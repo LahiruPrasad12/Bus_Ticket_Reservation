@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "918178636156",
+    "project_id": "busticketreservation-27ea3",
+    "storage_bucket": "busticketreservation-27ea3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918178636156:android:3b2a529180aa9063c0c4f9",
+        "android_client_info": {
+          "package_name": "com.example.busticketreservation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918178636156-fffjmlr7i67eds4j5cr7q2hp53j7d40m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR29TaT-t1GEqk_yZT6P-4GlynKarB2hY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918178636156-fffjmlr7i67eds4j5cr7q2hp53j7d40m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

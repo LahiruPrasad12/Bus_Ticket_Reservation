@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BUS ME</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="name">Enter Name</string>
+    <string name="mail">Email or Phone</string>
+    <string name="password">Password</string>
+    <string name="conPass">Confirm Password</string>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be 5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="Confirm">editComPassword</string>
+    <string name="editTextPhone">Enter Phone Number</string>
+    <string name="editComPass">Confirm Password</string>
+</resources>
