@@ -46,28 +46,31 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:textColor="#1f232d"
-            android:textColorHint="#1f232d"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:hint="Email"
-            android:layout_margin="20dp"
+            android:id="@+id/txtMail"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
+            android:layout_margin="20dp"
             android:background="@drawable/rounded_corner"
-            android:textSize="17sp" />
-        <EditText
-            android:textColor="#1f232d"
-            android:textColorHint="#1f232d"
+            android:hint="@string/txtMail"
             android:paddingStart="10dp"
             android:paddingLeft="10dp"
-            android:hint="Password"
-            android:inputType="textPassword"
+            android:textColor="#1f232d"
+            android:textColorHint="#1f232d"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/txtPass"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
             android:layout_margin="20dp"
             android:layout_marginBottom="0dp"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
             android:background="@drawable/rounded_corner"
+            android:hint="@string/uPassword"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#1f232d"
+            android:textColorHint="#1f232d"
             android:textSize="17sp" />
 
         <TextView
@@ -79,14 +82,19 @@
             android:onClick="signOut"
             android:text="Forgot Password ?"
             android:textColor="#fff" />
+
         <Button
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:background="@drawable/round_corner_buttom"
-            android:text="sign in"
-            android:textColor="#ffff"
+            android:id="@+id/signBtn"
             android:layout_width="wrap_content"
-            android:layout_height="35dp" />
+            android:layout_height="35dp"
+            android:background="@drawable/round_corner_buttom"
+            android:hint="@string/signBtn"
+            android:onClick="Login"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
         <TextView
             android:layout_marginTop="20dp"
             android:textColor="#fff"
