@@ -29,10 +29,15 @@ public class LoginActivity extends AppCompatActivity {
 
         frb = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.pBar);
-        txtMail = findViewById(R.id.txtMail);
-        txtPassword = findViewById(R.id.txtPass);
+        txtMail = findViewById(R.id.txNam);
+        txtPassword = findViewById(R.id.txtP);
 
         progressBar.setVisibility(View.GONE);
+
+        if(frb.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
 
     }
 
@@ -63,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(),Select_Bus.class));
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
                     }else {
                         Toast.makeText(LoginActivity.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

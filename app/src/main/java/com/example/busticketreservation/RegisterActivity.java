@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                     }else{
-                        Toast.makeText(RegisterActivity.this, "Your Connection Lost", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

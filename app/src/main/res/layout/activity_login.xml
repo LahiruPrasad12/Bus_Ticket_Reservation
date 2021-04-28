@@ -46,7 +46,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/txtMail"
+            android:id="@+id/txNam"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="20dp"
@@ -59,7 +59,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/txtPass"
+            android:id="@+id/txtP"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="20dp"
@@ -79,7 +79,6 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
-            android:onClick="signOut"
             android:text="Forgot Password ?"
             android:textColor="#fff" />
 

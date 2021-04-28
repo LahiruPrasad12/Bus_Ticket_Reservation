@@ -16,10 +16,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".Select_Bus"></activity>
+        <activity android:name=".ViewUserProfile"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Book_Bus"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            >
+        </activity>
+        <activity android:name=".Side_Nave_Bar" />
+        <activity android:name=".Select_Bus" />
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Your Trips"
+            android:icon="@drawable/search"
+            android:id="@+id/Trips"
+            />
+        <item
+            android:title="Wallet"
+            android:icon="@drawable/basket"
+            android:id="@+id/wallet"
+            />
+
+        <item
+            android:title="Setting"
+            android:icon="@drawable/setting"
+            android:id="@+id/setting"
+            />
+        <item
+            android:title="Helps"
+            android:icon="@drawable/favorite"
+            android:id="@+id/Helps"
+            />
+<!--        <item-->
+<!--            android:title="Promo-codes"-->
+<!--            android:icon="@drawable/promo_code"-->
+<!--            android:id="@+id/promo_code"-->
+<!--            />-->
+<!--        <item-->
+<!--            android:title="Orders"-->
+<!--            android:icon="@drawable/orders"-->
+<!--            android:id="@+id/orders"-->
+<!--            />-->
+    </group>
+    <item android:title=""
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/logOut"
+                    android:icon="@drawable/logout"
+                    android:title="Sign Out" />
+            </group>
+        </menu>
+    </item>
+</menu>
