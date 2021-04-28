@@ -16,9 +16,24 @@
     <string name="invalid_password">Password must be 5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="Confirm">editComPassword</string>
-    <string name="editTextPhone">Enter Phone Number</string>
+    <string name="editTextPhone">Enter Mail Address Number</string>
     <string name="editComPass">Confirm Password</string>
     <string name="txtMail">Email</string>
     <string name="uPassword">Password</string>
     <string name="signBtn">sign in</string>
+
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="BusNo">Bus No       :</string>
+    <string name="From">From       :</string>
+    <string name="To">To       : </string>
+    <string name="dTime">Departure Time       :</string>
+    <string name="aTime">Arrival Time       :</string>
+    <string name="amount">Amount       :</string>
+    <string name="amountHint">Enter Number Of Seats</string>
+    <string name="upDate">Update</string>
+    <string name="uName">Name</string>
+    <string name="del">Delete</string>
 </resources>

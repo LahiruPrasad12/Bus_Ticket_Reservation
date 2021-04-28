@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_bk_color"
+    tools:context=".ViewUserProfile">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="93dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/download" />
+
+    <EditText
+        android:id="@+id/txM"
+        android:layout_width="350dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="@string/txtMail"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#1f232d"
+        android:textColorHint="#1f232d"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtP"
+        android:layout_width="350dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="455dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="@string/uPassword"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#1f232d"
+        android:textColorHint="#1f232d"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_background_blue"
+        android:backgroundTint="@color/primaryTextColor"
+        android:onClick="upDate"
+        android:text="@string/upDate"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtP" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_background_blue"
+        android:backgroundTint="@color/design_default_color_error"
+        android:onClick="Delete"
+        android:text="@string/del"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
