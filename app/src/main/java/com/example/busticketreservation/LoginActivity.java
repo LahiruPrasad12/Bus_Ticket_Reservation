@@ -33,19 +33,21 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtP);
 
         progressBar.setVisibility(View.GONE);
-
         if(frb.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
-
     }
+
+
 
     public void register(View view){
         progressBar.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);
     }
+
+
 
 
     public void Login(View view){
@@ -60,8 +62,6 @@ public class LoginActivity extends AppCompatActivity {
         else if(TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Phone Is Required", Toast.LENGTH_SHORT).show();
         }else {
-
-
             //Authenticated User
             frb.signInWithEmailAndPassword(mail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
