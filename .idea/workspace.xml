@@ -18,16 +18,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Create Update And Delete User Profile">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/BusViewAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_lists.xml" afterDir="false" />
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Design List View Using Adapter Class">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619641116167</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Design List View Using Adapter Class">
+      <created>1619990259358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619990259358</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +232,8 @@
     <MESSAGE value="Create User Registration And Design Login Interface" />
     <MESSAGE value="Create Login" />
     <MESSAGE value="Create Update And Delete User Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Update And Delete User Profile" />
+    <MESSAGE value="Design List View Using Adapter Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Design List View Using Adapter Class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1619546793935">
@@ -275,10 +284,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1619641149358">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1619990273283">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619641149358" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619990273283" />
     <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1619506173917">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

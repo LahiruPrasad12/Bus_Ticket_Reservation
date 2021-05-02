@@ -48,10 +48,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
     String useId ;
-    String frm = "Kottava";
-    String trm = "Matara";
     public static final String TAG = "TAG";
-    Context context;
     String busNo;
     ProgressBar progressBar;
 

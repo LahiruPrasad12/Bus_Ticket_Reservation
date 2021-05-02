@@ -53,7 +53,7 @@ public class ViewUserProfile extends AppCompatActivity {
                     if(documentSnapshot.exists()){
                         txMail.setText(documentSnapshot.getString("Mail"));
                         txName.setText(documentSnapshot.getString("Name"));
-                        Toast.makeText(ViewUserProfile.this, "Success", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ViewUserProfile.this, "User Profile", Toast.LENGTH_SHORT).show();
 
                     }else {
 
@@ -99,9 +99,10 @@ public class ViewUserProfile extends AppCompatActivity {
                 fStore.collection("Users").document(useId).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
+                        Toast.makeText(ViewUserProfile.this, "Deactivating...", Toast.LENGTH_SHORT).show();
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                        Toast.makeText(ViewUserProfile.this, "Deactivate Success", Toast.LENGTH_SHORT).show();
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -118,7 +119,7 @@ public class ViewUserProfile extends AppCompatActivity {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(ViewUserProfile.this, "Concell", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ViewUserProfile.this, "Cancelling...", Toast.LENGTH_SHORT).show();
             }
         });
 
