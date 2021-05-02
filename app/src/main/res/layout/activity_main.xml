@@ -94,30 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/To" />
 
 
-
         //that the one
-
-        <LinearLayout
-
-            android:id="@+id/layout"
-            android:layout_width="405dp"
-            android:layout_height="411dp"
-            android:layout_marginTop="60dp"
-            android:paddingStart="8dp"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingEnd="8dp"
-           android:paddingRight="8dp"
-            android:background="@color/login_bk_color"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
-
-            >
-
-        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -131,6 +108,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="415dp"
+            android:layout_height="312dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -138,7 +125,7 @@
     <com.google.android.material.navigation.NavigationView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/nav_view"
+        android:id="@+id/nav_view"
             android:background="#0E66B9"
             android:layout_gravity="start"
             app:headerLayout="@layout/nav_header"

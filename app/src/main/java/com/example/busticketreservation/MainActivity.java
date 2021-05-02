@@ -16,6 +16,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.MenuItem;
@@ -37,11 +39,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
     TextView From,To,tx3;
-    String from,to,No;
+    String from,to,depTime,arTime;
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
     String useId ;
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
     String busNo;
     ProgressBar progressBar;
 
+    private ArrayList<String> BusNo = new ArrayList<>();
+    private ArrayList<String> Location = new ArrayList<>();
+    private ArrayList<String> Time = new ArrayList<>();
+    private Context mContext;
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
@@ -114,14 +121,6 @@ public class MainActivity extends AppCompatActivity {
         To = findViewById(R.id.To);
         progressBar = findViewById(R.id.progressBar);
 
-        LinearLayout linearLayout;
-        linearLayout = (LinearLayout) findViewById(R.id.layout);
-        TableRow tableRow = new TableRow(this);
-        TableLayout tableLayout = new TableLayout(this);
-
-        tableLayout.setLayoutParams(new TableLayout.LayoutParams(
-                TableLayout.LayoutParams.FILL_PARENT, TableLayout.LayoutParams.WRAP_CONTENT
-        ));
 
         progressBar.setVisibility(View.VISIBLE);
         frbAuth = FirebaseAuth.getInstance();
@@ -141,54 +140,35 @@ public class MainActivity extends AppCompatActivity {
 
                     for (QueryDocumentSnapshot document : task.getResult()) {
 
-                        tableRow.setLayoutParams((new TableRow.LayoutParams(
-                                TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT
-                        )));
 
                         TextView textView = new TextView(MainActivity.this);
                         Button button = new Button(getApplicationContext());
                         progressBar.setVisibility(View.INVISIBLE);
                         busNo = document.getString("Bus_No");
-                        button.setText("View");
-                        textView.setText("Bus_No - " + busNo + "          " + document.getString("From") + " - " + document.getString("To") + "          ");
-
-
-                        button.setLayoutParams(new TableRow.LayoutParams(
-                                TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT
-                        ));
-
-                        textView.setLayoutParams(new TableRow.LayoutParams(
-                                TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT
-                        ));
-
-
-                        tableRow.addView(textView);
-                        tableRow.addView(button);
-                        tableLayout.addView(tableRow);
-
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent = new Intent(getApplicationContext(), Book_Bus.class);
-                                intent.putExtra("BusNo", busNo);
-                                startActivity(intent);
-//                                startActivity(new Intent(getApplicationContext(),Book_Bus.class));
-                            }
-                        });
-
+                        depTime = document.getString("Departure_Time");
+                        arTime = document.getString("Arrival_Time");
+                        BusNo.add(busNo);
+                        Time.add(arTime +" - "+depTime);
+                        Location.add(from + " - "+to);
+                        initRecyclerView();
 
                     }
-                    linearLayout.addView(tableLayout);
+
                 } else {
                     Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
 
-
-
-
         });
 
+
+    }
+
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        BusViewAdapter adapter = new BusViewAdapter(BusNo,Location,Time,this);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
