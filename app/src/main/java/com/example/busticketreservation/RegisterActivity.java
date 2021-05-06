@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     FirebaseAuth frb;
     EditText txtName,txtPhone,txtPassword,txtComPassword;
-    String name,phone,pass,comPass;
+    String name,mail,pass,comPass;
     FirebaseFirestore fStore;
     String userId;
     DatabaseReference databaseReference;
@@ -61,14 +61,14 @@ public class RegisterActivity extends AppCompatActivity {
     public void Login(View view){
 
         name = txtName.getText().toString().trim();
-        phone = txtPhone.getText().toString().trim();
+        mail = txtPhone.getText().toString().trim();
         pass = txtPassword.getText().toString().trim();
         comPass = txtComPassword.getText().toString().trim();
 
         if(TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Name Is Required", Toast.LENGTH_SHORT).show();
         }
-        else if(TextUtils.isEmpty(phone)) {
+        else if(TextUtils.isEmpty(mail)) {
             Toast.makeText(this, "Phone Is Required", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(pass)) {
@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else if(pass.equals(comPass)) {
 
-            frb.createUserWithEmailAndPassword(phone,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            frb.createUserWithEmailAndPassword(mail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
@@ -93,16 +93,19 @@ public class RegisterActivity extends AppCompatActivity {
                         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
                         Map<String,Object> user = new HashMap<>();
                         user.put("Name",name);
-                        user.put("Mail",phone);
+                        user.put("Mail",mail);
+                        user.put("Roll","Customer");
+                        user.put("Phone","Null");
 
                         databaseReference.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Log.d(TAG,"user profile is created for "+ userId);
+                                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                             }
                         });
 
-                        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+
                     }else{
                         Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
