@@ -35,6 +35,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -52,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     String busNo;
     ProgressBar progressBar;
 
+    private DatabaseReference databaseReference;
     private ArrayList<String> BusNo = new ArrayList<>();
     private ArrayList<String> Location = new ArrayList<>();
     private ArrayList<String> Time = new ArrayList<>();
@@ -72,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view);
 
+        //Navigation  Bar
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -104,13 +112,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void loadFragment(Fragment fragment) {
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame,fragment).commit();
-        drawerLayout.closeDrawer(GravityCompat.START);
-        fragmentTransaction.addToBackStack(null);
-    }
+
+
+
+
+//    private void loadFragment(Fragment fragment) {
+//        FragmentManager fragmentManager=getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.frame,fragment).commit();
+//        drawerLayout.closeDrawer(GravityCompat.START);
+//        fragmentTransaction.addToBackStack(null);
+//    }
 
 
     public void FindBus(View view) {
@@ -125,43 +137,93 @@ public class MainActivity extends AppCompatActivity {
         useId = frbAuth.getCurrentUser().getUid();
         from = From.getText().toString();
         to = To.getText().toString();
-        fStore.collection("Routes").whereEqualTo("From", from).whereEqualTo("To", to).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+
+
+        //Retrieve Data Using From and To place
+        Query query = FirebaseDatabase.getInstance().getReference("Users").
+                orderByChild("Name").equalTo("Hashen");
+        query.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    if(task.getResult().isEmpty() ){
-                        progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(MainActivity.this, "Can't Find Value", Toast.LENGTH_SHORT).show();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
+
+                    for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                            TextView textView = new TextView(MainActivity.this);
+                            Button button = new Button(getApplicationContext());
+                            progressBar.setVisibility(View.INVISIBLE);
+                            busNo = dataSnapshot.child("Name").getValue().toString();
+                            depTime = dataSnapshot.child("Name").getValue().toString();
+                            arTime = dataSnapshot.child("Name").getValue().toString();
+                            BusNo.add(busNo);
+                            Time.add(arTime +" - "+depTime);
+                            Location.add(from + " - "+to);
+                            initRecyclerView();
                     }
 
-
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-
-
-                        TextView textView = new TextView(MainActivity.this);
-                        Button button = new Button(getApplicationContext());
-                        progressBar.setVisibility(View.INVISIBLE);
-                        busNo = document.getString("Bus_No");
-                        depTime = document.getString("Departure_Time");
-                        arTime = document.getString("Arrival_Time");
-                        BusNo.add(busNo);
-                        Time.add(arTime +" - "+depTime);
-                        Location.add(from + " - "+to);
-                        initRecyclerView();
-
-                    }
-
-                } else {
-                    Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(getApplicationContext(), "Can't", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
+
             }
 
-
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.INVISIBLE);
+            }
         });
+
+
+
+
+
+
+
+
+
+//        fStore.collection("Routes").whereEqualTo("From", from).whereEqualTo("To", to).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                if (task.isSuccessful()) {
+//                    if(task.getResult().isEmpty() ){
+//                        progressBar.setVisibility(View.INVISIBLE);
+//                        Toast.makeText(MainActivity.this, "Can't Find Value", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//
+//                    for (QueryDocumentSnapshot document : task.getResult()) {
+//
+//
+//                        TextView textView = new TextView(MainActivity.this);
+//                        Button button = new Button(getApplicationContext());
+//                        progressBar.setVisibility(View.INVISIBLE);
+//                        busNo = document.getString("Bus_No");
+//                        depTime = document.getString("Departure_Time");
+//                        arTime = document.getString("Arrival_Time");
+//                        BusNo.add(busNo);
+//                        Time.add(arTime +" - "+depTime);
+//                        Location.add(from + " - "+to);
+//                        initRecyclerView();
+//
+//                    }
+//
+//                } else {
+//                    Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//
+//        });
 
 
     }
 
+
+    //Invoke Bus View Adapter
     private void initRecyclerView(){
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         BusViewAdapter adapter = new BusViewAdapter(BusNo,Location,Time,this);
