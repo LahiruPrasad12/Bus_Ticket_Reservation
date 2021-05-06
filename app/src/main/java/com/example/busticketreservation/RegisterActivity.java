@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -31,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     String name,phone,pass,comPass;
     FirebaseFirestore fStore;
     String userId;
+    DatabaseReference databaseReference;
 
 
 
@@ -86,12 +89,13 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
                         userId = frb.getCurrentUser().getUid();
 
-                        DocumentReference documentReference = fStore.collection("Users").document(userId);
+//                        DocumentReference documentReference = fStore.collection("Users").document(userId);
+                        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
                         Map<String,Object> user = new HashMap<>();
                         user.put("Name",name);
                         user.put("Mail",phone);
 
-                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        databaseReference.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Log.d(TAG,"user profile is created for "+ userId);
