@@ -12,5 +12,8 @@
     <color name="whiteTextColor">#fff</color>
     <color name="primaryTextColor">#11CFC5</color>
     <color name="listBackgroundColor">#808080</color>
+    <color name="hash_dark_blue">#1F232D</color>
+    <color name="hash_middle_blue">#136179</color>
+    <color name="hash_light_blue">#35B5C7</color>
 
 </resources>

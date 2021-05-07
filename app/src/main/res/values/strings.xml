@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BUS ME</string>
+    <string name="app_name">Book My Bus</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>
     <string name="name">Enter Name</string>
@@ -36,4 +36,20 @@
     <string name="upDate">Update</string>
     <string name="uName">Name</string>
     <string name="del">Delete</string>
+
+<!--Hashen-->
+<!--    hash sample-->
+    <string name="hintID">Enter Student ID</string>
+    <string name="hintName">Enter Student Name</string>
+    <string name="hintAddress">Enter Student Address</string>
+    <string name="hintConNo">Enter Student Contact Number</string>
+    <string name="btnSave">Save</string>
+    <string name="btnShow">show</string>
+    <string name="btnUpdate">update</string>
+    <string name="btnDelete">delete</string>
+    <string name="nextPg">Next Page</string>
+
+<!--imports for ActionBarToggle Class-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
