@@ -37,8 +37,8 @@
     <string name="uName">Name</string>
     <string name="del">Delete</string>
 
-<!--Hashen-->
-<!--    hash sample-->
+    <!--Hashen-->
+    <!--    hash sample-->
     <string name="hintID">Enter Student ID</string>
     <string name="hintName">Enter Student Name</string>
     <string name="hintAddress">Enter Student Address</string>
@@ -49,7 +49,16 @@
     <string name="btnDelete">delete</string>
     <string name="nextPg">Next Page</string>
 
-<!--imports for ActionBarToggle Class-->
+    <!--imports for ActionBarToggle Class-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--    ishara-->
+    <string name="tv1">Add Bus In Here !!</string>
+    <string name="pt">Bus ID</string>
+    <string name="pt2">Route Number</string>
+    <string name="pt3">License Number</string>
+    <string name="pt4">Number Of Seats</string>
+    <string name="bt1">ADD BUS</string>
+
 </resources>
