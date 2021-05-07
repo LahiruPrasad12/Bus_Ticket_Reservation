@@ -16,30 +16,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-
-
-
-        <activity
-            android:name=".TripManager.TripMain">
-
+        <activity android:name=".BusOwner.UpdateAndDeleteBus"></activity>
+        <activity android:name=".BusOwner.AddBus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".TripManager.TripMain" />
         <activity
             android:name=".Admin.adminTest"
-            android:theme="@style/AppTheme.NoActionBarHash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBarHash" />
         <activity android:name=".hashTest" />
         <activity
             android:name=".ViewUserProfile"
@@ -58,7 +46,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
