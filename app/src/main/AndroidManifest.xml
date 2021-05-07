@@ -18,13 +18,17 @@
         android:theme="@style/Theme.BusTicketReservation">
         <activity android:name=".BusOwner.ViewBus"></activity>
         <activity android:name=".BusOwner.UpdateAndDeleteBus">
+
+        </activity>
+        <activity android:name=".BusOwner.AddBus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
-        <activity android:name=".BusOwner.AddBus"></activity>
         <activity android:name=".TripManager.TripMain" />
         <activity
             android:name=".Admin.AdminMain"
