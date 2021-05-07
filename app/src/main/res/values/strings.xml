@@ -37,6 +37,18 @@
     <string name="uName">Name</string>
     <string name="del">Delete</string>
 
+
+    <!--    ishara-->
+    <string name="tv1">Add Bus In Here !!</string>
+    <string name="pt">Bus ID</string>
+    <string name="pt2">Route Number</string>
+    <string name="pt3">License Number</string>
+    <string name="pt4">Number Of Seats</string>
+    <string name="bt1">ADD BUS</string>
+    <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
+    <string name="bt2">EDIT BUS</string>
+
+
     <!--Hashen-->
     <!--    hash sample-->
     <string name="hintID">Enter Student ID</string>
@@ -53,14 +65,12 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <!--    ishara-->
-    <string name="tv1">Add Bus In Here !!</string>
-    <string name="pt">Bus ID</string>
-    <string name="pt2">Route Number</string>
-    <string name="pt3">License Number</string>
-    <string name="pt4">Number Of Seats</string>
-    <string name="bt1">ADD BUS</string>
-    <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
-    <string name="bt2">EDIT BUS</string>
+    <!--    add routes string-->
+    <string name="hintRoutNoAdmin"> Route Number</string>
+    <string name="hintFromAdmin"> From</string>
+    <string name="hintToAdmin"> To</string>
+    <string name="hintPriceAdmin"> Price</string>
+    <string name="admin_btn_submit">submit</string>
+    <string name="addRoute">Add New Route</string>
 
 </resources>
