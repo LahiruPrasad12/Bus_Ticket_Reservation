@@ -16,8 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
+        <activity android:name=".BusOwner.UpdateAndDeleteBus"></activity>
         <activity android:name=".BusOwner.AddBus">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,9 +27,7 @@
         <activity android:name=".TripManager.TripMain" />
         <activity
             android:name=".Admin.adminTest"
-            android:theme="@style/AppTheme.NoActionBarHash">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBarHash" />
         <activity android:name=".hashTest" />
         <activity
             android:name=".ViewUserProfile"
