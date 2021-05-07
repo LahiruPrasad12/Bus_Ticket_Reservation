@@ -9,14 +9,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.busticketreservation.R;
 import android.os.Bundle;
 
-public class adminTest extends AppCompatActivity {
+public class AdminMain extends AppCompatActivity {
 
     private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_test);
+        setContentView(R.layout.activity_admin_main);
 
 //      using the toolbar as the action bar
         Toolbar toolbar = findViewById(R.id.hash_toolbar);
