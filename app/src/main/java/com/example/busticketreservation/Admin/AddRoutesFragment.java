@@ -16,5 +16,7 @@ public class AddRoutesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_add_routes, container, false);
+
+
     }
 }
