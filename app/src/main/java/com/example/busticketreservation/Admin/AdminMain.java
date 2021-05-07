@@ -1,5 +1,6 @@
 package com.example.busticketreservation.Admin;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -7,9 +8,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.busticketreservation.R;
-import android.os.Bundle;
+import com.google.android.material.navigation.NavigationView;
 
-public class AdminMain extends AppCompatActivity {
+import android.os.Bundle;
+import android.view.MenuItem;
+
+public class AdminMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
 
@@ -25,11 +29,48 @@ public class AdminMain extends AppCompatActivity {
 //        getting the drawer layout
         drawer = findViewById(R.id.hash_drawer_layout);
 
+//        listen to click events of the navigation view
+        NavigationView navigationView = findViewById(R.id.hash_nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
 //        get the menu button in the top left corner
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+//start all routes fragment immediately when main activity is started
+        if(savedInstanceState == null){
+        getSupportFragmentManager().beginTransaction().replace(R.id.hash_fragment_container,
+                new AllRoutesFragment()).commit();
+        navigationView.setCheckedItem(R.id.nav_all_routes);}
+    }
+
+    @Override
+//    passing menu item to setNavigationItemSelectedListener
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_all_routes:
+                getSupportFragmentManager().beginTransaction().replace(R.id.hash_fragment_container,
+                        new AllRoutesFragment()).commit();
+                break;
+            case R.id.nav_add_routes:
+                getSupportFragmentManager().beginTransaction().replace(R.id.hash_fragment_container,
+                        new AddRoutesFragment()).commit();
+                break;
+            case R.id.nav_all_users:
+                getSupportFragmentManager().beginTransaction().replace(R.id.hash_fragment_container,
+                        new AllUsersFragment()).commit();
+                break;
+            case R.id.nav_add_users:
+                getSupportFragmentManager().beginTransaction().replace(R.id.hash_fragment_container,
+                        new AddUsersFragment()).commit();
+                break;
+        }
+
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     @Override
