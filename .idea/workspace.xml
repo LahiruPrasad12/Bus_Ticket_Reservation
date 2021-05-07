@@ -20,7 +20,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="renamed adminTest to adminMain">
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Completed AdminMain with nav bar and fragments">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -32,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rfpbrrU0siXTGHCgmjNtl8yRyI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -78,7 +79,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -95,27 +96,30 @@
     <key name="android.template.1984254529">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1491598843">
-      <recent name="com.example.busticketreservation.Admin" />
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.-1704837980">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\drawable" />
-      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\font" />
-      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\values" />
-      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res" />
-    </key>
-    <key name="android.template.904773871">
+    <key name="android.template.-1114989114">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.-975130194">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1114989114">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gayan\AndroidStudioProjects\Bus_Ticket_Reservation\app\src\main\res\layout" />
+      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\drawable" />
+      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\font" />
+      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\values" />
+      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\drawable-v24" />
+    </key>
+    <key name="android.template.904773871">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-1491598843">
+      <recent name="com.example.busticketreservation.Admin" />
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.busticketreservation.Admin" />
+    </key>
+    <key name="android.template.-1704837980">
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
@@ -259,7 +263,35 @@
       <option name="project" value="LOCAL" />
       <updated>1620382114893</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commited to pull from main">
+      <created>1620382209479</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620382209479</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add four new fragments for the navigation">
+      <created>1620383056343</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620383056343</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add four java classes for the fragments">
+      <created>1620383865253</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620383865253</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Completed AdminMain with nav bar and fragments">
+      <created>1620385527934</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620385527934</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,16 +315,21 @@
     <MESSAGE value="added admin java class" />
     <MESSAGE value="deleted admin java class" />
     <MESSAGE value="renamed adminTest to adminMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed adminTest to adminMain" />
+    <MESSAGE value="commited to pull from main" />
+    <MESSAGE value="Add four new fragments for the navigation" />
+    <MESSAGE value="Add four java classes for the fragments" />
+    <MESSAGE value="Completed AdminMain with nav bar and fragments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed AdminMain with nav bar and fragments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="436" y="155" key="#PSD" timestamp="1620330551329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="155" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1620330551329" />
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1619546793935">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1620384265916">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1620384265916" />
     <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619546793935" />
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620307286432">
       <screen x="0" y="0" width="1536" height="824" />
@@ -304,10 +341,10 @@
     </state>
     <state x="595" y="178" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1620314562060" />
     <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1619475150401" />
-    <state x="634" y="170" key="AndroidCreateResourceFileDialog" timestamp="1620325773418">
+    <state x="155" y="154" key="AndroidCreateResourceFileDialog" timestamp="1620382477646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="634" y="170" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1620325773418" />
+    <state x="155" y="154" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1620382477646" />
     <state x="349" y="172" key="AndroidCreateResourceFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1619546471966" />
     <state x="610" y="201" key="AndroidCreateXmlResourceDialog" timestamp="1620321681745">
       <screen x="0" y="0" width="1536" height="824" />
@@ -342,10 +379,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1620328750809" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1620370288787">
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1620382249844">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1620370288787" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1620382249844" />
     <state x="521" y="119" key="RollbackChangesDialog" timestamp="1619461954236">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -354,10 +391,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620381458107">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620385601444">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620381458107" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620385601444" />
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619990273283" />
     <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1619506173917">
       <screen x="0" y="0" width="1536" height="834" />
@@ -367,10 +404,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="505" y="201" key="git4idea.merge.GitMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1620359744726" />
-    <state x="446" y="201" key="git4idea.merge.GitPullDialog" timestamp="1620377496142">
+    <state x="446" y="201" key="git4idea.merge.GitPullDialog" timestamp="1620390162856">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="446" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1620377496142" />
+    <state x="446" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1620390162856" />
     <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1619459637993">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
