@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/hash_drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".Admin.AdminMain"
+    tools:context=".Admin.AddUsers"
     tools:openDrawer="start">
 
 

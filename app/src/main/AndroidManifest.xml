@@ -27,6 +27,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Admin.AddRoutes"
@@ -36,19 +37,23 @@
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
         <activity android:name=".BusOwner.AddBus" />
         <activity android:name=".TripManager.TripMain" />
-        <activity
-            android:name=".Admin.AdminMain"
-            android:theme="@style/AppTheme.NoActionBarHash" />
-        <activity android:name=".hashTest" />
+<!--        <activity-->
+<!--            android:name=".Admin.AdminMain"-->
+<!--            android:theme="@style/AppTheme.NoActionBarHash" />-->
+<!--        <activity android:name=".hashTest" />-->
         <activity
             android:name=".ViewUserProfile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Book_Bus"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
             >
         </activity>
         <activity android:name=".Select_Bus" />
@@ -57,7 +62,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
