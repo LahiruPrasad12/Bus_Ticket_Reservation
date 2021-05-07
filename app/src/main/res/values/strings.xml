@@ -60,5 +60,6 @@
     <string name="pt3">License Number</string>
     <string name="pt4">Number Of Seats</string>
     <string name="bt1">ADD BUS</string>
+    <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
 
 </resources>
