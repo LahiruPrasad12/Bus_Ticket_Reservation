@@ -17,9 +17,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
 
-        <activity android:name=".Admin.AdminMain"
-            android:theme="@style/AppTheme.NoActionBarHash">
 
+
+        <activity
+            android:name=".TripManager.TripMain">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Admin.adminTest"
+            android:theme="@style/AppTheme.NoActionBarHash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,10 +40,10 @@
 
         </activity>
 
-        <activity android:name=".hashTest"></activity>
+        <activity android:name=".hashTest" />
         <activity
             android:name=".ViewUserProfile"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Book_Bus"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -46,11 +58,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
