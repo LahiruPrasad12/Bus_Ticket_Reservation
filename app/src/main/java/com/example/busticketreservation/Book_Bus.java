@@ -146,9 +146,14 @@ public class Book_Bus extends AppCompatActivity {
     //calculate final bill using num of seats
     public void calFinalBill(View view){
         numSeat = Integer.parseInt(txtNoSeat.getText().toString());
-        totBill = baseBill*numSeat;
+        totBill = calculation(numSeat,baseBill);
         txtfBill.setText(String.valueOf("LKR "+totBill));
         txtfBill.setVisibility(View.VISIBLE);
+    }
+
+
+    public int calculation(int numSeats, int bBill){
+        return numSeats*bBill;
     }
 
 
@@ -156,26 +161,25 @@ public class Book_Bus extends AppCompatActivity {
     public void AddFinalBill(View view){
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Final_Bill");
-        Map<String,Object> fBill = new HashMap<>();
-        fBill.put("User_Id",useId);
-        fBill.put("Bus_No",bsNo);
-        fBill.put("From",from);
-        fBill.put("To",to);
-        fBill.put("Num_Of_Seats",numSeat);
-//        fBill.put("Amount",totBill);
-        
-        databaseReference.setValue(fBill).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Toast.makeText(Book_Bus.this, "Booking Success", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Book_Bus.this, "Booking Failed", Toast.LENGTH_SHORT).show();
-            }
-        });
+        Final_Bill final_bill = new Final_Bill();
+
+        try{
+            final_bill.setBus_No(bsNo);
+            final_bill.setFrom(from);
+            final_bill.setTo(to);
+            final_bill.setNum_Of_Seats(numSeat);
+            final_bill.setUser_Id(useId);
+            final_bill.setTotAmount(totBill);
+
+            databaseReference.push().setValue(final_bill);
+            Toast.makeText(this, "Booking Success..", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+
 
 
 //        fStore.collection("Final-Bill")
