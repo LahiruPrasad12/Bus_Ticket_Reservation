@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     String busNo;
     ProgressBar progressBar;
     private int count = 0;
+    private int numRetrieve = 0;
 
     private DatabaseReference databaseReference;
     private ArrayList<String> BusNo = new ArrayList<>();
