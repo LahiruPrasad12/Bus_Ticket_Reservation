@@ -9,16 +9,25 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.busticketreservation.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class UpdateRoute extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     EditText routeNOE, fromE, toE, priceE;
     private DrawerLayout drawer;
+    Button updateButton;
+    DatabaseReference dbRef;
+    Routes routes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +39,8 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
         fromE = findViewById(R.id.admin_edit_from);
         toE = findViewById(R.id.admin_edit_to);
         priceE = findViewById(R.id.admin_edit_price);
+
+        updateButton = findViewById(R.id.admin_btn_updateRoute);
 
         //Initializing string variables to get from intent
         String routNo = "";
@@ -71,6 +82,28 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+
+//        update route button onClickListener
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dbRef = FirebaseDatabase.getInstance().getReference();
+                try {
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("routeNo").setValue(routeNOE.getText().toString().trim());
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("from").setValue(fromE.getText().toString().trim());
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("to").setValue(toE.getText().toString().trim());
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("price").setValue(Integer.parseInt(priceE.getText().toString().trim()));
+
+                    Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
+                } catch (NumberFormatException nfe) {
+                    Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+
     }
 
     @Override
