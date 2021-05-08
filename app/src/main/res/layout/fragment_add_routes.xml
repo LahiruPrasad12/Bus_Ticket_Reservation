@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--this file should be deleted-->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/admin_txt_update_rout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="@string/addRoute"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/admin_edit_routeno"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_width_40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/hintRoutNoAdmin"
+        android:icon="@drawable/ic_route_no"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_txt_update_rout" />
+
+    <EditText
+        android:id="@+id/admin_edit_from"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_width_40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/hintFromAdmin"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/admin_edit_routeno"
+        app:layout_constraintTop_toBottomOf="@+id/admin_edit_routeno" />
+
+    <EditText
+        android:id="@+id/admin_edit_to"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_width_40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/hintToAdmin"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/admin_edit_from"
+        app:layout_constraintTop_toBottomOf="@+id/admin_edit_from" />
+
+    <EditText
+        android:id="@+id/admin_edit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_width_40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/hintPriceAdmin"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/admin_edit_to"
+        app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />
+
+    <Button
+        android:id="@+id/admin_btn_addRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:text="@string/admin_btn_submit"
+        android:textColor="@color/hash_light_blue"
+        app:layout_constraintEnd_toEndOf="@+id/admin_edit_price"
+        app:layout_constraintTop_toBottomOf="@+id/admin_edit_price"
+        tools:text="@string/admin_btn_submit" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/admin_edit_from"
+        app:layout_constraintEnd_toStartOf="@+id/admin_edit_from"
+        app:layout_constraintTop_toTopOf="@+id/admin_edit_from"
+        app:srcCompat="@drawable/ic_my_location" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/admin_edit_to"
+        app:layout_constraintEnd_toStartOf="@+id/admin_edit_to"
+        app:layout_constraintTop_toTopOf="@+id/admin_edit_to"
+        app:srcCompat="@drawable/ic_end_location" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/admin_edit_price"
+        app:layout_constraintEnd_toStartOf="@+id/admin_edit_price"
+        app:layout_constraintTop_toTopOf="@+id/admin_edit_price"
+        app:srcCompat="@drawable/ic_price" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/admin_edit_routeno"
+        app:layout_constraintEnd_toStartOf="@+id/admin_edit_routeno"
+        app:layout_constraintTop_toTopOf="@+id/admin_edit_routeno"
+        app:srcCompat="@drawable/ic_route_no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

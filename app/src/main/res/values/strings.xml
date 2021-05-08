@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BUS ME</string>
+    <string name="app_name">Book My Bus</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>
     <string name="name">Enter Name</string>
@@ -36,4 +36,58 @@
     <string name="upDate">Update</string>
     <string name="uName">Name</string>
     <string name="del">Delete</string>
+
+
+    <!--    ishara-->
+    <string name="tv1">Add Bus In Here !!</string>
+    <string name="pt">Bus ID</string>
+    <string name="pt2">Route Number</string>
+    <string name="pt3">License Number</string>
+    <string name="pt4">Number Of Seats</string>
+    <string name="bt1">ADD BUS</string>
+    <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
+    <string name="bt2">EDIT BUS</string>
+    <string name="bt3">DELETE </string>
+    <string name="tvv3">Bus ID</string>
+    <string name="tvv4">Route ID</string>
+    <string name="tvv5">Licence Number</string>
+    <string name="tvv6">Number Of Seats</string>
+
+
+    <!--Hashen-->
+    <!--    hash sample-->
+    <string name="hintID">Enter Student ID</string>
+    <string name="hintName">Enter Student Name</string>
+    <string name="hintAddress">Enter Student Address</string>
+    <string name="hintConNo">Enter Student Contact Number</string>
+    <string name="btnSave">Save</string>
+    <string name="btnShow">show</string>
+    <string name="btnUpdate">update</string>
+    <string name="btnDelete">delete</string>
+    <string name="nextPg">Next Page</string>
+
+    <!--imports for ActionBarToggle Class-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--    add routes string-->
+    <string name="hintRoutNoAdmin"> Route Number</string>
+    <string name="hintFromAdmin"> From</string>
+    <string name="hintToAdmin"> To</string>
+    <string name="hintPriceAdmin"> Price</string>
+    <string name="admin_btn_submit">submit</string>
+    <string name="addRoute">Add New Route</string>
+    <string name="allRoutes">Click Route To View Details</string>
+    <string name="title">All Routes</string>
+    <string name="view_routes">Route Preview</string>
+    <string name="admin_route_no">Route No: </string>
+    <string name="from">From</string>
+    <string name="admin_from">From:</string>
+    <string name="admin_to">To:</string>
+    <string name="admin_price">Price:</string>
+    <string name="admin_btn_edit">Edit</string>
+    <string name="admin_btn_delete">Delete</string>
+    <string name="updateRoute">Update Route</string>
+    <string name="btn_update">Save And Update</string>
+
 </resources>
