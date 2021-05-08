@@ -19,14 +19,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Create Bus View Function">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/AddRoute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/addRout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_route.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Book_Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Book_Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[3300cda99198a4d5]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -57,8 +84,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="3300cda99198a4d5" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-06T17:56:07.972Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_XL_API_22" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-08T17:59:06.288Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -66,13 +93,16 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.2050761721">
+      <recent name="com.example.busticketreservation" />
+    </key>
     <key name="android.template.607012876">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.1984254529">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1114989114">
+    <key name="android.template.-1704837980">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -88,7 +118,7 @@
     <key name="android.template.-975130194">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1704837980">
+    <key name="android.template.-1114989114">
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
@@ -225,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620489637546</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Create Bus View Function">
+      <created>1620490006527</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620490006527</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,10 +292,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="654" y="280" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1620315129609" />
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1619546793935">
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1620503440038">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619546793935" />
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1620503440038" />
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619473904735">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -283,22 +320,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
-    <state width="1476" height="174" key="GridCell.Tab.0.bottom" timestamp="1620330967208">
+    <state width="1491" height="175" key="GridCell.Tab.0.bottom" timestamp="1620504687115">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1476" height="174" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620330967208" />
-    <state width="1476" height="174" key="GridCell.Tab.0.center" timestamp="1620330967208">
+    <state width="1491" height="175" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620504687115" />
+    <state width="1491" height="175" key="GridCell.Tab.0.center" timestamp="1620504687114">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1476" height="174" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620330967208" />
-    <state width="1476" height="174" key="GridCell.Tab.0.left" timestamp="1620330967208">
+    <state width="1491" height="175" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620504687114" />
+    <state width="1491" height="175" key="GridCell.Tab.0.left" timestamp="1620504687114">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1476" height="174" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620330967208" />
-    <state width="1476" height="174" key="GridCell.Tab.0.right" timestamp="1620330967208">
+    <state width="1491" height="175" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620504687114" />
+    <state width="1491" height="175" key="GridCell.Tab.0.right" timestamp="1620504687115">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1476" height="174" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620330967208" />
+    <state width="1491" height="175" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620504687115" />
+    <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1620490045368">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="407" y="178" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1620490045368" />
     <state x="521" y="119" key="RollbackChangesDialog" timestamp="1619461954236">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -315,10 +356,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1619506173917" />
-    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620489432509">
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620490020065">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489432509" />
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620490020065" />
     <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620315948617">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

@@ -41,7 +41,7 @@ public class Book_Bus extends AppCompatActivity {
     EditText txtNoSeat;
 
     private DatabaseReference databaseReference;
-    private double baseBill,totBill,numSeat;
+    private int baseBill,totBill,numSeat;
     private String from,to,No,bsNo;
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
@@ -81,25 +81,25 @@ public class Book_Bus extends AppCompatActivity {
         bsNo = intent.getStringExtra("BusNo");
 
         //Retrieve specific bus using bus No
-        Query query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("Name").equalTo("fhgg");
+        Query query = FirebaseDatabase.getInstance().getReference("Routes").orderByChild("bus_No").equalTo(bsNo);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    txtbusNo.setText(dataSnapshot.child("Name").getValue().toString());
+                    txtbusNo.setText(dataSnapshot.child("bus_No").getValue().toString());
 
 
-                    txtfrom.setText(dataSnapshot.child("Name").getValue().toString());
-                    from = dataSnapshot.child("Name").getValue().toString();
+                    txtfrom.setText(dataSnapshot.child("from").getValue().toString());
+                    from = dataSnapshot.child("from").getValue().toString();
 
-                    txtto.setText(dataSnapshot.child("Name").getValue().toString());
-                    to = dataSnapshot.child("Name").getValue().toString();
+                    txtto.setText(dataSnapshot.child("to").getValue().toString());
+                    to = dataSnapshot.child("to").getValue().toString();
 
-                    txtAtime.setText(dataSnapshot.child("Name").getValue().toString());
+                    txtAtime.setText(dataSnapshot.child("arrival_Time").getValue().toString());
+                    txtDtime.setText(dataSnapshot.child("departure_Time").getValue().toString());
 
-                    txtDtime.setText(dataSnapshot.child("Name").getValue().toString());
-                    txtAmount.setText(dataSnapshot.child("Name").getValue().toString());
-//                    baseBill = documentSnapshots.getDouble("Price");
+                    txtAmount.setText(dataSnapshot.child("price").getValue().toString());
+                    baseBill = Integer.parseInt(dataSnapshot.child("price").getValue().toString());
 
                     Toast.makeText(Book_Bus.this, "Book Now", Toast.LENGTH_SHORT).show();
                 }
@@ -167,7 +167,7 @@ public class Book_Bus extends AppCompatActivity {
         databaseReference.setValue(fBill).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                Toast.makeText(Book_Bus.this, "Booking Suucess", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Book_Bus.this, "Booking Success", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         }).addOnFailureListener(new OnFailureListener() {

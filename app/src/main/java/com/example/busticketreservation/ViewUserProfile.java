@@ -127,7 +127,6 @@ public class ViewUserProfile extends AppCompatActivity {
 
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
-
             //If user entered yes button run this part
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -146,9 +145,6 @@ public class ViewUserProfile extends AppCompatActivity {
                         Toast.makeText(ViewUserProfile.this, "Try Again", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
-
             }
         });
 
@@ -159,11 +155,8 @@ public class ViewUserProfile extends AppCompatActivity {
                 Toast.makeText(ViewUserProfile.this, "Cancelling...", Toast.LENGTH_SHORT).show();
             }
         });
-
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-
-
     }
 
 }
