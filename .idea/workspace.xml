@@ -18,14 +18,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Change Bus View Database into real time and update LoginActivity">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Create Bus View Function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Book_Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Book_Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="CustomerChecking" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -224,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620331282908</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Create Bus View Function">
+      <created>1620489637546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620489637546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,7 +247,8 @@
     <MESSAGE value="Design List View Using Adapter Class" />
     <MESSAGE value="Change Login And Registeration Database" />
     <MESSAGE value="Change Bus View Database into real time and update LoginActivity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Bus View Database into real time and update LoginActivity" />
+    <MESSAGE value="Create Bus View Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Bus View Function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="280" key="#Notifications" timestamp="1620315129609">
@@ -277,6 +279,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="367" y="4" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619614335594" />
+    <state x="148" y="66" key="DiffContextDialog" timestamp="1620489500988">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
     <state width="1476" height="174" key="GridCell.Tab.0.bottom" timestamp="1620330967208">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -301,14 +307,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1620331371623">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1620489661051">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620331371623" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620489661051" />
     <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1619506173917">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1619506173917" />
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620489432509">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489432509" />
     <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620315948617">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
