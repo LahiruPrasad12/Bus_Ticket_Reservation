@@ -51,6 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         TextView routeNo;
 
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 

@@ -79,5 +79,13 @@
     <string name="addRoute">Add New Route</string>
     <string name="allRoutes">Click Route To View Details</string>
     <string name="title">All Routes</string>
+    <string name="view_routes">Route Preview</string>
+    <string name="admin_route_no">Route No: </string>
+    <string name="from">From</string>
+    <string name="admin_from">From:</string>
+    <string name="admin_to">To:</string>
+    <string name="admin_price">Price:</string>
+    <string name="admin_btn_edit">Edit</string>
+    <string name="admin_btn_delete">Delete</string>
 
 </resources>

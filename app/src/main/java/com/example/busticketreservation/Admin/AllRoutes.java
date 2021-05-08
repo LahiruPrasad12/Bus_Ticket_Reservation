@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -102,9 +103,14 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
         listener = new MyAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View v, int position) {
+
                 Intent intent = new Intent(getApplicationContext(), ViewRoute.class);
-                intent.putExtra("routeNo", list.get(position).getRouteNo());
+                intent.putExtra("routeObj", list.get(position));
                 startActivity(intent);
+
+//                Intent intent = new Intent(getApplicationContext(), ViewRoute.class);
+//                intent.putExtra("routeNo", list.get(position).getRouteNo());
+//                startActivity(intent);
             }
         };
     }

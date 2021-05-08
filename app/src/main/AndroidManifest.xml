@@ -16,13 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".Admin.ViewRoute">
-
-
-        </activity>
+        <activity android:name=".Admin.UpdateRoute"></activity>
+        <activity android:name=".Admin.ViewRoute"></activity>
         <activity android:name=".BusOwner.ViewBus" />
-        <activity android:name=".BusOwner.UpdateAndDeleteBus"></activity>
-        <activity android:name=".BusOwner.AddBus"></activity>
+        <activity android:name=".BusOwner.UpdateAndDeleteBus" />
+        <activity android:name=".BusOwner.AddBus" />
         <activity android:name=".TripManager.TripMain" /> <!-- <activity -->
         <!-- android:name=".Admin.AdminMain" -->
         <!-- android:theme="@style/AppTheme.NoActionBarHash" /> -->
@@ -63,6 +61,10 @@
         <activity
             android:name=".Admin.AllUsers"
             android:theme="@style/AppTheme.NoActionBarHash" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
