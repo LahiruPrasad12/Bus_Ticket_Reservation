@@ -29,10 +29,180 @@
 
 
         <!--        creating the frame layout-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="this is all users"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Admin.ViewRoute">
+
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="350dp"
+                android:layout_height="194dp"
+                android:layout_marginTop="112dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/view_route_border" />
+
+            <TextView
+                android:id="@+id/allUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo_thambi"
+                android:text="@string/all_users"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_routeNo_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/user_type"
+                android:textColor="@color/hash_dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+            <TextView
+                android:id="@+id/tv_from_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/user_name"
+                android:textColor="@color/hash_dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_routeNo_head"
+                app:layout_constraintTop_toBottomOf="@+id/tv_routeNo_head" />
+
+            <TextView
+                android:id="@+id/tv_to_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/user_contact"
+                android:textColor="@color/hash_dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_from_head"
+                app:layout_constraintTop_toBottomOf="@+id/tv_from_head" />
+
+            <TextView
+                android:id="@+id/tv_price_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/user_email"
+                android:textColor="@color/hash_dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_to_head"
+                app:layout_constraintTop_toBottomOf="@+id/tv_to_head" />
+
+
+            <TextView
+                android:id="@+id/tv_routeNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:text="routeNo"
+                android:textSize="21sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_routeNo_head"
+                app:layout_constraintStart_toEndOf="@+id/tv_routeNo_head" />
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textSize="21sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_from_head"
+                app:layout_constraintStart_toStartOf="@+id/tv_routeNo" />
+
+            <TextView
+                android:id="@+id/tv_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="21sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_to_head"
+                app:layout_constraintStart_toStartOf="@+id/tv_from" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="21sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_price_head"
+                app:layout_constraintStart_toStartOf="@+id/tv_to" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_routeNo_head"
+                app:layout_constraintEnd_toStartOf="@+id/tv_routeNo_head"
+                app:layout_constraintTop_toTopOf="@+id/tv_routeNo_head"
+                app:layout_constraintVertical_bias="0.4"
+                app:srcCompat="@drawable/ic_user_type" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_from_head"
+                app:layout_constraintEnd_toStartOf="@+id/tv_from_head"
+                app:layout_constraintTop_toTopOf="@+id/tv_from_head"
+                app:layout_constraintVertical_bias="0.4"
+                app:srcCompat="@drawable/ic_adduser_name" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_to_head"
+                app:layout_constraintEnd_toStartOf="@+id/tv_to_head"
+                app:layout_constraintTop_toTopOf="@+id/tv_to_head"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/ic_adduser_phone" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_price_head"
+                app:layout_constraintEnd_toStartOf="@+id/tv_price_head"
+                app:layout_constraintTop_toTopOf="@+id/tv_price_head"
+                app:layout_constraintVertical_bias="0.181"
+                app:srcCompat="@drawable/ic_baseline_email_24" />
+
+            <Button
+                android:id="@+id/admin_btn_deleteRoute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/admin_rounded_btn"
+                android:text="@string/admin_btn_delete"
+                android:textColor="@color/hash_light_blue"
+                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <!--    creation of the navigation view-->
