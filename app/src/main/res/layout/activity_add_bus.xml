@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/register_bk_color"
     tools:context=".BusOwner.AddBus">
 
     <TextView
@@ -14,28 +13,19 @@
         android:layout_marginStart="108dp"
         android:layout_marginTop="28dp"
         android:text="@string/tv1"
-        android:textColor="@color/login_bk_color"
+        android:textColor="@color/hash_middle_blue"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="242dp"
-        android:layout_height="382dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/login_bk_color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/pt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="116dp"
+        android:layout_width="216dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt"
         android:inputType="textPersonName"
@@ -44,10 +34,11 @@
 
     <EditText
         android:id="@+id/pt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="188dp"
+        android:layout_width="211dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt2"
         android:inputType="textPersonName"
@@ -56,10 +47,11 @@
 
     <EditText
         android:id="@+id/pt3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="260dp"
+        android:layout_width="213dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt3"
         android:inputType="textPersonName"
@@ -68,10 +60,11 @@
 
     <EditText
         android:id="@+id/pt4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="332dp"
+        android:layout_width="213dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt4"
         android:inputType="textPersonName"
@@ -83,9 +76,10 @@
         android:layout_width="122dp"
         android:layout_height="48dp"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="396dp"
-        android:backgroundTint="@color/themeColor"
+        android:layout_marginTop="456dp"
+        android:backgroundTint="@color/hash_dark_blue"
         android:text="@string/bt1"
+        android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
