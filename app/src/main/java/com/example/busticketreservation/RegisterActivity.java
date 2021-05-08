@@ -53,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
+    //If user click already have an account user redirect to login page
     public void backToLogin(View view){
 
         startActivity(new Intent(getApplicationContext(),LoginActivity.class));
@@ -65,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         pass = txtPassword.getText().toString().trim();
         comPass = txtComPassword.getText().toString().trim();
 
+        //Check user enter data is correct or not
         if(TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Name Is Required", Toast.LENGTH_SHORT).show();
         }
@@ -82,6 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else if(pass.equals(comPass)) {
 
+            //Set mail password authontication
             frb.createUserWithEmailAndPassword(mail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -90,12 +93,13 @@ public class RegisterActivity extends AppCompatActivity {
                         userId = frb.getCurrentUser().getUid();
 
 //                        DocumentReference documentReference = fStore.collection("Users").document(userId);
+
+                        //Register user
                         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
                         Map<String,Object> user = new HashMap<>();
                         user.put("Name",name);
                         user.put("Mail",mail);
                         user.put("Roll","Customer");
-                        user.put("Phone","Null");
 
                         databaseReference.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

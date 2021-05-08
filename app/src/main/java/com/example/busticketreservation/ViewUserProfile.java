@@ -54,6 +54,9 @@ public class ViewUserProfile extends AppCompatActivity {
         useId = frbAuth.getCurrentUser().getUid();
 
 //        DocumentReference documentReference = fStore.collection("Users").document(useId);
+
+
+        //Retrieve login user details
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(useId);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -90,6 +93,7 @@ public class ViewUserProfile extends AppCompatActivity {
     }
 
 
+    //Update login user details
     public void upDate(View view) {
         String name, mail;
 
@@ -112,15 +116,19 @@ public class ViewUserProfile extends AppCompatActivity {
     }
 
 
+
+    //Deactivate user account
     public void Delete(View view){
+
+        //Create alert box to confirm deactivate request
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Confirm Delete");
         builder.setMessage("Are You Sure");
 
-
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
 
+            //If user entered yes button run this part
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(useId);
@@ -144,6 +152,7 @@ public class ViewUserProfile extends AppCompatActivity {
             }
         });
 
+        //If user entered No Button run this part
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

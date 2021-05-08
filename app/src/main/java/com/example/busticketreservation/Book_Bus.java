@@ -143,6 +143,7 @@ public class Book_Bus extends AppCompatActivity {
 
 
 
+    //calculate final bill using num of seats
     public void calFinalBill(View view){
         numSeat = Integer.parseInt(txtNoSeat.getText().toString());
         totBill = baseBill*numSeat;
@@ -151,6 +152,7 @@ public class Book_Bus extends AppCompatActivity {
     }
 
 
+    //create final bill
     public void AddFinalBill(View view){
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Final_Bill");

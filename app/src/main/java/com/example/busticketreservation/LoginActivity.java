@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+    //if Don't have account redirect to register page
     public void register(View view){
         progressBar.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this,RegisterActivity.class);
@@ -59,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+    //Login
     public void Login(View view){
         progressBar.setVisibility(View.VISIBLE);
 
@@ -108,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
             });
         }
     }
+
 
 //
 //    public void signOut(View view){
