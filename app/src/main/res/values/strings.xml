@@ -47,6 +47,11 @@
     <string name="bt1">ADD BUS</string>
     <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
     <string name="bt2">EDIT BUS</string>
+    <string name="bt3">DELETE </string>
+    <string name="tvv3">Bus ID</string>
+    <string name="tvv4">Route ID</string>
+    <string name="tvv5">Licence Number</string>
+    <string name="tvv6">Number Of Seats</string>
 
 
     <!--Hashen-->
