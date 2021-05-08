@@ -20,7 +20,8 @@
 
 
         <activity
-            android:name=".TripManager.TripMain">
+            android:name=".TripManager.TripMain"
+            android:theme="@style/AppTheme.NoActionBarHash">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,13 +31,8 @@
         </activity>
 
         <activity
-            android:name=".Admin.adminTest"
+            android:name=".Admin.AdminMain"
             android:theme="@style/AppTheme.NoActionBarHash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 
@@ -51,6 +47,7 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             >
+
         </activity>
         <activity android:name=".Select_Bus" />
         <activity
@@ -58,7 +55,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>
