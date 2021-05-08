@@ -72,5 +72,7 @@
     <string name="hintPriceAdmin"> Price</string>
     <string name="admin_btn_submit">submit</string>
     <string name="addRoute">Add New Route</string>
+    <string name="allRoutes">Click Route To View Details</string>
+    <string name="title">All Routes</string>
 
 </resources>
