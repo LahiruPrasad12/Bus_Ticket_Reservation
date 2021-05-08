@@ -72,5 +72,26 @@
     <string name="hintPriceAdmin"> Price</string>
     <string name="admin_btn_submit">submit</string>
     <string name="addRoute">Add New Route</string>
+    <string name="select_route">Select Route</string>
+
+
+
+
+    <!--    pamoda-->
+
+
+
+        <string-array name="bus_name">
+            <item>Bus 01</item>
+            <item>Bus 02</item>
+            <item>Bus 03</item>
+            <item>Bus 04</item>
+            <item>Bus 05</item>
+            <item>Bus 06</item>
+            <item>Bus 07</item>
+            <item>Bus 08</item>
+        </string-array>
+
+
 
 </resources>

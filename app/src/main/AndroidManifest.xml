@@ -17,26 +17,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
 
-
-
-        <activity
-            android:name=".TripManager.TripMain"
+        <activity android:name=".TripManager.ViewTrips"
             android:theme="@style/AppTheme.NoActionBarHash">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".Admin.AdminMain"
-            android:theme="@style/AppTheme.NoActionBarHash">
+        <activity android:name=".TripManager.AddTrips" />
+        <activity android:name=".TripManager.SelectRoutesTm" />
 
-        </activity>
 
-        <activity android:name=".hashTest" />
+<!--        <activity-->
+<!--            android:name=".TripManager.TripMain"-->
+<!--            android:theme="@style/AppTheme.NoActionBarHash">-->
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+<!--        </activity>-->
+
+
+
+
+<!--        <activity-->
+<!--            android:name=".Admin.AdminMain"-->
+<!--            android:theme="@style/AppTheme.NoActionBarHash" />-->
+<!--        <activity android:name=".hashTest" />-->
+
         <activity
             android:name=".ViewUserProfile"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -47,7 +59,6 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             >
-
         </activity>
         <activity android:name=".Select_Bus" />
         <activity
@@ -55,9 +66,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
