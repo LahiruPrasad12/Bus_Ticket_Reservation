@@ -37,7 +37,7 @@
 
 
             <TextView
-                android:id="@+id/admin_txt_add_rout"
+                android:id="@+id/admin_txt_update_rout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -60,7 +60,7 @@
                 android:icon="@drawable/ic_route_no"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_rout" />
+                app:layout_constraintTop_toBottomOf="@+id/admin_txt_update_rout" />
 
             <EditText
                 android:id="@+id/admin_edit_from"

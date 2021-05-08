@@ -5,9 +5,13 @@ import com.example.busticketreservation.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ViewRoute extends AppCompatActivity {
+
+    Button editBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,19 @@ public class ViewRoute extends AppCompatActivity {
         tvFrom.setText(route.getFrom());
         tvTo.setText(route.getTo());
         tvPrice.setText(String.valueOf(route.getPrice()));
+
+
+        //redirect to update route activity when edit button is clicked
+        editBtn = (Button) findViewById(R.id.admin_btn_editRoute);
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("edit button clicked");
+                Intent intent = new Intent(getApplicationContext(), UpdateRoute.class);
+                intent.putExtra("routeObj", route);
+                startActivity(intent);
+            }
+        });
 
 
     }

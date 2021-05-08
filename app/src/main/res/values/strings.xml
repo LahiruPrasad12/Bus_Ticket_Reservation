@@ -87,5 +87,7 @@
     <string name="admin_price">Price:</string>
     <string name="admin_btn_edit">Edit</string>
     <string name="admin_btn_delete">Delete</string>
+    <string name="updateRoute">Update Route</string>
+    <string name="btn_update">Save And Update</string>
 
 </resources>
