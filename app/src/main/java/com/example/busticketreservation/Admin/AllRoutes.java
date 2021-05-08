@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -33,7 +35,11 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
     DatabaseReference database;
     MyAdapter myAdapter;
     ArrayList<Routes> list;
+
+    //click listener for card items
+    private MyAdapter.RecyclerViewClickListener listener;
     //new over
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +65,16 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
         toggle.syncState();
 
         //new start
+
+        //creating onclick listener to item card
+        setOnClickListener();
         recyclerView = findViewById(R.id.routeList);
         database = FirebaseDatabase.getInstance().getReference("Routes_Admin");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        myAdapter = new MyAdapter(this,list);
+        myAdapter = new MyAdapter(this,list,listener);
         recyclerView.setAdapter(myAdapter);
 
         database.addValueEventListener(new ValueEventListener() {
@@ -87,6 +96,17 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
         });
         //new over
 
+    }
+
+    private void setOnClickListener() {
+        listener = new MyAdapter.RecyclerViewClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), ViewRoute.class);
+                intent.putExtra("routeNo", list.get(position).getRouteNo());
+                startActivity(intent);
+            }
+        };
     }
 
     @Override
@@ -122,3 +142,6 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
 
     }
 }
+
+
+
