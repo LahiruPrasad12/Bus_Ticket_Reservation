@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
+            <!--                id is wrong-->
             <TextView
                 android:id="@+id/admin_txt_update_rout"
                 android:layout_width="wrap_content"
