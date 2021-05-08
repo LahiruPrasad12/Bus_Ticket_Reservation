@@ -24,7 +24,7 @@ public class TripMain extends AppCompatActivity implements NavigationView.OnNavi
         setContentView(R.layout.activity_trip_main);
 
 //      using the toolbar as the action bar
-        Toolbar toolbar = findViewById(R.id.hash_toolbar);
+        Toolbar toolbar = findViewById(R.id.pamo_toolbar);
         setSupportActionBar(toolbar);
 
 //      getting the drawer layout
@@ -38,6 +38,7 @@ public class TripMain extends AppCompatActivity implements NavigationView.OnNavi
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //start all routes fragment immediately when main activity is started
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.pamo_fragment_container,
                     new ViewTripsFragment()).commit();
