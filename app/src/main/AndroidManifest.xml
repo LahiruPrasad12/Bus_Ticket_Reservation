@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".Admin.UpdateRoute"></activity>
+        <activity android:name=".Admin.UpdateRoute"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Admin.ViewRoute"></activity>
         <activity android:name=".BusOwner.ViewBus" />
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
