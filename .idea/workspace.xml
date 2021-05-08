@@ -20,12 +20,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="update Update&amp;deleteBus layout and Create ViewBus layout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_bus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_bus.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_bus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_bus.xml" afterDir="false" />
-    </list>
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="update AddBus layout and edit_text_boder.xml drawable file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620398656250</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update AddBus layout and edit_text_boder.xml drawable file">
+      <created>1620419856983</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620419856983</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +316,8 @@
     <MESSAGE value="UpdateAndDeleteBus.java and strings.xml" />
     <MESSAGE value="UPDATE UpdateAndDeleteBus layout" />
     <MESSAGE value="update Update&amp;deleteBus layout and Create ViewBus layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Update&amp;deleteBus layout and Create ViewBus layout" />
+    <MESSAGE value="update AddBus layout and edit_text_boder.xml drawable file" />
+    <option name="LAST_COMMIT_MESSAGE" value="update AddBus layout and edit_text_boder.xml drawable file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="436" y="155" key="#PSD" timestamp="1620330551329">
