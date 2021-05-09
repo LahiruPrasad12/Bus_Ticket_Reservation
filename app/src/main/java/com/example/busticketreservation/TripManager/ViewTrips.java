@@ -1,42 +1,73 @@
 package com.example.busticketreservation.TripManager;
 
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.busticketreservation.R;
+import com.example.busticketreservation.ViewUserProfile;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ViewTrips extends AppCompatActivity {
 
-    private DrawerLayout drawer;
+    RecyclerView recyclerView;
+    LinearLayoutManager layoutManager;
+    List<TripsModelClass>tripList;
+    Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_trips);
 
-//      using the toolbar as the action bar
-        Toolbar toolbar = findViewById(R.id.pamo_toolbar);
-        setSupportActionBar(toolbar);
-
-//      get the menu button in the top left corner
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
+        iniData();
+        iniRecyclerView();
 
 
     }
 
+    private void iniData() {
+        tripList = new ArrayList<>();
+
+        tripList.add(new TripsModelClass(002,"09/05/2020","14.30","20.30","ZA5563"));
+        tripList.add(new TripsModelClass(002,"09/05/2020","14.30","20.30","ZA5563"));
+        tripList.add(new TripsModelClass(002,"09/05/2020","14.30","20.30","ZA5563"));
+    }
+
+    private void iniRecyclerView() {
+
+        recyclerView = findViewById(R.id.view_trips_recycler);
+        layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(RecyclerView.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter=new Adapter(tripList);
+        recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+    }
+
 }
+
+
 
 
 

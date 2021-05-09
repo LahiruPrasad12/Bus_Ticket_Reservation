@@ -17,38 +17,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
 
-        <activity android:name=".TripManager.ViewTrips"
-            android:theme="@style/AppTheme.NoActionBarHash">
-
+        <activity android:name=".TripManager.TripMainActivity">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".TripManager.ViewTrips"> </activity>
+
         <activity android:name=".TripManager.AddTrips" />
-        <activity android:name=".TripManager.SelectRoutesTm" />
-
-
-<!--        <activity-->
-<!--            android:name=".TripManager.TripMain"-->
-<!--            android:theme="@style/AppTheme.NoActionBarHash">-->
-
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-
-<!--        </activity>-->
-
-
-
-
-<!--        <activity-->
-<!--            android:name=".Admin.AdminMain"-->
-<!--            android:theme="@style/AppTheme.NoActionBarHash" />-->
-<!--        <activity android:name=".hashTest" />-->
-
+        <activity android:name=".TripManager.SelectRoutesTm" /> <!-- <activity -->
+        <!-- android:name=".TripManager.TripMain" -->
+        <!-- android:theme="@style/AppTheme.NoActionBarHash"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".Admin.AdminMain" -->
+        <!-- android:theme="@style/AppTheme.NoActionBarHash" /> -->
+        <!-- <activity android:name=".hashTest" /> -->
         <activity
             android:name=".ViewUserProfile"
             android:theme="@style/AppTheme.NoActionBar" />
