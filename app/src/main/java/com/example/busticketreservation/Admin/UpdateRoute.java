@@ -103,7 +103,6 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
             }
         });
 
-
     }
 
     @Override
