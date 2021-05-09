@@ -47,6 +47,11 @@
     <string name="bt1">ADD BUS</string>
     <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
     <string name="bt2">EDIT BUS</string>
+    <string name="bt3">DELETE </string>
+    <string name="tvv3">Bus ID</string>
+    <string name="tvv4">Route ID</string>
+    <string name="tvv5">Licence Number</string>
+    <string name="tvv6">Number Of Seats</string>
 
 
     <!--Hashen-->
@@ -72,26 +77,21 @@
     <string name="hintPriceAdmin"> Price</string>
     <string name="admin_btn_submit">submit</string>
     <string name="addRoute">Add New Route</string>
-    <string name="select_route">Select Route</string>
-
-
+    <string name="allRoutes">Click Route To View Details</string>
+    <string name="title">All Routes</string>
 
 
     <!--    pamoda-->
-
-
-
-        <string-array name="bus_name">
-            <item>Bus 01</item>
-            <item>Bus 02</item>
-            <item>Bus 03</item>
-            <item>Bus 04</item>
-            <item>Bus 05</item>
-            <item>Bus 06</item>
-            <item>Bus 07</item>
-            <item>Bus 08</item>
-        </string-array>
-
+    <string name="welcome_trip_manager">Welcome Trip Manager</string>
+    <string name="view_trips">View Trips</string>
+    <string name="add_trip">Add Trip</string>
+    <string name="add_trip_id">Add Trip ID</string>
+    <string name="add_date">Add Date</string>
+    <string name="depature_time">Depature Time</string>
+    <string name="arrival_time">Arrival Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="root_id">Root ID :</string>
+    <string name="select_route_to_add_trip">Select Route To Add Trip</string>
 
 
 </resources>
