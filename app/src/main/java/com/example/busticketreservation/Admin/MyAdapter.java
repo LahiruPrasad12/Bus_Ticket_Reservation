@@ -18,9 +18,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     ArrayList<Routes> list;
 
-    public MyAdapter(Context context, ArrayList<Routes> list) {
+    //for onclick card
+    //had to make this static
+    private static RecyclerViewClickListener listener;
+
+    public MyAdapter(Context context, ArrayList<Routes> list, RecyclerViewClickListener listener) {
         this.context = context;
         this.list = list;
+        this.listener = listener;
     }
 
     @NonNull
@@ -42,15 +47,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return list.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
         TextView routeNo;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             routeNo = itemView.findViewById(R.id.tvRouteNo);
+            itemView.setOnClickListener(this);
 
         }
+        //for onclick card
+        @Override
+        public void onClick(View view) {
+            //had to make listner static in the declaration
+            listener.onClick(view, getAdapterPosition());
+        }
+    }
+
+    //implementation for card onclick listener
+    public interface RecyclerViewClickListener{
+            void onClick(View v, int position);
     }
 }

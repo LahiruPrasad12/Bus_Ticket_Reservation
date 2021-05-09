@@ -79,6 +79,32 @@
     <string name="addRoute">Add New Route</string>
     <string name="allRoutes">Click Route To View Details</string>
     <string name="title">All Routes</string>
+    <string name="view_routes">Route Preview</string>
+    <string name="admin_route_no">Route No: </string>
+    <string name="from">From</string>
+    <string name="admin_from">From:</string>
+    <string name="admin_to">To:</string>
+    <string name="admin_price">Price:</string>
+    <string name="admin_btn_edit">Edit</string>
+    <string name="admin_btn_delete">Delete</string>
+    <string name="updateRoute">Update Route</string>
+    <string name="btn_update">Update</string>
+    <string name="addUser">Add New User</string>
+
+    <string name="admin_hint_type">Enter User Type</string>
+    <string name="admin_hint_name">Name</string>
+    <string name="admin_hint_contact">Contact Number</string>
+    <string name="admin_hint_email">Email Address</string>
+    <string name="admin_hint_pwd">Password</string>
+    <string name="all_users">Select User Type</string>
+
+    <string name="user_type">Type:</string>
+    <string name="user_name">Name:</string>
+    <string name="user_contact">Phone:</string>
+    <string name="user_email">Email:</string>
+    <string name="tool_bar_title">Book My Bus</string>
+    <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
+
 
 
     <!--    pamoda-->

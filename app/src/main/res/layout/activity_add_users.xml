@@ -19,20 +19,207 @@
 
         <!--creating a diffferent toolbar-->
         <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/hash_dark_blue"
             android:id="@+id/hash_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/tool_bar_color"
+            android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:elevation="4dp" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/baloo_thambi"
+                    android:text="@string/tool_bar_title"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/toolbar_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/architects_daughter"
+                    android:text="@string/tool_bar_subtitle"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
 
         <!--        creating the frame layout-->
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="this is add users"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/admin_txt_add_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/baloo_thambi"
+                android:text="@string/addUser"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <EditText-->
+<!--                android:id="@+id/user_type"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/edit_text_width_40dp"-->
+<!--                android:layout_marginStart="120dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:background="@drawable/edit_text_rectangle"-->
+<!--                android:ems="10"-->
+<!--                android:hint="@string/admin_hint_type"-->
+<!--                android:icon="@drawable/ic_route_no"-->
+<!--                android:inputType="textPersonName"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user" />-->
+            <Spinner
+                android:id="@+id/user_type"
+                android:layout_width="215dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:ems="10"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user" />
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/admin_hint_name"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/user_type"
+                app:layout_constraintTop_toBottomOf="@+id/user_type" />
+
+            <EditText
+                android:id="@+id/contact_no"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/admin_hint_contact"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/user_name"
+                app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/admin_hint_email"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/contact_no"
+                app:layout_constraintTop_toBottomOf="@+id/contact_no" />
+
+            <EditText
+                android:id="@+id/pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/admin_hint_pwd"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <Button
+                android:id="@+id/admin_btn_addRoute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/admin_rounded_btn"
+                android:text="@string/admin_btn_submit"
+                android:textColor="@color/hash_light_blue"
+                app:layout_constraintEnd_toEndOf="@+id/pwd"
+                app:layout_constraintTop_toBottomOf="@+id/pwd"
+                tools:text="@string/admin_btn_submit" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/user_name"
+                app:layout_constraintEnd_toStartOf="@+id/user_name"
+                app:layout_constraintTop_toTopOf="@+id/user_name"
+                app:srcCompat="@drawable/ic_adduser_name" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_no"
+                app:layout_constraintEnd_toStartOf="@+id/contact_no"
+                app:layout_constraintTop_toTopOf="@+id/contact_no"
+                app:srcCompat="@drawable/ic_adduser_phone" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/email"
+                app:layout_constraintEnd_toStartOf="@+id/email"
+                app:layout_constraintTop_toTopOf="@+id/email"
+                app:srcCompat="@drawable/ic_baseline_email_24" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/user_type"
+                app:layout_constraintEnd_toStartOf="@+id/user_type"
+                app:layout_constraintTop_toTopOf="@+id/user_type"
+                app:srcCompat="@drawable/ic_adduser_type" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/pwd"
+                app:layout_constraintEnd_toStartOf="@+id/pwd"
+                app:layout_constraintTop_toTopOf="@+id/pwd"
+                app:srcCompat="@drawable/ic_baseline_password_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <!--    creation of the navigation view-->
