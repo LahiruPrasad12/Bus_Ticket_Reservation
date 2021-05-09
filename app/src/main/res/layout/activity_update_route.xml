@@ -29,13 +29,11 @@
 
 
         <!--        creating the frame layout-->
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--                id is wrong-->
+
             <TextView
                 android:id="@+id/admin_txt_update_rout"
                 android:layout_width="wrap_content"
@@ -43,7 +41,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/baloo_thambi"
-                android:text="@string/addRoute"
+                android:text="@string/updateRoute"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -99,12 +97,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />
 
             <Button
-                android:id="@+id/admin_btn_addRoute"
+                android:id="@+id/admin_btn_updateRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
                 android:background="@drawable/admin_rounded_btn"
-                android:text="@string/admin_btn_submit"
+                android:text="@string/btn_update"
                 android:textColor="@color/hash_light_blue"
                 app:layout_constraintEnd_toEndOf="@+id/admin_edit_price"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_price"

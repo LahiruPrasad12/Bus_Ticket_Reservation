@@ -4,50 +4,68 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.busticketreservation.R;
-import com.example.busticketreservation.ViewUserProfile;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import java.util.ArrayList;
+public class UpdateRoute extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-public class AllRoutes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+    EditText routeNOE, fromE, toE, priceE;
     private DrawerLayout drawer;
-
-    //new start
-    RecyclerView recyclerView;
-    DatabaseReference database;
-    MyAdapter myAdapter;
-    ArrayList<Routes> list;
-
-    //click listener for card items
-    private MyAdapter.RecyclerViewClickListener listener;
-    //new over
-
+    Button updateButton;
+    DatabaseReference dbRef;
+    Routes routes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_routes);
+        setContentView(R.layout.activity_update_route);
 
-//      using the toolbar as the action bar
+        //setting current text into edit text fields
+        routeNOE = findViewById(R.id.admin_edit_routeno);
+        fromE = findViewById(R.id.admin_edit_from);
+        toE = findViewById(R.id.admin_edit_to);
+        priceE = findViewById(R.id.admin_edit_price);
+
+        updateButton = findViewById(R.id.admin_btn_updateRoute);
+
+        //Initializing string variables to get from intent
+        String routNo = "";
+        String from = "";
+        String to = "";
+        Integer price = 0;
+
+        //Getting Intent with values
+        Intent i =getIntent();
+        Routes route = (Routes)i.getSerializableExtra("routeObj");
+
+        //assigning intent values to variables
+        routNo = route.getRouteNo();
+        from = route.getFrom();
+        to = route.getTo();
+        price = route.getPrice();
+
+        //changing text of text views according to the variables
+        routeNOE.setText(route.getRouteNo());
+        fromE.setText(route.getFrom());
+        toE.setText(route.getTo());
+        priceE.setText(String.valueOf(route.getPrice()));
+
+
+        //      using the toolbar as the action bar
         Toolbar toolbar = findViewById(R.id.hash_toolbar);
         setSupportActionBar(toolbar);
 
@@ -65,54 +83,27 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        //new start
 
-        //creating onclick listener to item card
-        setOnClickListener();
-        recyclerView = findViewById(R.id.routeList);
-        database = FirebaseDatabase.getInstance().getReference("Routes_Admin");
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        list = new ArrayList<>();
-        myAdapter = new MyAdapter(this,list,listener);
-        recyclerView.setAdapter(myAdapter);
-
-        database.addValueEventListener(new ValueEventListener() {
+//        update route button onClickListener
+        updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
+            public void onClick(View view) {
+                dbRef = FirebaseDatabase.getInstance().getReference();
+                try {
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("routeNo").setValue(routeNOE.getText().toString().trim());
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("from").setValue(fromE.getText().toString().trim());
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("to").setValue(toE.getText().toString().trim());
+                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("price").setValue(Integer.parseInt(priceE.getText().toString().trim()));
 
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
+                } catch (NumberFormatException nfe) {
+                    Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
 
-                    Routes routes = dataSnapshot.getValue(Routes.class);
-                    list.add(routes);
                 }
-                myAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-        //new over
 
-    }
 
-    private void setOnClickListener() {
-        listener = new MyAdapter.RecyclerViewClickListener() {
-            @Override
-            public void onClick(View v, int position) {
-
-                Intent intent = new Intent(getApplicationContext(), ViewRoute.class);
-                intent.putExtra("routeObj", list.get(position));
-                startActivity(intent);
-
-//                Intent intent = new Intent(getApplicationContext(), ViewRoute.class);
-//                intent.putExtra("routeNo", list.get(position).getRouteNo());
-//                startActivity(intent);
-            }
-        };
     }
 
     @Override
@@ -148,6 +139,3 @@ public class AllRoutes extends AppCompatActivity implements NavigationView.OnNav
 
     }
 }
-
-
-

@@ -1,6 +1,8 @@
 package com.example.busticketreservation.Admin;
 
-public class Routes {
+import java.io.Serializable;
+
+public class Routes implements Serializable {
 
     private String routeNo;
     private String from;
