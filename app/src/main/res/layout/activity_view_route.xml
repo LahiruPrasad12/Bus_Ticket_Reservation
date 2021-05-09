@@ -194,7 +194,7 @@
 
             <Button
                 android:id="@+id/admin_btn_editRoute"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/admin_rounded_btn"
@@ -207,7 +207,7 @@
 
             <Button
                 android:id="@+id/admin_btn_deleteRoute"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_delete"

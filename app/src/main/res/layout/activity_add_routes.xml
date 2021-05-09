@@ -57,6 +57,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintRoutNoAdmin"
+                android:paddingLeft="10dp"
                 android:icon="@drawable/ic_route_no"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +71,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintFromAdmin"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_routeno"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_routeno" />
@@ -82,6 +84,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintToAdmin"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_from"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_from" />
@@ -94,6 +97,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintPriceAdmin"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_to"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />

@@ -46,19 +46,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+<!--            <EditText-->
+<!--                android:id="@+id/user_type"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/edit_text_width_40dp"-->
+<!--                android:layout_marginStart="120dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:background="@drawable/edit_text_rectangle"-->
+<!--                android:ems="10"-->
+<!--                android:hint="@string/admin_hint_type"-->
+<!--                android:icon="@drawable/ic_route_no"-->
+<!--                android:inputType="textPersonName"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user" />-->
+            <Spinner
                 android:id="@+id/user_type"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_width="215dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="120dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/admin_hint_type"
-                android:icon="@drawable/ic_route_no"
-                android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user" />
+                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
 
             <EditText
                 android:id="@+id/user_name"
@@ -68,6 +79,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_name"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/user_type"
                 app:layout_constraintTop_toBottomOf="@+id/user_type" />
@@ -80,6 +92,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_contact"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/user_name"
                 app:layout_constraintTop_toBottomOf="@+id/user_name" />
@@ -92,6 +105,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_email"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/contact_no"
                 app:layout_constraintTop_toBottomOf="@+id/contact_no" />
@@ -104,6 +118,7 @@
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_pwd"
+                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/email"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
@@ -112,7 +127,7 @@
                 android:id="@+id/admin_btn_addRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="38dp"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_submit"
                 android:textColor="@color/hash_light_blue"
