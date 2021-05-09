@@ -100,10 +100,10 @@
 
     <string name="user_type">Type:</string>
     <string name="user_name">Name:</string>
-    <string name="user_contact">Contact:</string>
+    <string name="user_contact">Phone:</string>
     <string name="user_email">Email:</string>
-
-
+    <string name="tool_bar_title">Book My Bus</string>
+    <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
 
 
 </resources>

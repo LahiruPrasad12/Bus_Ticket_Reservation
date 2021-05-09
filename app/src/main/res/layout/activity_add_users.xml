@@ -19,13 +19,47 @@
 
         <!--creating a diffferent toolbar-->
         <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/hash_dark_blue"
             android:id="@+id/hash_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/tool_bar_color"
+            android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:elevation="4dp" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/baloo_thambi"
+                    android:text="@string/tool_bar_title"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/toolbar_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/architects_daughter"
+                    android:text="@string/tool_bar_subtitle"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
 
         <!--        creating the frame layout-->
@@ -39,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/baloo_thambi"
                 android:text="@string/addUser"
                 android:textSize="24sp"
@@ -64,23 +98,23 @@
                 android:layout_width="215dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="120dp"
-                android:layout_marginTop="50dp"
-                android:ems="10"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user"
+                android:layout_marginTop="15dp"
                 android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown"/>
+                android:ems="10"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user" />
 
             <EditText
                 android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_name"
-                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/user_type"
                 app:layout_constraintTop_toBottomOf="@+id/user_type" />
 
@@ -88,12 +122,12 @@
                 android:id="@+id/contact_no"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_contact"
-                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/user_name"
                 app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
@@ -101,12 +135,12 @@
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_email"
-                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/contact_no"
                 app:layout_constraintTop_toBottomOf="@+id/contact_no" />
 
@@ -114,12 +148,12 @@
                 android:id="@+id/pwd"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/admin_hint_pwd"
-                android:paddingLeft="10dp"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/email"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -127,7 +161,7 @@
                 android:id="@+id/admin_btn_addRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_submit"
                 android:textColor="@color/hash_light_blue"
