@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/addtripid"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="56dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/add_date"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="60dp"
@@ -48,7 +48,7 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/addtripid" />
 
     <ImageView
         android:id="@+id/image5"
@@ -70,7 +70,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="60dp"
         android:background="@color/whiteTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/addtripid"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
@@ -88,7 +88,7 @@
         android:spinnerMode="dropdown"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_ar_time" />
 
     <ImageView
         android:id="@+id/image2"
@@ -96,7 +96,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="60dp"
         android:background="@color/whiteTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+        app:layout_constraintEnd_toStartOf="@+id/add_date"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image1"
@@ -108,7 +108,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="60dp"
         android:background="@color/whiteTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toStartOf="@+id/txt_dep_time"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image2"
@@ -120,14 +120,14 @@
         android:layout_height="33dp"
         android:layout_marginTop="65dp"
         android:background="@color/whiteTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toStartOf="@+id/txt_ar_time"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image3"
         app:srcCompat="@drawable/ic_clock" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/txt_dep_time"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="44dp"
@@ -139,10 +139,10 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/add_date" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/txt_ar_time"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="60dp"
@@ -154,10 +154,10 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dep_time" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button_add_trip"
         android:layout_width="139dp"
         android:layout_height="55dp"
         android:layout_marginEnd="36dp"
@@ -177,7 +177,7 @@
         android:text="@string/cancel"
         android:textColor="@color/hash_light_blue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/button_add_trip"
         app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent" />
 
