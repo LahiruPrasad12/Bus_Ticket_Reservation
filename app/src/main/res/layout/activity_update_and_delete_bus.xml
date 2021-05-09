@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/register_bk_color"
-    android:backgroundTint="@color/register_bk_color"
+    android:background="@color/login_bk_color"
     tools:context=".BusOwner.UpdateAndDeleteBus">
 
     <TextView
@@ -15,29 +14,19 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/tvv2"
-        android:textColor="@color/login_bk_color"
+        android:textColor="@color/hash_middle_blue"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="235dp"
-        android:layout_height="376dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="92dp"
-        android:background="@color/login_bk_color"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/pt5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_width="208dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="128dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +34,11 @@
 
     <EditText
         android:id="@+id/pt6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_width="208dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="212dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +46,11 @@
 
     <EditText
         android:id="@+id/pt7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_width="208dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="300dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,10 +58,11 @@
 
     <EditText
         android:id="@+id/pt8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_width="208dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="380dp"
+        android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,22 +71,26 @@
     <Button
         android:id="@+id/bt2"
         android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="480dp"
-        android:backgroundTint="@color/primaryTextColor"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="492dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:backgroundTint="@color/hash_dark_blue"
         android:text="@string/bt2"
+        android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bt3"
         android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="480dp"
-        android:backgroundTint="@color/primaryTextColor"
+        android:layout_height="45dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="492dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:backgroundTint="@color/hash_dark_blue"
         android:text="@string/bt3"
+        android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,11 +98,12 @@
         android:id="@+id/tvv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="104dp"
         android:text="@string/tvv3"
-        android:textColor="@color/darkTextColor"
+        android:textColor="@color/hash_dark_blue"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,11 +111,12 @@
         android:id="@+id/tvv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="188dp"
         android:text="@string/tvv4"
-        android:textColor="@color/darkTextColor"
+        android:textColor="@color/hash_dark_blue"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,11 +124,12 @@
         android:id="@+id/tvv5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="276dp"
         android:text="@string/tvv5"
         android:textColor="@color/darkTextColor"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,11 +137,52 @@
         android:id="@+id/tvv6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="356dp"
         android:text="@string/tvv6"
-        android:textColor="@color/darkTextColor"
+        android:textColor="@color/hash_dark_blue"
         android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/im2_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/im3_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/im4_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="384dp"
+        android:background="@drawable/ic_baseline_airline_seat_recline_normal_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

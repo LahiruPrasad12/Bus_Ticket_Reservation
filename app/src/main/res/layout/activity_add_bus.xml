@@ -21,10 +21,10 @@
 
     <EditText
         android:id="@+id/pt1"
-        android:layout_width="216dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="104dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt"
@@ -34,10 +34,10 @@
 
     <EditText
         android:id="@+id/pt2"
-        android:layout_width="211dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="180dp"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="184dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt2"
@@ -47,9 +47,9 @@
 
     <EditText
         android:id="@+id/pt3"
-        android:layout_width="213dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="104dp"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="132dp"
         android:layout_marginTop="272dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
@@ -60,10 +60,10 @@
 
     <EditText
         android:id="@+id/pt4"
-        android:layout_width="213dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="360dp"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="356dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt4"
@@ -75,11 +75,53 @@
         android:id="@+id/bt1"
         android:layout_width="122dp"
         android:layout_height="48dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/admin_rounded_btn"
         android:backgroundTint="@color/hash_dark_blue"
         android:text="@string/bt1"
         android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="364dp"
+        android:background="@drawable/ic_baseline_airline_seat_recline_normal_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/im2_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/im3_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/im4_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
