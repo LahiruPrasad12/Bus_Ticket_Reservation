@@ -40,6 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         Routes routes =list.get(position);
         holder.routeNo.setText(routes.getRouteNo());
+
     }
 
     @Override
@@ -49,11 +50,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
-        TextView routeNo;
+         TextView routeNo,Description;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
 
             routeNo = itemView.findViewById(R.id.tvRouteNo);
             itemView.setOnClickListener(this);

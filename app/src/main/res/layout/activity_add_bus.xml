@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".BusOwner.AddBus">
 
+
+
+
+
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
@@ -75,8 +79,8 @@
         android:id="@+id/bt1"
         android:layout_width="122dp"
         android:layout_height="48dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="452dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="464dp"
         android:background="@drawable/admin_rounded_btn"
         android:backgroundTint="@color/hash_dark_blue"
         android:text="@string/bt1"
@@ -121,6 +125,19 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="280dp"
         android:background="@drawable/im4_busowner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="464dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:onClick="View_Bus"
+        android:text="@string/btn3"
+        android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

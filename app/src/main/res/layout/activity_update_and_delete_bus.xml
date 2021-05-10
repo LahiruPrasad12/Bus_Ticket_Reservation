@@ -28,7 +28,11 @@
         android:layout_marginTop="128dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
+        android:hint="ID4567"
         android:inputType="textPersonName"
+        android:textColor="@color/hash_dark_blue"
+        android:textColorHint="@color/hash_dark_blue"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +44,10 @@
         android:layout_marginTop="212dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
+        android:hint="RB46"
         android:inputType="textPersonName"
+        android:textColorHint="@color/hash_dark_blue"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +59,10 @@
         android:layout_marginTop="300dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
+        android:hint="567858V"
         android:inputType="textPersonName"
+        android:textColorHint="@color/hash_dark_blue"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,7 +74,10 @@
         android:layout_marginTop="380dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
+        android:hint="56"
         android:inputType="textPersonName"
+        android:textColorHint="@color/hash_dark_blue"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
