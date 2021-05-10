@@ -19,21 +19,63 @@
 
         <!--creating a diffferent toolbar-->
         <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/hash_dark_blue"
             android:id="@+id/hash_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/tool_bar_color"
+            android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:elevation="4dp" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/baloo_thambi"
+                    android:text="@string/tool_bar_title"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/toolbar_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/architects_daughter"
+                    android:text="@string/tool_bar_subtitle"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
 
         <!--        creating the frame layout-->
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+<!--            heading-->
+<!--            <TextView-->
+<!--                android:id="@+id/heading"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="70dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                tools:ignore="MissingConstraints"-->
+<!--                android:background="@color/hash_middle_blue"/>-->
 
             <!--                id is wrong-->
             <TextView
@@ -53,12 +95,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
                 android:layout_marginStart="120dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintRoutNoAdmin"
                 android:icon="@drawable/ic_route_no"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/admin_txt_update_rout" />
 
@@ -71,6 +114,7 @@
                 android:ems="10"
                 android:hint="@string/hintFromAdmin"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_routeno"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_routeno" />
 
@@ -83,6 +127,7 @@
                 android:ems="10"
                 android:hint="@string/hintToAdmin"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_from"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_from" />
 
@@ -95,6 +140,7 @@
                 android:ems="10"
                 android:hint="@string/hintPriceAdmin"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_to"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />
 
@@ -102,7 +148,7 @@
                 android:id="@+id/admin_btn_addRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_submit"
                 android:textColor="@color/hash_light_blue"

@@ -32,14 +32,12 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
     Routes routes;
 
     private DrawerLayout drawer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_routes);
 
-
-        //        getting reference from xml elements
+        //      getting reference from xml elements
         routeNO = findViewById(R.id.admin_edit_routeno);
         from = findViewById(R.id.admin_edit_from);
         to = findViewById(R.id.admin_edit_to);
@@ -54,7 +52,6 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onClick(View view) {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin");
-
                 try {
                     if (TextUtils.isEmpty(routeNO.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Empty Route No",Toast.LENGTH_SHORT).show();
@@ -78,13 +75,9 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                         Toast.makeText(getApplicationContext(),"Route added Successfully",Toast.LENGTH_SHORT).show();
                         clearControls();
                     }
-
-
-
                 }
                 catch (NumberFormatException nfe){
                     Toast.makeText(getApplicationContext(),"Invalid Price",Toast.LENGTH_SHORT).show();
-
                 }
 
             }
@@ -92,11 +85,11 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
 
 
 
-
-
 //      using the toolbar as the action bar
         Toolbar toolbar = findViewById(R.id.hash_toolbar);
         setSupportActionBar(toolbar);
+        //removing app name from toolbar
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 //        getting the drawer layout
         drawer = findViewById(R.id.hash_drawer_layout);
