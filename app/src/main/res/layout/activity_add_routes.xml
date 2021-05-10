@@ -67,15 +67,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-<!--            heading-->
-<!--            <TextView-->
-<!--                android:id="@+id/heading"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="70dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                tools:ignore="MissingConstraints"-->
-<!--                android:background="@color/hash_middle_blue"/>-->
+            <!--            heading-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="70dp"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                tools:ignore="MissingConstraints"-->
+            <!--                android:background="@color/hash_middle_blue"/>-->
 
             <!--                id is wrong-->
             <TextView
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/baloo_thambi"
                 android:text="@string/addRoute"
                 android:textSize="24sp"
@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
                 android:layout_marginStart="120dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintRoutNoAdmin"
@@ -109,7 +109,7 @@
                 android:id="@+id/admin_edit_from"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintFromAdmin"
@@ -122,7 +122,7 @@
                 android:id="@+id/admin_edit_to"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintToAdmin"
@@ -132,10 +132,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_from" />
 
             <EditText
-                android:id="@+id/admin_edit_price"
+                android:id="@+id/admin_edit_noOfStops"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintPriceAdmin"
@@ -144,16 +144,42 @@
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_to"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />
 
+            <EditText
+                android:id="@+id/admin_edit_basePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/hintPriceAdmin"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/admin_edit_noOfStops"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_noOfStops" />
+
+            <EditText
+                android:id="@+id/admin_edit_stopPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/hintPriceAdmin"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/admin_edit_basePrice"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_basePrice" />
+
             <Button
                 android:id="@+id/admin_btn_addRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_submit"
                 android:textColor="@color/hash_light_blue"
-                app:layout_constraintEnd_toEndOf="@+id/admin_edit_price"
-                app:layout_constraintTop_toBottomOf="@+id/admin_edit_price"
+                app:layout_constraintEnd_toEndOf="@+id/admin_edit_stopPrice"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_stopPrice"
                 tools:text="@string/admin_btn_submit" />
 
             <ImageView
