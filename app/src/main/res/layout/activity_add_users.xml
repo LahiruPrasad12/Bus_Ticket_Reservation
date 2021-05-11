@@ -80,19 +80,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <EditText-->
-<!--                android:id="@+id/user_type"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="@dimen/edit_text_width_40dp"-->
-<!--                android:layout_marginStart="120dp"-->
-<!--                android:layout_marginTop="50dp"-->
-<!--                android:background="@drawable/edit_text_rectangle"-->
-<!--                android:ems="10"-->
-<!--                android:hint="@string/admin_hint_type"-->
-<!--                android:icon="@drawable/ic_route_no"-->
-<!--                android:inputType="textPersonName"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/admin_txt_add_user" />-->
             <Spinner
                 android:id="@+id/user_type"
                 android:layout_width="215dp"
@@ -158,7 +145,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/email" />
 
             <Button
-                android:id="@+id/admin_btn_addRoute"
+                android:id="@+id/admin_btn_addUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

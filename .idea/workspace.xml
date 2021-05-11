@@ -27,8 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="all route management functions completed(updated)">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/busticketreservation/FullRoutePriceTest.java" afterDir="false" />
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="completed test cases for adding new route">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -39,11 +38,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddRoutes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_route.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_route.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_users.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +157,7 @@
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
-  <component name="RunManager" selected="Android JUnit.FullRoutePriceTest.priceCalculation">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="FullRoutePriceTest.priceCalculation" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="BusTicketReservation.app" />
       <extension name="coverage">
@@ -538,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620727345467</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="completed test cases for adding new route">
+      <created>1620731113355</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1620731113355</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -554,7 +559,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="designed layout fragment_add_routes" />
     <MESSAGE value="Created activities instead of fragments to resolve data handling issues" />
     <MESSAGE value="deleted fragment classes" />
     <MESSAGE value="updated layouts with icons" />
@@ -579,17 +583,18 @@
     <MESSAGE value="new add route xml and started changing add route java" />
     <MESSAGE value="completed add with calculation and view specific route" />
     <MESSAGE value="all route management functions completed(updated)" />
-    <option name="LAST_COMMIT_MESSAGE" value="all route management functions completed(updated)" />
+    <MESSAGE value="completed test cases for adding new route" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed test cases for adding new route" />
   </component>
   <component name="WindowStateProjectService">
     <state x="436" y="155" key="#PSD" timestamp="1620330551329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="155" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1620330551329" />
-    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1620710651796">
+    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1620735659459">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1620710651796" />
+    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1620735659459" />
     <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619546793935" />
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620407362624">
       <screen x="0" y="0" width="1536" height="824" />
@@ -623,42 +628,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620678072477" />
-    <state width="1491" height="178" key="GridCell.Tab.0.bottom" timestamp="1620731064368">
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom" timestamp="1620738245980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620731064368" />
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620738245980" />
     <state width="1491" height="176" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="178" key="GridCell.Tab.0.center" timestamp="1620731064368">
+    <state width="1491" height="2" key="GridCell.Tab.0.center" timestamp="1620738245980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620731064368" />
+    <state width="1491" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620738245980" />
     <state width="1491" height="176" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="178" key="GridCell.Tab.0.left" timestamp="1620731064368">
+    <state width="1491" height="2" key="GridCell.Tab.0.left" timestamp="1620738245980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620731064368" />
+    <state width="1491" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620738245980" />
     <state width="1491" height="176" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="178" key="GridCell.Tab.0.right" timestamp="1620731064368">
+    <state width="1491" height="2" key="GridCell.Tab.0.right" timestamp="1620738245980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620731064368" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620738245980" />
     <state width="1491" height="176" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="193" key="GridCell.Tab.1.bottom" timestamp="1620711994262">
+    <state width="1491" height="2" key="GridCell.Tab.1.bottom" timestamp="1620738245981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="193" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620711994262" />
-    <state width="1491" height="193" key="GridCell.Tab.1.center" timestamp="1620711994262">
+    <state width="1491" height="2" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620738245981" />
+    <state width="1491" height="2" key="GridCell.Tab.1.center" timestamp="1620738245981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="193" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620711994262" />
-    <state width="1491" height="193" key="GridCell.Tab.1.left" timestamp="1620711994262">
+    <state width="1491" height="2" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620738245981" />
+    <state width="1491" height="2" key="GridCell.Tab.1.left" timestamp="1620738245980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="193" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620711994262" />
-    <state width="1491" height="193" key="GridCell.Tab.1.right" timestamp="1620711994262">
+    <state width="1491" height="2" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620738245980" />
+    <state width="1491" height="2" key="GridCell.Tab.1.right" timestamp="1620738245981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="193" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620711994262" />
+    <state width="1491" height="2" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620738245981" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1620328750809">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

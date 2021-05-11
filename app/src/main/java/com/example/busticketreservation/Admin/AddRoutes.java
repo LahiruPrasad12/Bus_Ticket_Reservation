@@ -20,23 +20,40 @@ import com.example.busticketreservation.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+public class AddRoutes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-public class AddRoutes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-//    creating objects to get reference from xml file
+    //    creating objects to get reference from xml file
     EditText routeNO, from, to, noOfStops, basePrice, stopPrice;
     int stops, bPrice, sPrice, fullRoutePrice;
     Button addRouteBtn;
     DatabaseReference dbRef;
     Routes routes;
-
     private DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_routes);
 
-        //      getting reference from xml elements
+        //      using the toolbar as the action bar
+        Toolbar toolbar = findViewById(R.id.hash_toolbar);
+        setSupportActionBar(toolbar);
+
+        //      getting the drawer layout
+        drawer = findViewById(R.id.hash_drawer_layout);
+
+        //      listen to click events of the navigation view
+        NavigationView navigationView = findViewById(R.id.hash_nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        //       get the menu button in the top left corner
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+
+        //getting reference from xml elements
         routeNO = findViewById(R.id.admin_edit_routeno);
         from = findViewById(R.id.admin_edit_from);
         to = findViewById(R.id.admin_edit_to);
@@ -45,97 +62,96 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
         stopPrice = findViewById(R.id.admin_edit_stopPrice);
 
         addRouteBtn = findViewById(R.id.admin_btn_addRoute);
-
         routes = new Routes();
 
-        //        add route button onClickListener
+        // add route button onClickListener
         addRouteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                // connecting to the database and referring Routes_Admin table
-                dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin");
-
-                //validating input fields
-                try {
-                    if (TextUtils.isEmpty(routeNO.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty Route No",Toast.LENGTH_SHORT).show();
-
-                    else if(TextUtils.isEmpty(from.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty From",Toast.LENGTH_SHORT).show();
-
-                    else  if (TextUtils.isEmpty(to.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty To",Toast.LENGTH_SHORT).show();
-
-                    else   if(TextUtils.isEmpty(noOfStops.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty noOfStops",Toast.LENGTH_SHORT).show();
-
-                    else   if(TextUtils.isEmpty(basePrice.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty basePrice",Toast.LENGTH_SHORT).show();
-
-                    else   if(TextUtils.isEmpty(stopPrice.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty stopPrice",Toast.LENGTH_SHORT).show();
-
-                    else {
-
-                        //getting inputs into int fields
-                        stops = Integer.parseInt(noOfStops.getText().toString().trim());
-                        bPrice = Integer.parseInt(basePrice.getText().toString().trim());
-                        sPrice = Integer.parseInt(stopPrice.getText().toString().trim());
-
-                        //calling method for calculation
-                        fullRoutePrice = calFullRoutePrice(stops, bPrice, sPrice);
-
-
-                        //setting values to routes object
-                        routes.setRouteNo(routeNO.getText().toString().trim());
-                        routes.setFrom(from.getText().toString().trim());
-                        routes.setTo(to.getText().toString().trim());
-                        routes.setNoOfStops(stops);
-                        routes.setBasePrice(bPrice);
-                        routes.setStopPrice(sPrice);
-                        routes.setFullRoutePrice(fullRoutePrice);
-
-                        //pushing routes object into Routes_Admin table
-                        dbRef.push().setValue(routes);
-                        Toast.makeText(getApplicationContext(),"Route added Successfully",Toast.LENGTH_SHORT).show();
-                        clearControls();
-                    }
-                }
-                catch (NumberFormatException nfe){
-                    Toast.makeText(getApplicationContext(),"Invalid Price",Toast.LENGTH_SHORT).show();
-                }
-
+                insertData(view);
             }
         });
-
-
-
-//      using the toolbar as the action bar
-        Toolbar toolbar = findViewById(R.id.hash_toolbar);
-        setSupportActionBar(toolbar);
-        //removing app name from toolbar
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-//        getting the drawer layout
-        drawer = findViewById(R.id.hash_drawer_layout);
-
-        //        listen to click events of the navigation view
-        NavigationView navigationView = findViewById(R.id.hash_nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
-//        get the menu button in the top left corner
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
     }
 
-    @Override
-//    passing menu item to setNavigationItemSelectedListener
+
+    //method to clear text values when data is inserted
+    protected void clearControls() {
+        routeNO.setText("");
+        from.setText("");
+        to.setText("");
+        noOfStops.setText("");
+        basePrice.setText("");
+        stopPrice.setText("");
+    }
+
+
+    //method to calculate fullRoutePrice
+    public int calFullRoutePrice(int stops, int bPrice, int sPrice) {
+
+        return bPrice + (stops - 1) * sPrice;
+
+    }
+
+
+    //method to insert route data
+    public void insertData(View view) {
+
+        // connecting to the database and referring Routes_Admin table
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin");
+
+        //validating input fields
+        try {
+            if (TextUtils.isEmpty(routeNO.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Empty Route No", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(from.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Empty From", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(to.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Empty To", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(noOfStops.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Empty noOfStops", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(basePrice.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Empty basePrice", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(stopPrice.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Empty stopPrice", Toast.LENGTH_SHORT).show();
+
+            else {
+
+                //getting inputs into int fields
+                stops = Integer.parseInt(noOfStops.getText().toString().trim());
+                bPrice = Integer.parseInt(basePrice.getText().toString().trim());
+                sPrice = Integer.parseInt(stopPrice.getText().toString().trim());
+
+                //calling method for calculation
+                fullRoutePrice = calFullRoutePrice(stops, bPrice, sPrice);
+
+
+                //setting values to routes object
+                routes.setRouteNo(routeNO.getText().toString().trim());
+                routes.setFrom(from.getText().toString().trim());
+                routes.setTo(to.getText().toString().trim());
+                routes.setNoOfStops(stops);
+                routes.setBasePrice(bPrice);
+                routes.setStopPrice(sPrice);
+                routes.setFullRoutePrice(fullRoutePrice);
+
+                //pushing routes object into Routes_Admin table
+                dbRef.push().setValue(routes);
+                Toast.makeText(getApplicationContext(), "Route added Successfully", Toast.LENGTH_SHORT).show();
+                clearControls();
+            }
+        } catch (NumberFormatException nfe) {
+            Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+//        passing menu item to setNavigationItemSelectedListener
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_all_routes:
                 startActivity(new Intent(getApplicationContext(), AllRoutes.class));
                 break;
@@ -157,28 +173,11 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
     @Override
 //    close navigation bar when back button is clicked
     public void onBackPressed() {
-        if(drawer.isDrawerOpen(GravityCompat.START)){
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             super.onBackPressed();
         }
-
-    }
-//method to clear text values when data is inserted
-    protected void clearControls(){
-        routeNO.setText("");
-        from.setText("");
-        to.setText("");
-        noOfStops.setText("");
-        basePrice.setText("");
-        stopPrice.setText("");
-    }
-
-
-    //method to calculate fullRoutePrice
-    public int calFullRoutePrice(int stops, int bPrice, int sPrice){
-
-       return bPrice + (stops-1) * sPrice;
 
     }
 }
