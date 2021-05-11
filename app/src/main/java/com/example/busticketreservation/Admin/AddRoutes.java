@@ -1,19 +1,5 @@
 package com.example.busticketreservation.Admin;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import com.example.busticketreservation.BusOwner.Bus;
-import com.example.busticketreservation.R;
-import com.example.busticketreservation.ViewUserProfile;
-import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -22,6 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.busticketreservation.R;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddRoutes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -85,8 +83,9 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                         bPrice = Integer.parseInt(basePrice.getText().toString().trim());
                         sPrice = Integer.parseInt(stopPrice.getText().toString().trim());
 
-                        //calculation
-                        fullRoutePrice = bPrice + (stops-1) * sPrice;
+                        //calling method for calculation
+                        fullRoutePrice = calFullRoutePrice(stops, bPrice, sPrice);
+
 
                         //setting values to routes object
                         routes.setRouteNo(routeNO.getText().toString().trim());
@@ -166,12 +165,20 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
 
     }
 //method to clear text values when data is inserted
-    private void clearControls(){
+    protected void clearControls(){
         routeNO.setText("");
         from.setText("");
         to.setText("");
         noOfStops.setText("");
         basePrice.setText("");
         stopPrice.setText("");
+    }
+
+
+    //method to calculate fullRoutePrice
+    public int calFullRoutePrice(int stops, int bPrice, int sPrice){
+
+       return bPrice + (stops-1) * sPrice;
+
     }
 }
