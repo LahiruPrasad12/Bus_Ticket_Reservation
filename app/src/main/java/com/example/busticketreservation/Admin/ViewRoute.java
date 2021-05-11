@@ -80,7 +80,7 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin").child("currentItem");
+                dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR");
                 dbRef.removeValue();
                 Toast.makeText(getApplicationContext(), "Successfully delted", Toast.LENGTH_SHORT).show();
             }
