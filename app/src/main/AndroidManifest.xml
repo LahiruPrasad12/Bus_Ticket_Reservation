@@ -23,6 +23,12 @@
         <activity android:name=".BusOwner.ViewBus" />
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
         <activity android:name=".BusOwner.AddBus">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
 
 
         </activity>
@@ -55,17 +61,16 @@
             android:name=".Admin.AllRoutes"
             android:theme="@style/AppTheme.NoActionBarHash">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
 
         </activity>
         <activity
             android:name=".Admin.AddUsers"
             android:theme="@style/AppTheme.NoActionBarHash" />
+
+
+
         <activity
             android:name=".Admin.AllUsers"
             android:theme="@style/AppTheme.NoActionBarHash" />

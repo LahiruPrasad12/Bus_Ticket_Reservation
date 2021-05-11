@@ -80,7 +80,7 @@
         android:layout_width="122dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="524dp"
         android:background="@drawable/admin_rounded_btn"
         android:backgroundTint="@color/hash_dark_blue"
         android:text="@string/bt1"
@@ -132,12 +132,21 @@
         android:id="@+id/btn3"
         android:layout_width="112dp"
         android:layout_height="48dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="524dp"
         android:background="@drawable/admin_rounded_btn"
         android:onClick="View_Bus"
         android:text="@string/btn3"
         android:textColor="@color/hash_light_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="271dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="408dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
