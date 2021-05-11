@@ -129,7 +129,7 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/hintPriceAdmin"
+                android:hint="@string/basePrice"
                 android:paddingLeft="10dp"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_to"

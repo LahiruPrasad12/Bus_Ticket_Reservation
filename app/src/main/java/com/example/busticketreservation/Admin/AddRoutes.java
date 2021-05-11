@@ -26,7 +26,7 @@ import android.widget.Toast;
 public class AddRoutes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 //    creating objects to get reference from xml file
-    EditText routeNO, from, to, price;
+    EditText routeNO, from, to, noOfStops, basePrice, stopPrice;
     Button addRouteBtn;
     DatabaseReference dbRef;
     Routes routes;
@@ -41,7 +41,9 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
         routeNO = findViewById(R.id.admin_edit_routeno);
         from = findViewById(R.id.admin_edit_from);
         to = findViewById(R.id.admin_edit_to);
-        price = findViewById(R.id.admin_edit_price);
+        noOfStops = findViewById(R.id.admin_edit_noOfStops);
+        basePrice = findViewById(R.id.admin_edit_basePrice);
+        stopPrice = findViewById(R.id.admin_edit_stopPrice);
 
         addRouteBtn = findViewById(R.id.admin_btn_addRoute);
 

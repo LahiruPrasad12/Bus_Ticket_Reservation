@@ -74,9 +74,11 @@
     <string name="hintRoutNoAdmin"> Route Number</string>
     <string name="hintFromAdmin"> From</string>
     <string name="hintToAdmin"> To</string>
-    <string name="hintPriceAdmin"> Price</string>
+    <string name="noOfStops"> No Of Stops</string>
+    <string name="basePrice"> Base Price</string>
+    <string name="priceOfStop"> Price For a Stop</string>
     <string name="admin_btn_submit">submit</string>
-    <string name="addRoute">Add New Route</string>
+    <string name="addRoute">New Route</string>
     <string name="allRoutes">Click Route To View Details</string>
     <string name="title">All Routes</string>
     <string name="view_routes">Route Preview</string>
