@@ -73,9 +73,9 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="350dp"
-                android:layout_height="194dp"
-                android:layout_marginTop="100dp"
+                android:layout_width="342dp"
+                android:layout_height="262dp"
+                android:layout_marginTop="85dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="parent"
@@ -86,8 +86,8 @@
                 android:id="@+id/twViewRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="@font/baloo_thambi"
                 android:text="@string/view_routes"
                 android:textSize="24sp"
@@ -133,16 +133,40 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_from_head" />
 
             <TextView
-                android:id="@+id/tv_price_head"
+                android:id="@+id/tv_stops_head"
                 android:layout_width="62dp"
                 android:layout_height="37dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/allerta"
-                android:text="@string/admin_price"
+                android:text="@string/admin_stops"
                 android:textColor="@color/hash_dark_blue"
                 android:textSize="21sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_to_head"
                 app:layout_constraintTop_toBottomOf="@+id/tv_to_head" />
+
+            <TextView
+                android:id="@+id/tv_fullPrice_head"
+                android:layout_width="119dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/admin_fullPrice"
+                android:textColor="@color/hash_dark_blue"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_stops_head"
+                app:layout_constraintTop_toBottomOf="@+id/tv_stops_head" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_sPrice_head"-->
+<!--                android:layout_width="128dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:fontFamily="@font/allerta"-->
+<!--                android:text="@string/admin_sPrice"-->
+<!--                android:textColor="@color/hash_dark_blue"-->
+<!--                android:textSize="21sp"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_bPrice_head"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_bPrice_head" />-->
 
 
             <TextView
@@ -174,13 +198,31 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_from" />
 
             <TextView
-                android:id="@+id/tv_price"
+                android:id="@+id/tv_stops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:textSize="21sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_stops_head"
+                app:layout_constraintStart_toStartOf="@+id/tv_to" />
+
+            <TextView
+                android:id="@+id/tv_fullPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Price"
                 android:textSize="21sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/tv_price_head"
-                app:layout_constraintStart_toStartOf="@+id/tv_to" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_fullPrice_head"
+                app:layout_constraintStart_toStartOf="@+id/tv_stops" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_sPrice"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="sPrice"-->
+<!--                android:textSize="21sp"-->
+<!--                app:layout_constraintBaseline_toBaselineOf="@+id/tv_sPrice_head"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_bPrice" />-->
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -216,21 +258,44 @@
                 app:srcCompat="@drawable/ic_end_location" />
 
             <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_stops_head"
+                app:layout_constraintEnd_toStartOf="@+id/tv_stops_head"
+                app:layout_constraintTop_toTopOf="@+id/tv_stops_head"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/ic_baseline_stop_24" />
+
+
+            <ImageView
                 android:id="@+id/imageView14"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_marginEnd="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_price_head"
-                app:layout_constraintEnd_toStartOf="@+id/tv_price_head"
-                app:layout_constraintTop_toTopOf="@+id/tv_price_head"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_fullPrice_head"
+                app:layout_constraintEnd_toStartOf="@+id/tv_fullPrice_head"
+                app:layout_constraintTop_toTopOf="@+id/tv_fullPrice_head"
                 app:layout_constraintVertical_bias="0.181"
                 app:srcCompat="@drawable/ic_price" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView15"-->
+<!--                android:layout_width="26dp"-->
+<!--                android:layout_height="26dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/tv_sPrice_head"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/tv_sPrice_head"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/tv_sPrice_head"-->
+<!--                app:layout_constraintVertical_bias="0.181"-->
+<!--                app:srcCompat="@drawable/ic_price" />-->
 
             <Button
                 android:id="@+id/admin_btn_editRoute"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_edit"
                 android:textColor="@color/hash_light_blue"

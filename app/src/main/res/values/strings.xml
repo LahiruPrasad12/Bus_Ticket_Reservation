@@ -86,7 +86,10 @@
     <string name="from">From</string>
     <string name="admin_from">From:</string>
     <string name="admin_to">To:</string>
-    <string name="admin_price">Price:</string>
+    <string name="admin_stops">Stops:</string>
+    <string name="admin_bPrice">Base Price:</string>
+    <string name="admin_sPrice">Stop Price:</string>
+    <string name="admin_fullPrice">Full Price:</string>
     <string name="admin_btn_edit">Edit</string>
     <string name="admin_btn_delete">Delete</string>
     <string name="updateRoute">Update Route</string>

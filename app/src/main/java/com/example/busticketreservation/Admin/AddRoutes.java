@@ -27,6 +27,7 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
 
 //    creating objects to get reference from xml file
     EditText routeNO, from, to, noOfStops, basePrice, stopPrice;
+    int stops, bPrice, sPrice, fullRoutePrice;
     Button addRouteBtn;
     DatabaseReference dbRef;
     Routes routes;
@@ -49,11 +50,15 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
 
         routes = new Routes();
 
-        //        add route button onClickListner
+        //        add route button onClickListener
         addRouteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                // connecting to the database and referring Routes_Admin table
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin");
+
+                //validating input fields
                 try {
                     if (TextUtils.isEmpty(routeNO.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Empty Route No",Toast.LENGTH_SHORT).show();
@@ -64,15 +69,35 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                     else  if (TextUtils.isEmpty(to.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Empty To",Toast.LENGTH_SHORT).show();
 
-                    else   if(TextUtils.isEmpty(price.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty Price",Toast.LENGTH_SHORT).show();
+                    else   if(TextUtils.isEmpty(noOfStops.getText().toString()))
+                        Toast.makeText(getApplicationContext(),"Empty noOfStops",Toast.LENGTH_SHORT).show();
+
+                    else   if(TextUtils.isEmpty(basePrice.getText().toString()))
+                        Toast.makeText(getApplicationContext(),"Empty basePrice",Toast.LENGTH_SHORT).show();
+
+                    else   if(TextUtils.isEmpty(stopPrice.getText().toString()))
+                        Toast.makeText(getApplicationContext(),"Empty stopPrice",Toast.LENGTH_SHORT).show();
 
                     else {
+
+                        //getting inputs into int fields
+                        stops = Integer.parseInt(noOfStops.getText().toString().trim());
+                        bPrice = Integer.parseInt(basePrice.getText().toString().trim());
+                        sPrice = Integer.parseInt(stopPrice.getText().toString().trim());
+
+                        //calculation
+                        fullRoutePrice = bPrice + (stops-1) * sPrice;
+
+                        //setting values to routes object
                         routes.setRouteNo(routeNO.getText().toString().trim());
                         routes.setFrom(from.getText().toString().trim());
                         routes.setTo(to.getText().toString().trim());
-                        routes.setPrice(Integer.parseInt(price.getText().toString().trim()));
+                        routes.setNoOfStops(stops);
+                        routes.setBasePrice(bPrice);
+                        routes.setStopPrice(sPrice);
+                        routes.setFullRoutePrice(fullRoutePrice);
 
+                        //pushing routes object into Routes_Admin table
                         dbRef.push().setValue(routes);
                         Toast.makeText(getApplicationContext(),"Route added Successfully",Toast.LENGTH_SHORT).show();
                         clearControls();
@@ -145,6 +170,8 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
         routeNO.setText("");
         from.setText("");
         to.setText("");
-        price.setText("");
+        noOfStops.setText("");
+        basePrice.setText("");
+        stopPrice.setText("");
     }
 }

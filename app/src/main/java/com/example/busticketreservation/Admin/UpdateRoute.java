@@ -31,77 +31,77 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_route);
-
-        //setting current text into edit text fields
-        routeNOE = findViewById(R.id.admin_edit_routeno);
-        fromE = findViewById(R.id.admin_edit_from);
-        toE = findViewById(R.id.admin_edit_to);
-        priceE = findViewById(R.id.admin_edit_price);
-
-        updateButton = findViewById(R.id.admin_btn_updateRoute);
-
-        //Initializing string variables to get from intent
-        String routNo = "";
-        String from = "";
-        String to = "";
-        Integer price = 0;
-
-        //Getting Intent with values
-        Intent i =getIntent();
-        Routes route = (Routes)i.getSerializableExtra("routeObj");
-
-        //assigning intent values to variables
-        routNo = route.getRouteNo();
-        from = route.getFrom();
-        to = route.getTo();
-        price = route.getPrice();
-
-        //changing text of text views according to the variables
-        routeNOE.setText(route.getRouteNo());
-        fromE.setText(route.getFrom());
-        toE.setText(route.getTo());
-        priceE.setText(String.valueOf(route.getPrice()));
-
-
-        //      using the toolbar as the action bar
-        Toolbar toolbar = findViewById(R.id.hash_toolbar);
-        setSupportActionBar(toolbar);
-
-//        getting the drawer layout
-        drawer = findViewById(R.id.hash_drawer_layout);
-
-        //        listen to click events of the navigation view
-        NavigationView navigationView = findViewById(R.id.hash_nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
-//        get the menu button in the top left corner
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-
-//        update route button onClickListener
-        updateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dbRef = FirebaseDatabase.getInstance().getReference();
-                try {
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("routeNo").setValue(routeNOE.getText().toString().trim());
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("from").setValue(fromE.getText().toString().trim());
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("to").setValue(toE.getText().toString().trim());
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("price").setValue(Integer.parseInt(priceE.getText().toString().trim()));
-
-                    Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
-                } catch (NumberFormatException nfe) {
-                    Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
-
-                }
-            }
-        });
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_update_route);
+//
+//        //setting current text into edit text fields
+//        routeNOE = findViewById(R.id.admin_edit_routeno);
+//        fromE = findViewById(R.id.admin_edit_from);
+//        toE = findViewById(R.id.admin_edit_to);
+//        priceE = findViewById(R.id.admin_edit_price);
+//
+//        updateButton = findViewById(R.id.admin_btn_updateRoute);
+//
+//        //Initializing string variables to get from intent
+//        String routNo = "";
+//        String from = "";
+//        String to = "";
+//        Integer price = 0;
+//
+//        //Getting Intent with values
+//        Intent i =getIntent();
+//        Routes route = (Routes)i.getSerializableExtra("routeObj");
+//
+//        //assigning intent values to variables
+//        routNo = route.getRouteNo();
+//        from = route.getFrom();
+//        to = route.getTo();
+//        price = route.getPrice();
+//
+//        //changing text of text views according to the variables
+//        routeNOE.setText(route.getRouteNo());
+//        fromE.setText(route.getFrom());
+//        toE.setText(route.getTo());
+//        priceE.setText(String.valueOf(route.getPrice()));
+//
+//
+//        //      using the toolbar as the action bar
+//        Toolbar toolbar = findViewById(R.id.hash_toolbar);
+//        setSupportActionBar(toolbar);
+//
+////        getting the drawer layout
+//        drawer = findViewById(R.id.hash_drawer_layout);
+//
+//        //        listen to click events of the navigation view
+//        NavigationView navigationView = findViewById(R.id.hash_nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+//
+//
+////        get the menu button in the top left corner
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
+//                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
+//
+//
+////        update route button onClickListener
+//        updateButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dbRef = FirebaseDatabase.getInstance().getReference();
+//                try {
+//                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("routeNo").setValue(routeNOE.getText().toString().trim());
+//                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("from").setValue(fromE.getText().toString().trim());
+//                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("to").setValue(toE.getText().toString().trim());
+//                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("price").setValue(Integer.parseInt(priceE.getText().toString().trim()));
+//
+//                    Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
+//                } catch (NumberFormatException nfe) {
+//                    Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+//
+//                }
+//            }
+//        });
 
     }
 

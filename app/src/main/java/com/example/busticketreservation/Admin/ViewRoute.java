@@ -31,33 +31,35 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_route);
-        TextView twViewRoute = findViewById(R.id.twViewRoute);
+//        TextView twViewRoute = findViewById(R.id.twViewRoute);
         TextView tvRouteNo = findViewById(R.id.tv_routeNo);
         TextView tvFrom = findViewById(R.id.tv_from);
         TextView tvTo = findViewById(R.id.tv_to);
-        TextView tvPrice = findViewById(R.id.tv_price);
+        TextView tvStops = findViewById(R.id.tv_stops);
+        TextView tvFullPrice = findViewById(R.id.tv_fullPrice);
 
-        //Initializing string variables to get from intent
-        String routNo = "";
-        String from = "";
-        String to = "";
-        Integer price = 0;
+//        //Initializing string variables to get from intent
+//        String routNo = "";
+//        String from = "";
+//        String to = "";
+//        Integer price = 0;
 
         //Getting Intent with values
         Intent i =getIntent();
         Routes route = (Routes)i.getSerializableExtra("routeObj");
 
-        //assigning intent values to variables
-        routNo = route.getRouteNo();
-        from = route.getFrom();
-        to = route.getTo();
-        price = route.getPrice();
+//        //assigning intent values to variables
+//        routNo = route.getRouteNo();
+//        from = route.getFrom();
+//        to = route.getTo();
+//        price = route.getPrice();
 
         //changing text of text views according to the variables
         tvRouteNo.setText(route.getRouteNo());
         tvFrom.setText(route.getFrom());
         tvTo.setText(route.getTo());
-        tvPrice.setText(String.valueOf(route.getPrice()));
+        tvStops.setText(String.valueOf(route.getNoOfStops()));
+        tvFullPrice.setText(String.valueOf(route.getFullRoutePrice()));
 
 
         //redirect to update route activity when edit button is clicked
