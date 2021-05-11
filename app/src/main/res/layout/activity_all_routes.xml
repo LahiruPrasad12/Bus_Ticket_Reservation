@@ -19,13 +19,47 @@
 
         <!--creating a diffferent toolbar-->
         <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/hash_dark_blue"
             android:id="@+id/hash_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/tool_bar_color"
+            android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:elevation="4dp" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/baloo_thambi"
+                    android:text="@string/tool_bar_title"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/toolbar_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="37dp"
+                    android:fontFamily="@font/architects_daughter"
+                    android:text="@string/tool_bar_subtitle"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
 
         <!--        creating the frame layout-->

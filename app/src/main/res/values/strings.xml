@@ -46,7 +46,7 @@
     <string name="pt4">Number Of Seats</string>
     <string name="bt1">ADD BUS</string>
     <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
-    <string name="bt2">EDIT BUS</string>
+    <string name="bt2">UPDATE</string>
     <string name="bt3">DELETE </string>
     <string name="tvv3">Bus ID</string>
     <string name="tvv4">Route ID</string>
@@ -65,6 +65,16 @@
     <string name="btnUpdate">update</string>
     <string name="btnDelete">delete</string>
     <string name="nextPg">Next Page</string>
+<!--    <string name="addRoute">Add New Route</string>-->
+<!--    <string name="hintRoutNoAdmin"> Route Number</string>-->
+<!--    <string name="hintFromAdmin"> From</string>-->
+<!--    <string name="hintToAdmin"> To</string>-->
+<!--    <string name="hintPriceAdmin"> Price</string>-->
+<!--    <string name="admin_btn_submit">submit</string>-->
+
+
+
+
 
     <!--imports for ActionBarToggle Class-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -74,9 +84,11 @@
     <string name="hintRoutNoAdmin"> Route Number</string>
     <string name="hintFromAdmin"> From</string>
     <string name="hintToAdmin"> To</string>
-    <string name="hintPriceAdmin"> Price</string>
+    <string name="noOfStops"> No Of Stops</string>
+    <string name="basePrice"> Base Price</string>
+    <string name="priceOfStop"> Price For a Stop</string>
     <string name="admin_btn_submit">submit</string>
-    <string name="addRoute">Add New Route</string>
+    <string name="addRoute">New Route</string>
     <string name="allRoutes">Click Route To View Details</string>
     <string name="title">All Routes</string>
     <string name="view_routes">Route Preview</string>
@@ -84,10 +96,32 @@
     <string name="from">From</string>
     <string name="admin_from">From:</string>
     <string name="admin_to">To:</string>
-    <string name="admin_price">Price:</string>
+    <string name="admin_stops">Stops:</string>
+    <string name="admin_bPrice">Base Price:</string>
+    <string name="admin_sPrice">Stop Price:</string>
+    <string name="admin_fullPrice">Full Price:</string>
     <string name="admin_btn_edit">Edit</string>
     <string name="admin_btn_delete">Delete</string>
     <string name="updateRoute">Update Route</string>
     <string name="btn_update">Save And Update</string>
+    <string name="addUser">Add New User</string>
+
+    <string name="admin_hint_type">Enter User Type</string>
+    <string name="admin_hint_name">Name</string>
+    <string name="admin_hint_contact">Contact Number</string>
+    <string name="admin_hint_email">Email Address</string>
+    <string name="admin_hint_pwd">Password</string>
+    <string name="all_users">Select User Type</string>
+    <string name="tool_bar_title">Book My Bus</string>
+    <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
+
+
+
+    <string name="user_type">Type:</string>
+    <string name="user_name">Name:</string>
+    <string name="user_contact">Contact:</string>
+    <string name="user_email">Email:</string>
+    <string name="btn3">VIEW BUS</string>
+
 
 </resources>
