@@ -41,10 +41,10 @@ public class LoginActivity extends AppCompatActivity {
 
         progressBar.setVisibility(View.INVISIBLE);
 
-        if(frb.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }
+//        if(frb.getCurrentUser() != null){
+//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//            finish();
+//        }
 
     }
 
