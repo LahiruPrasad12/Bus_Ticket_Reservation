@@ -41,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.pBar);
         txtMail = findViewById(R.id.txNam);
         txtPassword = findViewById(R.id.txtP);
-
         progressBar.setVisibility(View.INVISIBLE);
 
 //        if(frb.getCurrentUser() != null){

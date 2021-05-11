@@ -68,13 +68,9 @@ public class Book_Bus extends AppCompatActivity {
         txtfBill = findViewById(R.id.totBill);
 
 
-
-
         frbAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         useId = frbAuth.getCurrentUser().getUid();
-
-
 
 
         Intent intent = getIntent();
@@ -143,7 +139,7 @@ public class Book_Bus extends AppCompatActivity {
 
 
 
-    //calculate final bill using num of seats
+   //set Final Bill
     public void calFinalBill(View view){
         numSeat = Integer.parseInt(txtNoSeat.getText().toString());
         totBill = calculation(numSeat,baseBill);
@@ -152,12 +148,13 @@ public class Book_Bus extends AppCompatActivity {
     }
 
 
+    //calculate final bill using num of seats
     public int calculation(int numSeats, int bBill){
         return numSeats*bBill;
     }
 
 
-    //create final bill
+    //insert final bill details to Final_Bill table
     public void AddFinalBill(View view){
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Final_Bill");
