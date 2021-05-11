@@ -41,12 +41,12 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.pBar);
         txtMail = findViewById(R.id.txNam);
         txtPassword = findViewById(R.id.txtP);
-        progressBar.setVisibility(View.INVISIBLE);
 
-//        if(frb.getCurrentUser() != null){
-//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-//            finish();
-//        }
+
+        if(frb.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
 
     }
 
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Name Is Required", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Phone Is Required", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Password Is Required", Toast.LENGTH_SHORT).show();
         }else {
             //Authenticated User
             frb.signInWithEmailAndPassword(mail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
