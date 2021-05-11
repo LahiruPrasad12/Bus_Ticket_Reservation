@@ -5,6 +5,7 @@ import com.example.busticketreservation.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -60,6 +61,7 @@ public class AddBus extends AppCompatActivity {
 
                         dbref.push().setValue(bs);
                         Toast.makeText(getApplicationContext(),"Bus added Successfully",Toast.LENGTH_SHORT).show();
+
                         clearControls();
                     }
 
@@ -89,5 +91,9 @@ public class AddBus extends AppCompatActivity {
 
 
 
+    }
+
+    public void View_Bus(View view){
+        startActivity(new Intent(getApplicationContext(),ViewBus.class));
     }
 }
