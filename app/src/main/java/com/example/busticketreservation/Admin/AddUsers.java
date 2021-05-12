@@ -176,7 +176,7 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
                                     user.put("Name", un);
                                     user.put("Mail", mail);
                                     user.put("Roll", userType);
-                                    user.put("Phone", con);
+                                    user.put("Phone",con);
 
                                     dbRef.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override

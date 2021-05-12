@@ -108,7 +108,7 @@
     <string name="admin_hint_contact">Contact Number</string>
     <string name="admin_hint_email">Email Address</string>
     <string name="admin_hint_pwd">Password</string>
-    <string name="all_users">Select User Type</string>
+    <string name="all_users">All Users</string>
     <string name="tool_bar_title">Book My Bus</string>
     <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
 

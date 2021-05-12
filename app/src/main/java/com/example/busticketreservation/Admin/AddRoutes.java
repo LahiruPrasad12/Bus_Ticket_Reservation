@@ -129,7 +129,6 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                 //calling method for calculation
                 fullRoutePrice = calFullRoutePrice(stops, bPrice, sPrice);
 
-
                 //setting values to routes object
                 routes.setRouteNo(routeNO.getText().toString().trim());
                 routes.setFrom(from.getText().toString().trim());

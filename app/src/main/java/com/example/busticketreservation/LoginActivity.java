@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
         txtMail = findViewById(R.id.txNam);
         txtPassword = findViewById(R.id.txtP);
 
-
 //        if(frb.getCurrentUser() != null){
 //            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 //            finish();
@@ -50,16 +49,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
-
     //if Don't have account redirect to register page
     public void register(View view){
         progressBar.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);
     }
-
-
 
 
     //Login
