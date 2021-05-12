@@ -75,8 +75,22 @@ public class AddBus extends AppCompatActivity {
 
                 }
 
+                //ishara
+
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    Routes routes = dataSnapshot.getValue(Routes.class);
+                    list.add(routes);
+                }
+                for (int x=0; x<list.size(); x++){
+                    System.out.println(list.get(x).getPrice());
+
+                    stringArrayList.add(list.get(x).getPrice());
+                }
+
             }
 
+                //ishara
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // auto created
@@ -176,6 +190,6 @@ public class AddBus extends AppCompatActivity {
 
 
     public void View_Bus(View view){
-        startActivity(new Intent(getApplicationContext(),ViewBus.class));
+        startActivity(new Intent(getApplicationContext(),ViewAllBus.class));
     }
 }

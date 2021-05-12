@@ -20,7 +20,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ViewRoute extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class ViewRoute extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Button editBtn, deleteBtn;
     private DrawerLayout drawer;
@@ -44,8 +44,8 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
         Integer price = 0;
 
         //Getting Intent with values
-        Intent i =getIntent();
-        Routes route = (Routes)i.getSerializableExtra("routeObj");
+        Intent i = getIntent();
+        Routes route = (Routes) i.getSerializableExtra("routeObj");
 
         //assigning intent values to variables
         routNo = route.getRouteNo();
@@ -85,7 +85,6 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
         });
 
 
-
         //      using the toolbar as the action bar
         Toolbar toolbar = findViewById(R.id.hash_toolbar);
         setSupportActionBar(toolbar);
@@ -108,7 +107,7 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
 
     //    passing menu item to setNavigationItemSelectedListener
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_all_routes:
                 startActivity(new Intent(getApplicationContext(), AllRoutes.class));
                 break;
@@ -130,20 +129,13 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
     @Override
 //    close navigation bar when back button is clicked
     public void onBackPressed() {
-        if(drawer.isDrawerOpen(GravityCompat.START)){
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             super.onBackPressed();
         }
-
     }
-
-
 }
-
-
-
-
 
 
 

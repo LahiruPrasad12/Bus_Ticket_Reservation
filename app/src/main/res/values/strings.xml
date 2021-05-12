@@ -38,9 +38,6 @@
     <string name="del">Delete</string>
 
 
-
-
-
     <!--Hashen-->
     <!--    hash sample-->
     <string name="hintID">Enter Student ID</string>
@@ -54,15 +51,12 @@
     <string name="nextPg">Next Page</string>
     <string name="tool_bar_title">Book My Bus</string>
     <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
-<!--    <string name="addRoute">Add New Route</string>-->
-<!--    <string name="hintRoutNoAdmin"> Route Number</string>-->
-<!--    <string name="hintFromAdmin"> From</string>-->
-<!--    <string name="hintToAdmin"> To</string>-->
-<!--    <string name="hintPriceAdmin"> Price</string>-->
-<!--    <string name="admin_btn_submit">submit</string>-->
-
-
-
+    <!--    <string name="addRoute">Add New Route</string>-->
+    <!--    <string name="hintRoutNoAdmin"> Route Number</string>-->
+    <!--    <string name="hintFromAdmin"> From</string>-->
+    <!--    <string name="hintToAdmin"> To</string>-->
+    <!--    <string name="hintPriceAdmin"> Price</string>-->
+    <!--    <string name="admin_btn_submit">submit</string>-->
 
 
     <!--imports for ActionBarToggle Class-->

@@ -37,7 +37,7 @@ public class Routes implements Serializable {
         this.to = to;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
