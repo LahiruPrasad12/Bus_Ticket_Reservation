@@ -27,8 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="commited before pull from main">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/User.java" afterDir="false" />
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Completed view user searching by email">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -40,23 +39,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddRoutes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AllUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AllUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/UpdateRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/UpdateRoute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/ViewRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/ViewRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +158,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
+    <configuration name="FullRoutePriceTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BusTicketReservation.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.busticketreservation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.busticketreservation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.busticketreservation.FullRoutePriceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FullRoutePriceTest.priceCalculation" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="BusTicketReservation.app" />
       <extension name="coverage">
@@ -256,6 +257,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.FullRoutePriceTest" />
         <item itemvalue="Android JUnit.FullRoutePriceTest.priceCalculation" />
       </list>
     </recent_temporary>
@@ -600,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620833484852</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Completed view user searching by email">
+      <created>1620846643187</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1620846643187</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +625,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created all routes recycle view to retrieve and display data" />
     <MESSAGE value="commited to pull from main" />
     <MESSAGE value="changed string file" />
     <MESSAGE value="created view route activity to open when one item card is clicked" />
@@ -641,7 +649,8 @@
     <MESSAGE value="arranged manifest file" />
     <MESSAGE value="merged project so now all the users can login from one interface" />
     <MESSAGE value="commited before pull from main" />
-    <option name="LAST_COMMIT_MESSAGE" value="commited before pull from main" />
+    <MESSAGE value="Completed view user searching by email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed view user searching by email" />
   </component>
   <component name="WindowStateProjectService">
     <state x="436" y="155" key="#PSD" timestamp="1620330551329">
@@ -685,42 +694,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620678072477" />
-    <state width="1491" height="141" key="GridCell.Tab.0.bottom" timestamp="1620846542188">
+    <state width="1491" height="6" key="GridCell.Tab.0.bottom" timestamp="1620850293208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="141" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620846542188" />
+    <state width="1491" height="6" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620850293208" />
     <state width="1491" height="176" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="141" key="GridCell.Tab.0.center" timestamp="1620846542187">
+    <state width="1491" height="6" key="GridCell.Tab.0.center" timestamp="1620850293208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="141" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620846542187" />
+    <state width="1491" height="6" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620850293208" />
     <state width="1491" height="176" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="141" key="GridCell.Tab.0.left" timestamp="1620846542187">
+    <state width="1491" height="6" key="GridCell.Tab.0.left" timestamp="1620850293207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="141" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620846542187" />
+    <state width="1491" height="6" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620850293207" />
     <state width="1491" height="176" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="141" key="GridCell.Tab.0.right" timestamp="1620846542187">
+    <state width="1491" height="6" key="GridCell.Tab.0.right" timestamp="1620850293208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="141" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620846542187" />
+    <state width="1491" height="6" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620850293208" />
     <state width="1491" height="176" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="87" key="GridCell.Tab.1.bottom" timestamp="1620844870583">
+    <state width="1491" height="177" key="GridCell.Tab.1.bottom" timestamp="1620850114550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="87" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620844870583" />
-    <state width="1491" height="87" key="GridCell.Tab.1.center" timestamp="1620844870583">
+    <state width="1491" height="177" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620850114550" />
+    <state width="1491" height="177" key="GridCell.Tab.1.center" timestamp="1620850114550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="87" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620844870583" />
-    <state width="1491" height="87" key="GridCell.Tab.1.left" timestamp="1620844870583">
+    <state width="1491" height="177" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620850114550" />
+    <state width="1491" height="177" key="GridCell.Tab.1.left" timestamp="1620850114550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="87" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620844870583" />
-    <state width="1491" height="87" key="GridCell.Tab.1.right" timestamp="1620844870583">
+    <state width="1491" height="177" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620850114550" />
+    <state width="1491" height="177" key="GridCell.Tab.1.right" timestamp="1620850114550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="87" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620844870583" />
+    <state width="1491" height="177" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620850114550" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1620328750809">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

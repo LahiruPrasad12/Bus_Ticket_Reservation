@@ -17,8 +17,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.busticketreservation.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class ViewRoute extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -85,9 +89,38 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR");
-                dbRef.removeValue();
-                Toast.makeText(getApplicationContext(), "Successfully delted", Toast.LENGTH_SHORT).show();
+
+
+                try{
+                    Query query = FirebaseDatabase.getInstance().getReference().child("Routes_Admin")
+                            .orderByChild("routeNo")
+                            .equalTo(route.getRouteNo());
+                    System.out.println(route.getRouteNo());
+                    query.addValueEventListener(new ValueEventListener() {
+
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                                String routeKey = dataSnapshot.getKey();
+                                dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin").child(routeKey);
+                                dbRef.removeValue();
+                                Toast.makeText(getApplicationContext(), "Route Deleted Successfully ", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getApplicationContext(), "Could not delete route", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
