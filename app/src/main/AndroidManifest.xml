@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-
+        <activity android:name=".TripManager.UpdateTrip"></activity>
+        <activity android:name=".TripManager.TripPreview" />
         <activity android:name=".TripManager.TripMainActivity">
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -25,10 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".TripManager.ViewTrips"> </activity>
-
+        <activity android:name=".TripManager.ViewTrips" />
         <activity android:name=".TripManager.AddTrips" />
         <activity android:name=".TripManager.SelectRoutesTm" /> <!-- <activity -->
         <!-- android:name=".TripManager.TripMain" -->

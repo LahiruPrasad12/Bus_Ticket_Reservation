@@ -50,18 +50,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addtripid" />
 
-    <ImageView
-        android:id="@+id/image5"
-        android:layout_width="43dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="65dp"
-        android:background="@color/whiteTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/select_bus"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image4"
-        app:srcCompat="@drawable/ic_bus" />
+<!--    <ImageView-->
+<!--        android:id="@+id/image5"-->
+<!--        android:layout_width="43dp"-->
+<!--        android:layout_height="33dp"-->
+<!--        android:layout_marginStart="52dp"-->
+<!--        android:layout_marginTop="65dp"-->
+<!--        android:background="@color/whiteTextColor"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/select_bus"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/image4"-->
+<!--        app:srcCompat="@drawable/ic_bus" />-->
 
     <ImageView
         android:id="@+id/image1"
@@ -76,19 +76,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:srcCompat="@drawable/ic_add_routes" />
 
-    <Spinner
-        android:id="@+id/select_bus"
-        android:layout_width="236dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="72dp"
-        android:background="@drawable/edit_text_rectangle"
-        android:dropDownWidth="wrap_content"
-        android:duplicateParentState="false"
-        android:spinnerMode="dropdown"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ar_time" />
+<!--    <Spinner-->
+<!--        android:id="@+id/select_bus"-->
+<!--        android:layout_width="236dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginEnd="72dp"-->
+<!--        android:background="@drawable/edit_text_rectangle"-->
+<!--        android:dropDownWidth="wrap_content"-->
+<!--        android:duplicateParentState="false"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_ar_time" />-->
 
     <ImageView
         android:id="@+id/image2"
@@ -161,7 +161,7 @@
         android:layout_width="139dp"
         android:layout_height="55dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="160dp"
         android:background="@drawable/admin_rounded_btn"
         android:text="@string/add_trip"
         android:textColor="@color/hash_light_blue"
@@ -172,7 +172,7 @@
         android:id="@+id/btncancel"
         android:layout_width="139dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="160dp"
         android:background="@drawable/admin_rounded_btn"
         android:text="@string/cancel"
         android:textColor="@color/hash_light_blue"

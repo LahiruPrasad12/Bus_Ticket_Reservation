@@ -62,12 +62,14 @@ public class AddTrips extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Empty Arrival Time",Toast.LENGTH_SHORT).show();
                     else {
 
+                        trp = new Trip();
                         trp.setTrip_id(trip_id.getText().toString().trim());
                         trp.setDate(date.getText().toString().trim());
                         trp.setDep_time(dep_time.getText().toString().trim());
                         trp.setAr_time(ar_time.getText().toString().trim());
-                        dbref.child("Trip1").setValue(trp);
+//                        dbref.child("Trip").setValue(trp);
 
+                        dbref.push().setValue(trp);
                         Toast.makeText(getApplicationContext(),"Succesfully inserted",Toast.LENGTH_SHORT).show();
                         clearControls();
 
