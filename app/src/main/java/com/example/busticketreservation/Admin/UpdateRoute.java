@@ -17,8 +17,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.busticketreservation.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class UpdateRoute extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -79,30 +83,37 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dbRef = FirebaseDatabase.getInstance().getReference();
 
-                //getting inputs into int fields
-                stops = Integer.parseInt(stopsE.getText().toString().trim());
-                bPrice = Integer.parseInt(bPriceE.getText().toString().trim());
-                sPrice = Integer.parseInt(sPriceE.getText().toString().trim());
+                //getting key of the route
+                try{
+                    Query query = FirebaseDatabase.getInstance().getReference().child("Routes_Admin")
+                            .orderByChild("routeNo")
+                            .equalTo(route.getRouteNo());
+                    System.out.println(route.getRouteNo());
+                    query.addValueEventListener(new ValueEventListener() {
 
-                //calculation
-                fullRoutePrice = bPrice + (stops-1) * sPrice;
-                try {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("routeNo").setValue(routeNOE.getText().toString().trim());
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("from").setValue(fromE.getText().toString().trim());
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("to").setValue(toE.getText().toString().trim());
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("noOfStops").setValue(stops);
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("basePrice").setValue(bPrice);
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("stopPrice").setValue(sPrice);
-                    dbRef.child("Routes_Admin").child("-M_85giM4xbv-yEzoPOR").child("fullRoutePrice").setValue(fullRoutePrice);
+                            for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                                String routeKey = dataSnapshot.getKey();
+                                updateRoute(routeKey);
 
-                    Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
-                } catch (NumberFormatException nfe) {
-                    Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+                            }
+                        }
 
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getApplicationContext(), "Could not delete route", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
                 }
+
+
             }
         });
 
@@ -140,4 +151,35 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
         }
 
     }
+
+    //update route when key is give
+    public void updateRoute(String key){
+        dbRef = FirebaseDatabase.getInstance().getReference();
+
+        //getting inputs into int fields
+        stops = Integer.parseInt(stopsE.getText().toString().trim());
+        bPrice = Integer.parseInt(bPriceE.getText().toString().trim());
+        sPrice = Integer.parseInt(sPriceE.getText().toString().trim());
+
+        //calculation
+        fullRoutePrice = bPrice + (stops-1) * sPrice;
+        try {
+
+            dbRef.child("Routes_Admin").child(key).child("routeNo").setValue(routeNOE.getText().toString().trim());
+            dbRef.child("Routes_Admin").child(key).child("from").setValue(fromE.getText().toString().trim());
+            dbRef.child("Routes_Admin").child(key).child("to").setValue(toE.getText().toString().trim());
+            dbRef.child("Routes_Admin").child(key).child("noOfStops").setValue(stops);
+            dbRef.child("Routes_Admin").child(key).child("basePrice").setValue(bPrice);
+            dbRef.child("Routes_Admin").child(key).child("stopPrice").setValue(sPrice);
+            dbRef.child("Routes_Admin").child(key).child("fullRoutePrice").setValue(fullRoutePrice);
+
+            Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
+
+        } catch (NumberFormatException nfe) {
+            Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+
 }
