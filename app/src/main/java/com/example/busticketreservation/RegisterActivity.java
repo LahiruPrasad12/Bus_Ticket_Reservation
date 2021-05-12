@@ -35,8 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
     String userId;
     DatabaseReference databaseReference;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,20 +49,19 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
-
+    //If user click already have an account user redirect to login page
     public void backToLogin(View view){
-
         startActivity(new Intent(getApplicationContext(),LoginActivity.class));
     }
 
-    public void Login(View view){
+    public void Register(View view){
 
         name = txtName.getText().toString().trim();
         mail = txtPhone.getText().toString().trim();
         pass = txtPassword.getText().toString().trim();
         comPass = txtComPassword.getText().toString().trim();
 
+        //Check user enter data is correct or not
         if(TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Name Is Required", Toast.LENGTH_SHORT).show();
         }
@@ -82,6 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else if(pass.equals(comPass)) {
 
+            //Set mail password authentication
             frb.createUserWithEmailAndPassword(mail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -89,13 +87,12 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
                         userId = frb.getCurrentUser().getUid();
 
-//                        DocumentReference documentReference = fStore.collection("Users").document(userId);
+                        //Register user
                         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
                         Map<String,Object> user = new HashMap<>();
                         user.put("Name",name);
                         user.put("Mail",mail);
                         user.put("Roll","Customer");
-                        user.put("Phone","Null");
 
                         databaseReference.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -104,14 +101,11 @@ public class RegisterActivity extends AppCompatActivity {
                                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                             }
                         });
-
-
                     }else{
                         Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
-
         }
         else {
             Toast.makeText(this, "Confirm Password Is Incorrect", Toast.LENGTH_SHORT).show();

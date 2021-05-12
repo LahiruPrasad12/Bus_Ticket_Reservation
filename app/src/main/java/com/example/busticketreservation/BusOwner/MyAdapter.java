@@ -1,5 +1,7 @@
-package com.example.busticketreservation.Admin;
+package com.example.busticketreservation.BusOwner;
 
+
+import com.example.busticketreservation.Admin.Routes;
 import com.example.busticketreservation.R;
 
 import android.content.Context;
@@ -40,6 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         Routes routes =list.get(position);
         holder.routeNo.setText(routes.getRouteNo());
+        holder.Description.setText("Bus No");
 
     }
 
@@ -50,13 +53,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
-         TextView routeNo,Description;
+        TextView routeNo,Description;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-
+            Description = itemView.findViewById(R.id.description);
             routeNo = itemView.findViewById(R.id.tvRouteNo);
             itemView.setOnClickListener(this);
 
@@ -71,6 +74,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     //implementation for card onclick listener
     public interface RecyclerViewClickListener{
-            void onClick(View v, int position);
+        void onClick(View v, int position);
     }
 }

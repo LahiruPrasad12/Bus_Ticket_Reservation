@@ -67,15 +67,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-<!--            heading-->
-<!--            <TextView-->
-<!--                android:id="@+id/heading"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="70dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                tools:ignore="MissingConstraints"-->
-<!--                android:background="@color/hash_middle_blue"/>-->
+            <!--            heading-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="70dp"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                tools:ignore="MissingConstraints"-->
+            <!--                android:background="@color/hash_middle_blue"/>-->
 
             <!--                id is wrong-->
             <TextView
@@ -92,37 +92,36 @@
 
             <EditText
                 android:id="@+id/admin_edit_routeno"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/edit_text_rectangle"
+                android:layout_width="160dp"
+                android:layout_height="31dp"
+                android:background="@drawable/edit_text_rect_light"
                 android:ems="10"
                 android:hint="@string/hintRoutNoAdmin"
                 android:icon="@drawable/ic_route_no"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/admin_txt_update_rout" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/admin_txt_update_rout"
+                app:layout_constraintEnd_toEndOf="@+id/admin_edit_from" />
 
             <EditText
                 android:id="@+id/admin_edit_from"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintFromAdmin"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
-                app:layout_constraintStart_toStartOf="@+id/admin_edit_routeno"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_routeno" />
 
             <EditText
                 android:id="@+id/admin_edit_to"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
                 android:hint="@string/hintToAdmin"
@@ -132,28 +131,54 @@
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_from" />
 
             <EditText
-                android:id="@+id/admin_edit_price"
+                android:id="@+id/admin_edit_noOfStops"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/hintPriceAdmin"
+                android:hint="@string/noOfStops"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_to"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />
 
+            <EditText
+                android:id="@+id/admin_edit_basePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/basePrice"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/admin_edit_noOfStops"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_noOfStops" />
+
+            <EditText
+                android:id="@+id/admin_edit_stopPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:ems="10"
+                android:hint="@string/priceOfStop"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/admin_edit_basePrice"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_basePrice" />
+
             <Button
                 android:id="@+id/admin_btn_addRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/admin_rounded_btn"
                 android:text="@string/admin_btn_submit"
                 android:textColor="@color/hash_light_blue"
-                app:layout_constraintEnd_toEndOf="@+id/admin_edit_price"
-                app:layout_constraintTop_toBottomOf="@+id/admin_edit_price"
+                app:layout_constraintEnd_toEndOf="@+id/admin_edit_stopPrice"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_stopPrice"
                 tools:text="@string/admin_btn_submit" />
 
             <ImageView
@@ -181,9 +206,9 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginEnd="25dp"
-                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_price"
-                app:layout_constraintEnd_toStartOf="@+id/admin_edit_price"
-                app:layout_constraintTop_toTopOf="@+id/admin_edit_price"
+                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_basePrice"
+                app:layout_constraintEnd_toStartOf="@+id/admin_edit_basePrice"
+                app:layout_constraintTop_toTopOf="@+id/admin_edit_basePrice"
                 app:srcCompat="@drawable/ic_price" />
 
             <ImageView
@@ -191,10 +216,20 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginEnd="25dp"
-                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_routeno"
-                app:layout_constraintEnd_toStartOf="@+id/admin_edit_routeno"
-                app:layout_constraintTop_toTopOf="@+id/admin_edit_routeno"
-                app:srcCompat="@drawable/ic_route_no" />
+                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_noOfStops"
+                app:layout_constraintEnd_toStartOf="@+id/admin_edit_noOfStops"
+                app:layout_constraintTop_toTopOf="@+id/admin_edit_noOfStops"
+                app:srcCompat="@drawable/ic_baseline_stop_24" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_stopPrice"
+                app:layout_constraintEnd_toStartOf="@+id/admin_edit_stopPrice"
+                app:layout_constraintTop_toTopOf="@+id/admin_edit_stopPrice"
+                app:srcCompat="@drawable/ic_price" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

@@ -41,7 +41,7 @@ public class Book_Bus extends AppCompatActivity {
     EditText txtNoSeat;
 
     private DatabaseReference databaseReference;
-    private double baseBill,totBill,numSeat;
+    private int baseBill,totBill,numSeat;
     private String from,to,No,bsNo;
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
@@ -68,38 +68,34 @@ public class Book_Bus extends AppCompatActivity {
         txtfBill = findViewById(R.id.totBill);
 
 
-
-
         frbAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         useId = frbAuth.getCurrentUser().getUid();
-
-
 
 
         Intent intent = getIntent();
         bsNo = intent.getStringExtra("BusNo");
 
         //Retrieve specific bus using bus No
-        Query query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("Name").equalTo("fhgg");
+        Query query = FirebaseDatabase.getInstance().getReference("Routes").orderByChild("bus_No").equalTo(bsNo);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    txtbusNo.setText(dataSnapshot.child("Name").getValue().toString());
+                    txtbusNo.setText(dataSnapshot.child("bus_No").getValue().toString());
 
 
-                    txtfrom.setText(dataSnapshot.child("Name").getValue().toString());
-                    from = dataSnapshot.child("Name").getValue().toString();
+                    txtfrom.setText(dataSnapshot.child("from").getValue().toString());
+                    from = dataSnapshot.child("from").getValue().toString();
 
-                    txtto.setText(dataSnapshot.child("Name").getValue().toString());
-                    to = dataSnapshot.child("Name").getValue().toString();
+                    txtto.setText(dataSnapshot.child("to").getValue().toString());
+                    to = dataSnapshot.child("to").getValue().toString();
 
-                    txtAtime.setText(dataSnapshot.child("Name").getValue().toString());
+                    txtAtime.setText(dataSnapshot.child("arrival_Time").getValue().toString());
+                    txtDtime.setText(dataSnapshot.child("departure_Time").getValue().toString());
 
-                    txtDtime.setText(dataSnapshot.child("Name").getValue().toString());
-                    txtAmount.setText(dataSnapshot.child("Name").getValue().toString());
-//                    baseBill = documentSnapshots.getDouble("Price");
+                    txtAmount.setText(dataSnapshot.child("price").getValue().toString());
+                    baseBill = Integer.parseInt(dataSnapshot.child("price").getValue().toString());
 
                     Toast.makeText(Book_Bus.this, "Book Now", Toast.LENGTH_SHORT).show();
                 }
@@ -143,37 +139,44 @@ public class Book_Bus extends AppCompatActivity {
 
 
 
+   //set Final Bill
     public void calFinalBill(View view){
         numSeat = Integer.parseInt(txtNoSeat.getText().toString());
-        totBill = baseBill*numSeat;
+        totBill = calculation(numSeat,baseBill);
         txtfBill.setText(String.valueOf("LKR "+totBill));
         txtfBill.setVisibility(View.VISIBLE);
     }
 
 
+    //calculate final bill using num of seats
+    public int calculation(int numSeats, int bBill){
+        return numSeats*bBill;
+    }
+
+
+    //insert final bill details to Final_Bill table
     public void AddFinalBill(View view){
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Final_Bill");
-        Map<String,Object> fBill = new HashMap<>();
-        fBill.put("User_Id",useId);
-        fBill.put("Bus_No",bsNo);
-        fBill.put("From",from);
-        fBill.put("To",to);
-        fBill.put("Num_Of_Seats",numSeat);
-//        fBill.put("Amount",totBill);
-        
-        databaseReference.setValue(fBill).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Toast.makeText(Book_Bus.this, "Booking Suucess", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Book_Bus.this, "Booking Failed", Toast.LENGTH_SHORT).show();
-            }
-        });
+        Final_Bill final_bill = new Final_Bill();
+
+        try{
+            final_bill.setBus_No(bsNo);
+            final_bill.setFrom(from);
+            final_bill.setTo(to);
+            final_bill.setNum_Of_Seats(numSeat);
+            final_bill.setUser_Id(useId);
+            final_bill.setTotAmount(totBill);
+
+            databaseReference.push().setValue(final_bill);
+            Toast.makeText(this, "Booking Success..", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+
 
 
 //        fStore.collection("Final-Bill")
