@@ -16,39 +16,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
+        <activity android:name=".AddRoute">
 
-        <!--Hashen activities-->
-        <activity android:name=".Admin.AddRoutes" android:theme="@style/AppTheme.NoActionBarHash" />
-        <activity android:name=".Admin.AllRoutes" android:theme="@style/AppTheme.NoActionBarHash"/>
-        <activity android:name=".Admin.AddUsers" android:theme="@style/AppTheme.NoActionBarHash" />
-        <activity android:name=".Admin.AllUsers" android:theme="@style/AppTheme.NoActionBarHash" />
-        <activity android:name=".Admin.UpdateRoute" android:theme="@style/AppTheme.NoActionBarHash"/>
-        <activity android:name=".Admin.ViewRoute" android:theme="@style/AppTheme.NoActionBarHash"/>
-
-        <!--Ishara activities-->
+        </activity>
+        <activity
+            android:name=".Admin.UpdateRoute"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Admin.ViewRoute" />
         <activity android:name=".BusOwner.ViewBus" />
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
-        <activity android:name=".BusOwner.AddBus"/>
-        <activity android:name=".Book_Bus" android:theme="@style/AppTheme.NoActionBar" />
-
-        <!--Pamoda activities-->
-        <activity android:name=".TripManager.TripMain"/>
-
-        <!--Lahiru activities-->
-        <activity android:name=".ViewUserProfile" android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".BusOwner.AddBus" />
+        <activity android:name=".TripManager.TripMain" /> <!-- <activity -->
+        <!-- android:name=".Admin.AdminMain" -->
+        <!-- android:theme="@style/AppTheme.NoActionBarHash" /> -->
+        <!-- <activity android:name=".hashTest" /> -->
+        <activity
+            android:name=".ViewUserProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Book_Bus"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            >
+        </activity>
         <activity android:name=".Select_Bus" />
-        <activity android:name=".RegisterActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
-        <!--Login activity-->
-        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts" />
+        </activity>
+        <activity
+            android:name=".Admin.AddRoutes"
+            android:theme="@style/AppTheme.NoActionBarHash" />
+        <activity
+            android:name=".Admin.AllRoutes"
+            android:theme="@style/AppTheme.NoActionBarHash"></activity>
+        <activity
+            android:name=".Admin.AddUsers"
+            android:theme="@style/AppTheme.NoActionBarHash" />
+        <activity
+            android:name=".Admin.AllUsers"
+            android:theme="@style/AppTheme.NoActionBarHash" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

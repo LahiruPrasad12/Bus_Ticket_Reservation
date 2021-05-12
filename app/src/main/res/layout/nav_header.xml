@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="350dp"
     android:layout_marginBottom="-70dp"
-    android:background="@color/register_bk_color"
+    android:background="@color/hash_dark_blue"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingRight="16dp">
