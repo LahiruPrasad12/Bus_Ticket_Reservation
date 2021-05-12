@@ -7,7 +7,10 @@ public class Routes implements Serializable {
     private String routeNo;
     private String from;
     private String to;
-    private Integer price;
+    private Integer noOfStops;
+    private Integer basePrice;
+    private Integer stopPrice;
+    private int fullRoutePrice;
 
     public Routes() {
 
@@ -37,11 +40,35 @@ public class Routes implements Serializable {
         this.to = to;
     }
 
-    public String getPrice() {
-        return price;
+    public Integer getNoOfStops() {
+        return noOfStops;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setNoOfStops(Integer noOfStops) {
+        this.noOfStops = noOfStops;
+    }
+
+    public Integer getBasePrice() {
+        return basePrice;
+    }
+
+    public void setBasePrice(Integer basePrice) {
+        this.basePrice = basePrice;
+    }
+
+    public Integer getStopPrice() {
+        return stopPrice;
+    }
+
+    public void setStopPrice(Integer stopPrice) {
+        this.stopPrice = stopPrice;
+    }
+
+    public int getFullRoutePrice() {
+        return fullRoutePrice;
+    }
+
+    public void setFullRoutePrice(int fullRoutePrice) {
+        this.fullRoutePrice = fullRoutePrice;
     }
 }

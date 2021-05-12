@@ -288,4 +288,6 @@
         app:headerLayout="@layout/hash_nav_header"
         app:menu="@menu/drawer_menu"/>
 
+
+
 </androidx.drawerlayout.widget.DrawerLayout>

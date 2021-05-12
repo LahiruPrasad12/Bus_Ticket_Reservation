@@ -117,7 +117,7 @@
                         style="@style/loginButton"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:onClick="Login"
+                        android:onClick="Register"
                         android:text="Register"
                         android:textColor="#ffff"
                         app:initialCornerAngle="27dp"

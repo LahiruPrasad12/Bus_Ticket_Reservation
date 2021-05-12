@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
     String busNo;
     ProgressBar progressBar;
+    private int count = 0;
+    private int numRetrieve = 0;
 
     private DatabaseReference databaseReference;
     private ArrayList<String> BusNo = new ArrayList<>();
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view);
+
 
         //Navigation  Bar
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -139,42 +142,62 @@ public class MainActivity extends AppCompatActivity {
         to = To.getText().toString();
 
 
+        if(from.length()==0){
+            Toast.makeText(this, "Please Enter Your Location", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.INVISIBLE);
+        }else if(to.length()==0){
+            Toast.makeText(this, "Please Enter Finding Location", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.INVISIBLE);
+        }else{
 
-        //Retrieve Data Using From and To place
-        Query query = FirebaseDatabase.getInstance().getReference("Users").
-                orderByChild("Name").equalTo("Hashen");
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    progressBar.setVisibility(View.INVISIBLE);
+            //Retrieve Data Using From and To place
+            Query query = FirebaseDatabase.getInstance().getReference("Routes").
+                    orderByChild("from").equalTo(from);
+            query.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.exists()){
+                        Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.INVISIBLE);
 
-                    for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                            TextView textView = new TextView(MainActivity.this);
-                            Button button = new Button(getApplicationContext());
-                            progressBar.setVisibility(View.INVISIBLE);
-                            busNo = dataSnapshot.child("Name").getValue().toString();
-                            depTime = dataSnapshot.child("Name").getValue().toString();
-                            arTime = dataSnapshot.child("Name").getValue().toString();
-                            BusNo.add(busNo);
-                            Time.add(arTime +" - "+depTime);
-                            Location.add(from + " - "+to);
-                            initRecyclerView();
+                        //Check whether have 1 bus
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            if(dataSnapshot.child("to").getValue().toString().equals(to)){
+                                count++;
+                            }
+                        }
+
+                        if(count>=1){
+                            for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TextView textView = new TextView(MainActivity.this);
+                                Button button = new Button(getApplicationContext());
+                                progressBar.setVisibility(View.INVISIBLE);
+                                busNo = dataSnapshot.child("bus_No").getValue().toString();
+                                depTime = dataSnapshot.child("departure_Time").getValue().toString();
+                                arTime = dataSnapshot.child("arrival_Time").getValue().toString();
+                                BusNo.add(busNo);
+                                Time.add(arTime +" - "+depTime);
+                                Location.add(from + " - "+to);
+                                initRecyclerView();
+                            }
+                        }else {
+                            Toast.makeText(MainActivity.this, "Can't Find Location", Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Can't Find Location", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.INVISIBLE);
                     }
-
-                }else {
-                    Toast.makeText(getApplicationContext(), "Can't", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.INVISIBLE);
                 }
+            });
 
-            }
+        }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.INVISIBLE);
-            }
-        });
+
 
 
 
