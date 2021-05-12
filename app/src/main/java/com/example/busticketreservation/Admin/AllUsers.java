@@ -1,5 +1,6 @@
 package com.example.busticketreservation.Admin;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -64,6 +66,7 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
         name = findViewById(R.id.tv_name);
         phone = findViewById(R.id.tv_phone);
         email = findViewById(R.id.tv_email);
+        System.out.println("Ed: "+edTxtMail);
 
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +80,8 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteUSer();
+                AlertDialog diaBox = AskOption();
+                diaBox.show();
             }
         });
 
@@ -151,14 +155,22 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
                         //creating user object with retrieved data
                         User user = dataSnapshot.getValue(User.class);
 
-                        Toast.makeText(getApplicationContext(), "Username:"+user.getName(), Toast.LENGTH_SHORT).show();
+
 
                         roll.setText(user.getRoll());
                         name.setText(user.getName());
                         phone.setText(user.getPhone());
                         email.setText(user.getMail());
                     }
+
+                    if(userKey==null){
+                        Toast.makeText(getApplicationContext(), "No user with"+search+"email", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "User fetched successfully", Toast.LENGTH_SHORT).show();
+                    }
                 }
+
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
@@ -177,6 +189,35 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
         dbRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userKey);
         dbRef.removeValue();
         Toast.makeText(getApplicationContext(), "User Deleted Successfully ", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getApplicationContext(), AddUsers.class));
+    }
+
+    private AlertDialog AskOption()
+    {
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete User")
+                .setMessage("Are you sure you wanna delete?")
+
+                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int Yes) {
+                        deleteUSer();
+
+                        dialog.dismiss();
+                    }
+
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int No) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        return myQuittingDialogBox;
     }
 
 
