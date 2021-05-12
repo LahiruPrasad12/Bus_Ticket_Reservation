@@ -100,7 +100,7 @@
     <string name="admin_btn_edit">Edit</string>
     <string name="admin_btn_delete">Delete</string>
     <string name="updateRoute">Update Route</string>
-    <string name="btn_update">Save And Update</string>
+    <string name="btn_update">Update</string>
     <string name="addUser">Add New User</string>
 
     <string name="admin_hint_type">Enter User Type</string>

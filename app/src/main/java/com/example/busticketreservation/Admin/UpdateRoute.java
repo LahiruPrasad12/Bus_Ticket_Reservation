@@ -174,6 +174,7 @@ public class UpdateRoute extends AppCompatActivity implements NavigationView.OnN
             dbRef.child("Routes_Admin").child(key).child("fullRoutePrice").setValue(fullRoutePrice);
 
             Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), AllRoutes.class));
 
         } catch (NumberFormatException nfe) {
             Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();

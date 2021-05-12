@@ -27,16 +27,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Changed delete route to advance version">
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Changed update route to advance version">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AllUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AllUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/UpdateRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/UpdateRoute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/ViewRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/ViewRoute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +53,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_27]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58M475GFXE]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -267,13 +274,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619377073080</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Create User Registration And Design Login Interface">
-      <created>1619458535496</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1619458535496</updated>
     </task>
     <task id="LOCAL-00002" summary="Create User Registration And Design Login Interface">
       <created>1619459894473</created>
@@ -611,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620850997880</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Changed update route to advance version">
+      <created>1620852399148</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852399149</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -627,7 +634,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed string file" />
     <MESSAGE value="created view route activity to open when one item card is clicked" />
     <MESSAGE value="completed view layout design" />
     <MESSAGE value="created update activity with redirection" />
@@ -652,7 +658,8 @@
     <MESSAGE value="commited before pull from main" />
     <MESSAGE value="Completed view user searching by email" />
     <MESSAGE value="Changed delete route to advance version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed delete route to advance version" />
+    <MESSAGE value="Changed update route to advance version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed update route to advance version" />
   </component>
   <component name="WindowStateProjectService">
     <state x="436" y="155" key="#PSD" timestamp="1620330551329">
@@ -696,25 +703,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620678072477" />
-    <state width="1491" height="174" key="GridCell.Tab.0.bottom" timestamp="1620851918790">
+    <state width="1491" height="168" key="GridCell.Tab.0.bottom" timestamp="1620856757096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620851918790" />
+    <state width="1491" height="168" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620856757096" />
     <state width="1491" height="176" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="174" key="GridCell.Tab.0.center" timestamp="1620851918789">
+    <state width="1491" height="168" key="GridCell.Tab.0.center" timestamp="1620856757096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="174" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620851918789" />
+    <state width="1491" height="168" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620856757096" />
     <state width="1491" height="176" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="174" key="GridCell.Tab.0.left" timestamp="1620851918789">
+    <state width="1491" height="168" key="GridCell.Tab.0.left" timestamp="1620856757096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="174" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620851918789" />
+    <state width="1491" height="168" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620856757096" />
     <state width="1491" height="176" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
-    <state width="1491" height="174" key="GridCell.Tab.0.right" timestamp="1620851918790">
+    <state width="1491" height="168" key="GridCell.Tab.0.right" timestamp="1620856757096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="174" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620851918790" />
+    <state width="1491" height="168" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620856757096" />
     <state width="1491" height="176" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
     <state width="1491" height="177" key="GridCell.Tab.1.bottom" timestamp="1620850114550">
       <screen x="0" y="0" width="1536" height="824" />
@@ -744,10 +751,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="521" y="119" key="RollbackChangesDialog/0.0.1536.834@0.0.1536.834" timestamp="1619461954236" />
-    <state x="135" y="0" key="SettingsEditor" timestamp="1620623766839">
+    <state x="135" y="0" key="SettingsEditor" timestamp="1620856518749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="135" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620623766839" />
+    <state x="135" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620856518749" />
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
     <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620809253433">
       <screen x="0" y="0" width="1536" height="824" />

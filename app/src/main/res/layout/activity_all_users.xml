@@ -188,7 +188,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:text="Bus Owner"
+                android:text=""
                 android:textSize="21sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tv_routeNo_head"
                 app:layout_constraintStart_toEndOf="@+id/tv_routeNo_head" />
@@ -197,7 +197,7 @@
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nalin Hashen"
+                android:text=""
                 android:textSize="21sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tv_from_head"
                 app:layout_constraintStart_toStartOf="@+id/tv_roll" />
@@ -206,7 +206,7 @@
                 android:id="@+id/tv_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="077744568"
+                android:text=""
                 android:textSize="21sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tv_to_head"
                 app:layout_constraintStart_toStartOf="@+id/tv_name" />
@@ -215,7 +215,7 @@
                 android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="nh9@gmail.com"
+                android:text=""
                 android:textSize="21sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tv_price_head"
                 app:layout_constraintStart_toStartOf="@+id/tv_phone" />
@@ -265,7 +265,7 @@
                 app:srcCompat="@drawable/ic_baseline_email_24" />
 
             <Button
-                android:id="@+id/admin_btn_deleteRoute"
+                android:id="@+id/admin_btn_deleteUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

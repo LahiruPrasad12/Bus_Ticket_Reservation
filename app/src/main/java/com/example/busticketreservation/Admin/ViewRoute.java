@@ -90,8 +90,8 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onClick(View view) {
 
-
                 try{
+                    //getting key to delete
                     Query query = FirebaseDatabase.getInstance().getReference().child("Routes_Admin")
                             .orderByChild("routeNo")
                             .equalTo(route.getRouteNo());
@@ -106,6 +106,7 @@ public class ViewRoute extends AppCompatActivity implements NavigationView.OnNav
                                 dbRef = FirebaseDatabase.getInstance().getReference().child("Routes_Admin").child(routeKey);
                                 dbRef.removeValue();
                                 Toast.makeText(getApplicationContext(), "Route Deleted Successfully ", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), AllRoutes.class));
 
                             }
                         }

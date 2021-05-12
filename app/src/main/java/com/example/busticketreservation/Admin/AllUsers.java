@@ -32,11 +32,12 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
 
     private DrawerLayout drawer;
     private String userType;
-    Button btnSearch;
+    Button btnSearch, btnDelete;
     EditText edTxtMail;
     TextView roll, name, phone, email;
     private DatabaseReference dbRef;
     ArrayList<User> list;
+    private String userKey;
 
 
     @Override
@@ -44,37 +45,21 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_users);
 
-//      using the toolbar as the action bar
+//      nav and toolbar
         Toolbar toolbar = findViewById(R.id.hash_toolbar);
         setSupportActionBar(toolbar);
-
-//        getting the drawer layout
         drawer = findViewById(R.id.hash_drawer_layout);
-
-        //        listen to click events of the navigation view
         NavigationView navigationView = findViewById(R.id.hash_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-//        get the menu button in the top left corner
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
 
-//        //get the spinner from the xml.
-//        Spinner dropdown = findViewById(R.id.user_type);
-//        //create a list of items for the spinner.
-//        String[] items = new String[]{"Bus Owner", "Bus Driver", "Trip Manager"};
-//        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
-//        //There are multiple variations of this, but this is the basic variant.
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-//        //set the spinners adapter to the previously created one.
-//        dropdown.setAdapter(adapter);
-
         edTxtMail = findViewById(R.id.edTxtMail);
         btnSearch = findViewById(R.id.btnSearch);
+        btnDelete = findViewById(R.id.admin_btn_deleteUser);
         roll = findViewById(R.id.tv_roll);
         name = findViewById(R.id.tv_name);
         phone = findViewById(R.id.tv_phone);
@@ -85,42 +70,16 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
 
             @Override
             public void onClick(View view) {
-                String search = edTxtMail.getText().toString();
-
-                // connecting to the database and referring users table
-                try{
-                    Query query = FirebaseDatabase.getInstance().getReference().child("Users")
-                            .orderByChild("Mail")
-                            .equalTo(search);
-                    query.addValueEventListener(new ValueEventListener() {
-
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                                User user = dataSnapshot.getValue(User.class);
-
-                                Toast.makeText(getApplicationContext(), "Username:"+user.getName(), Toast.LENGTH_SHORT).show();
-
-                                roll.setText(user.getRoll());
-                                name.setText(user.getName());
-                                phone.setText(user.getPhone());
-                                email.setText(user.getMail());
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-                            Toast.makeText(getApplicationContext(), "No user"+search+"email", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
-                }
+                userKey = searchUser();
             }
         });
 
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteUSer();
+            }
+        });
 
     }
 
@@ -168,6 +127,56 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
         userType = null;
+    }
+
+    //method to search user by email address
+    public String searchUser(){
+        String search = edTxtMail.getText().toString();
+
+
+        // connecting to the database and referring users table
+        try{
+            Query query = FirebaseDatabase.getInstance().getReference().child("Users")
+                    .orderByChild("Mail")
+                    .equalTo(search);
+            query.addValueEventListener(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+
+                        //getting key for deleting purpose
+                         userKey = dataSnapshot.getKey();
+
+                        //creating user object with retrieved data
+                        User user = dataSnapshot.getValue(User.class);
+
+                        Toast.makeText(getApplicationContext(), "Username:"+user.getName(), Toast.LENGTH_SHORT).show();
+
+                        roll.setText(user.getRoll());
+                        name.setText(user.getName());
+                        phone.setText(user.getPhone());
+                        email.setText(user.getMail());
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(getApplicationContext(), "No user"+search+"email", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
+        }
+        return userKey;
+    }
+
+    public void deleteUSer(){
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userKey);
+        dbRef.removeValue();
+        Toast.makeText(getApplicationContext(), "User Deleted Successfully ", Toast.LENGTH_SHORT).show();
     }
 
 
