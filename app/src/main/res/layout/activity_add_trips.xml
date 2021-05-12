@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripManager.AddTrips">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="187dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="@string/add_trip"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addtripid"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/add_trip_id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/image5"-->
+    <!--        android:layout_width="43dp"-->
+    <!--        android:layout_height="33dp"-->
+    <!--        android:layout_marginStart="52dp"-->
+    <!--        android:layout_marginTop="65dp"-->
+    <!--        android:background="@color/whiteTextColor"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/select_bus"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/image4"-->
+    <!--        app:srcCompat="@drawable/ic_bus" />-->
+
+    <EditText
+        android:id="@+id/addrouteid"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/add_route_id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/add_date"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/add_date"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addtripid" />
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/select_bus"-->
+    <!--        android:layout_width="236dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="60dp"-->
+    <!--        android:layout_marginEnd="72dp"-->
+    <!--        android:background="@drawable/edit_text_rectangle"-->
+    <!--        android:dropDownWidth="wrap_content"-->
+    <!--        android:duplicateParentState="false"-->
+    <!--        android:spinnerMode="dropdown"-->
+    <!--        android:textAlignment="center"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/txt_ar_time" />-->
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/addtripid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/ic_add_routes" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/addrouteid"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image1"
+        app:srcCompat="@drawable/ic_rote_tm" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/whiteTextColor"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toStartOf="@+id/txt_dep_time"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image2"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/add_date"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image1"
+        app:srcCompat="@drawable/ic_baseline_calendar" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/txt_ar_time"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image3"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <EditText
+        android:id="@+id/txt_dep_time"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/depature_time"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_date" />
+
+    <EditText
+        android:id="@+id/txt_ar_time"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/arrival_time"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dep_time" />
+
+    <Button
+        android:id="@+id/button_add_trip"
+        android:layout_width="139dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:text="@string/add_trip"
+        android:textColor="@color/hash_light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btncancel"
+        android:layout_width="139dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:text="@string/cancel"
+        android:textColor="@color/hash_light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_add_trip"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
