@@ -2,7 +2,16 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel" />
+        <device id="pixel_3a_xl" />
+        <device id="Nexus 6" />
+        <device id="pixel_2_xl" />
+        <device id="Nexus 6P" />
+        <device id="Nexus 5X" />
+        <device id="pixel_2" />
+        <target>android-30</target>
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
@@ -18,33 +27,50 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Done All crud operation part">
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="merged project so now all the users can login from one interface">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/Admin/AddUsers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_XL_API_30]" />
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="valueResourceFile" />
+        <option value="layoutResourceFile_vertical" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -52,74 +78,81 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="CustomerChecking" />
+        <entry key="$PROJECT_DIR$" value="AdminFunctions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rfpbrrU0siXTGHCgmjNtl8yRyI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_4_XL_API_30" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-11T18:15:13.291Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_27" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-09T06:58:08.186Z" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="COLOR" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ViewUser" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Properties" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.2050761721">
+    <key name="android.template.-1114989114">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.607012876">
       <recent name="com.example.busticketreservation" />
     </key>
+    <key name="android.template.-1422321407">
+      <recent name="com.example.busticketreservation.Admin" />
+    </key>
+    <key name="android.template.-1446625351">
+      <recent name="com.example.busticketreservation.Admin" />
+    </key>
     <key name="android.template.1984254529">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.-1704837980">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\drawable" />
-      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\font" />
-      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\values" />
-      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res" />
-    </key>
-    <key name="android.template.904773871">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.-975130194">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1114989114">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gayan\AndroidStudioProjects\Bus_Ticket_Reservation\app\src\main\res\layout" />
+      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\drawable" />
+      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\font" />
+      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\values" />
+      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\drawable-v24" />
+    </key>
+    <key name="android.template.-1175704917">
+      <recent name="com.example.busticketreservation.Admin" />
+    </key>
+    <key name="android.template.904773871">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-1491598843">
+      <recent name="com.example.busticketreservation.Admin" />
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.busticketreservation.Admin" />
+    </key>
+    <key name="android.template.-1704837980">
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
-    <configuration name="ExampleUnitTest.testFinalAmount" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BusTicketReservation.app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.busticketreservation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.busticketreservation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.busticketreservation.ExampleUnitTest" />
-      <option name="METHOD_NAME" value="testFinalAmount" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FullRoutePriceTest.priceCalculation" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="BusTicketReservation.app" />
       <extension name="coverage">
@@ -203,7 +236,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.ExampleUnitTest.testFinalAmount" />
         <item itemvalue="Android JUnit.FullRoutePriceTest.priceCalculation" />
       </list>
     </recent_temporary>
@@ -254,77 +286,287 @@
       <option name="project" value="LOCAL" />
       <updated>1619990259358</updated>
     </task>
-    <task id="LOCAL-00006" summary="Change Login And Registeration Database">
-      <created>1620315012348</created>
+    <task id="LOCAL-00006" summary="package commits before pulling from main">
+      <created>1620370214691</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1620315012348</updated>
+      <updated>1620370214692</updated>
     </task>
-    <task id="LOCAL-00007" summary="Change Bus View Database into real time and update LoginActivity">
-      <created>1620331282907</created>
+    <task id="LOCAL-00007" summary="added admin java class">
+      <created>1620370559213</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1620331282908</updated>
+      <updated>1620370559213</updated>
     </task>
-    <task id="LOCAL-00008" summary="Create Bus View Function">
-      <created>1620489637546</created>
+    <task id="LOCAL-00008" summary="deleted admin java class">
+      <created>1620370685347</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1620489637546</updated>
+      <updated>1620370685347</updated>
     </task>
-    <task id="LOCAL-00009" summary="Create Bus View Function">
-      <created>1620490006527</created>
+    <task id="LOCAL-00009" summary="renamed adminTest to adminMain">
+      <created>1620382114893</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1620490006527</updated>
+      <updated>1620382114893</updated>
     </task>
-    <task id="LOCAL-00010" summary="Design Bus View Part">
-      <created>1620506115904</created>
+    <task id="LOCAL-00010" summary="commited to pull from main">
+      <created>1620382209479</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1620506115904</updated>
+      <updated>1620382209479</updated>
     </task>
-    <task id="LOCAL-00011" summary="Create Final Bill Part">
-      <created>1620507801693</created>
+    <task id="LOCAL-00011" summary="Add four new fragments for the navigation">
+      <created>1620383056343</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1620507801693</updated>
+      <updated>1620383056343</updated>
     </task>
-    <task id="LOCAL-00012" summary="Create Validation part in MainActivity">
-      <created>1620509134513</created>
+    <task id="LOCAL-00012" summary="Add four java classes for the fragments">
+      <created>1620383865253</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1620509134513</updated>
+      <updated>1620383865253</updated>
     </task>
-    <task id="LOCAL-00013" summary="Update login activity">
-      <created>1620752253651</created>
+    <task id="LOCAL-00013" summary="Completed AdminMain with nav bar and fragments">
+      <created>1620385527934</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1620752253651</updated>
+      <updated>1620385527934</updated>
     </task>
-    <task id="LOCAL-00014" summary="Add Test Cases">
-      <created>1620756081506</created>
+    <task id="LOCAL-00014" summary="Completed AdminMain with nav bar and fragments">
+      <created>1620390543096</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1620756081507</updated>
+      <updated>1620390543096</updated>
     </task>
-    <task id="LOCAL-00015" summary="Done All crud operation part">
-      <created>1620757594864</created>
+    <task id="LOCAL-00015" summary="Updated manifest file">
+      <created>1620391094993</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1620757594864</updated>
+      <updated>1620391094993</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="designed layout fragment_add_routes">
+      <created>1620400980806</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620400980806</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Created activities instead of fragments to resolve data handling issues">
+      <created>1620407237472</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620407237472</updated>
+    </task>
+    <task id="LOCAL-00018" summary="deleted fragment classes">
+      <created>1620407540899</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1620407540899</updated>
+    </task>
+    <task id="LOCAL-00019" summary="updated layouts with icons">
+      <created>1620426642690</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1620426642690</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add Route Insert operation completed">
+      <created>1620429317794</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1620429317794</updated>
+    </task>
+    <task id="LOCAL-00021" summary="deleted sample java files">
+      <created>1620446972131</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1620446972132</updated>
+    </task>
+    <task id="LOCAL-00022" summary="created all routes recycle view to retrieve and display data">
+      <created>1620459393065</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1620459393065</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commited to pull from main">
+      <created>1620459816522</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1620459816522</updated>
+    </task>
+    <task id="LOCAL-00024" summary="changed string file">
+      <created>1620461196027</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1620461196027</updated>
+    </task>
+    <task id="LOCAL-00025" summary="created view route activity to open when one item card is clicked">
+      <created>1620471550246</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1620471550246</updated>
+    </task>
+    <task id="LOCAL-00026" summary="completed view layout design">
+      <created>1620486091955</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1620486091955</updated>
+    </task>
+    <task id="LOCAL-00027" summary="created update activity with redirection">
+      <created>1620488549823</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1620488549823</updated>
+    </task>
+    <task id="LOCAL-00028" summary="completed navigation view of UpdateRoute activity">
+      <created>1620489791072</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1620489791072</updated>
+    </task>
+    <task id="LOCAL-00029" summary="created route data update function">
+      <created>1620497439729</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1620497439729</updated>
+    </task>
+    <task id="LOCAL-00030" summary="created route data delete&#10;function">
+      <created>1620499037348</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1620499037348</updated>
+    </task>
+    <task id="LOCAL-00031" summary="deleted four navigation fragments">
+      <created>1620499224638</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1620499224638</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Created Add User Layout">
+      <created>1620502523261</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1620502523261</updated>
+    </task>
+    <task id="LOCAL-00033" summary="designed the all users layout">
+      <created>1620504555088</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1620504555088</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Updated Layout Designs">
+      <created>1620539057353</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1620539057353</updated>
+    </task>
+    <task id="LOCAL-00035" summary="made validations">
+      <created>1620575637518</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1620575637518</updated>
+    </task>
+    <task id="LOCAL-00036" summary="commited to checkout to new test case branch">
+      <created>1620677979143</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1620677979143</updated>
+    </task>
+    <task id="LOCAL-00037" summary="changed add route UI with new input boxes">
+      <created>1620678529021</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1620678529021</updated>
+    </task>
+    <task id="LOCAL-00038" summary="new add route xml and started changing add route java">
+      <created>1620709700753</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1620709700753</updated>
+    </task>
+    <task id="LOCAL-00039" summary="completed add with calculation and view specific route">
+      <created>1620714530324</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1620714530324</updated>
+    </task>
+    <task id="LOCAL-00040" summary="all route management functions completed(updated)">
+      <created>1620727345467</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1620727345467</updated>
+    </task>
+    <task id="LOCAL-00041" summary="completed test cases for adding new route">
+      <created>1620731113355</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1620731113355</updated>
+    </task>
+    <task id="LOCAL-00042" summary="getting data from spinner at add user">
+      <created>1620738629790</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1620738629791</updated>
+    </task>
+    <task id="LOCAL-00043" summary="completed employee registration (Add user) Function">
+      <created>1620743686747</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1620743686747</updated>
+    </task>
+    <task id="LOCAL-00044" summary="arranged manifest file">
+      <created>1620744452077</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1620744452077</updated>
+    </task>
+    <task id="LOCAL-00045" summary="merged project so now all the users can login from one interface">
+      <created>1620746012657</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1620746012657</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,110 +582,153 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create User Registration And Design Login Interface" />
-    <MESSAGE value="Create Login" />
-    <MESSAGE value="Create Update And Delete User Profile" />
-    <MESSAGE value="Design List View Using Adapter Class" />
-    <MESSAGE value="Change Login And Registeration Database" />
-    <MESSAGE value="Change Bus View Database into real time and update LoginActivity" />
-    <MESSAGE value="Create Bus View Function" />
-    <MESSAGE value="Design Bus View Part" />
-    <MESSAGE value="Create Final Bill Part" />
-    <MESSAGE value="Create Validation part in MainActivity" />
-    <MESSAGE value="Update login activity" />
-    <MESSAGE value="Add Test Cases" />
-    <MESSAGE value="Done All crud operation part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done All crud operation part" />
+    <MESSAGE value="deleted sample java files" />
+    <MESSAGE value="created all routes recycle view to retrieve and display data" />
+    <MESSAGE value="commited to pull from main" />
+    <MESSAGE value="changed string file" />
+    <MESSAGE value="created view route activity to open when one item card is clicked" />
+    <MESSAGE value="completed view layout design" />
+    <MESSAGE value="created update activity with redirection" />
+    <MESSAGE value="completed navigation view of UpdateRoute activity" />
+    <MESSAGE value="created route data update function" />
+    <MESSAGE value="created route data delete&#10;function" />
+    <MESSAGE value="deleted four navigation fragments" />
+    <MESSAGE value="Created Add User Layout" />
+    <MESSAGE value="designed the all users layout" />
+    <MESSAGE value="Updated Layout Designs" />
+    <MESSAGE value="made validations" />
+    <MESSAGE value="commited to checkout to new test case branch" />
+    <MESSAGE value="changed add route UI with new input boxes" />
+    <MESSAGE value="new add route xml and started changing add route java" />
+    <MESSAGE value="completed add with calculation and view specific route" />
+    <MESSAGE value="all route management functions completed(updated)" />
+    <MESSAGE value="completed test cases for adding new route" />
+    <MESSAGE value="getting data from spinner at add user" />
+    <MESSAGE value="completed employee registration (Add user) Function" />
+    <MESSAGE value="arranged manifest file" />
+    <MESSAGE value="merged project so now all the users can login from one interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged project so now all the users can login from one interface" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="654" y="280" key="#Notifications" timestamp="1620315129609">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="436" y="155" key="#PSD" timestamp="1620330551329">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="654" y="280" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1620315129609" />
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1620506327334">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="436" y="155" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1620330551329" />
+    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1620735659459">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1620506327334" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619473904735">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="816" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1620735659459" />
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619546793935" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620407362624">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620407362624" />
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1619473904735" />
-    <state x="93" y="93" width="1350" height="648" key="AVDManager" timestamp="1620756946398">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="595" y="178" key="AndroidCreateResourceDirectoryDialog" timestamp="1620314562060">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="648" key="AVDManager/0.0.1536.834@0.0.1536.834" timestamp="1620756946398" />
-    <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog" timestamp="1619475150401">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
+    <state x="595" y="178" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1620314562060" />
     <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1619475150401" />
-    <state x="349" y="172" key="AndroidCreateResourceFileDialog" timestamp="1619546471966">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="155" y="154" key="AndroidCreateResourceFileDialog" timestamp="1620707147808">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="155" y="154" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1620707147808" />
     <state x="349" y="172" key="AndroidCreateResourceFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1619546471966" />
-    <state x="610" y="203" key="AndroidCreateXmlResourceDialog" timestamp="1619637134243">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="855" y="186" key="AndroidCreateXmlResourceDialog" timestamp="1620657664045">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="855" y="186" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1620657664045" />
     <state x="610" y="203" key="AndroidCreateXmlResourceDialog/0.0.1536.834@0.0.1536.834" timestamp="1619637134243" />
     <state x="367" y="4" key="CommitChangelistDialog2" timestamp="1619614335594">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="367" y="4" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619614335594" />
-    <state x="148" y="66" key="DiffContextDialog" timestamp="1620489500988">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="393" y="184" key="Downloadable.Font.Dialog.Size" timestamp="1620548353256">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
-    <state width="1491" height="94" key="GridCell.Tab.0.bottom" timestamp="1620758334789">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="393" y="184" key="Downloadable.Font.Dialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1620548353256" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620678072477">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="94" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
-    <state width="1491" height="94" key="GridCell.Tab.0.center" timestamp="1620758334789">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620678072477" />
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom" timestamp="1620743434853">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="94" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
-    <state width="1491" height="94" key="GridCell.Tab.0.left" timestamp="1620758334789">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620743434853" />
+    <state width="1491" height="176" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
+    <state width="1491" height="2" key="GridCell.Tab.0.center" timestamp="1620743434852">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="94" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
-    <state width="1491" height="94" key="GridCell.Tab.0.right" timestamp="1620758334789">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1491" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620743434852" />
+    <state width="1491" height="176" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
+    <state width="1491" height="2" key="GridCell.Tab.0.left" timestamp="1620743434852">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="94" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
-    <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1620752364219">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1491" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620743434852" />
+    <state width="1491" height="176" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right" timestamp="1620743434852">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="407" y="178" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1620752364219" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620743434852" />
+    <state width="1491" height="176" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
+    <state width="1491" height="2" key="GridCell.Tab.1.bottom" timestamp="1620738245981">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="2" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620738245981" />
+    <state width="1491" height="2" key="GridCell.Tab.1.center" timestamp="1620738245981">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="2" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620738245981" />
+    <state width="1491" height="2" key="GridCell.Tab.1.left" timestamp="1620738245980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="2" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620738245980" />
+    <state width="1491" height="2" key="GridCell.Tab.1.right" timestamp="1620738245981">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="2" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620738245981" />
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1620328750809">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1620328750809" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1620743834984">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1620743834984" />
     <state x="521" y="119" key="RollbackChangesDialog" timestamp="1619461954236">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="521" y="119" key="RollbackChangesDialog/0.0.1536.834@0.0.1536.834" timestamp="1619461954236" />
-    <state x="209" y="124" key="SettingsEditor" timestamp="1619462132765">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="135" y="0" key="SettingsEditor" timestamp="1620623766839">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="135" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620623766839" />
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1620757660714">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620746027096">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620757660714" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620746027096" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619990273283" />
     <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1619506173917">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1619506173917" />
-    <state x="465" y="130" key="git4idea.branch.GitSmartOperationDialog" timestamp="1620509398592">
+    <state x="488" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1620678785803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="488" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1620678785803" />
+    <state x="505" y="201" key="git4idea.merge.GitMergeDialog" timestamp="1620359744726">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="505" y="201" key="git4idea.merge.GitMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1620359744726" />
+    <state x="446" y="201" key="git4idea.merge.GitPullDialog" timestamp="1620743803669">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="446" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1620743803669" />
+    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1619459637993">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="130" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.834@0.0.1536.834" timestamp="1620509398592" />
-    <state x="485" y="205" key="git4idea.merge.GitMergeDialog" timestamp="1620509453467">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="485" y="205" key="git4idea.merge.GitMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1620509453467" />
-    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620757614251">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620757614251" />
-    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620315948617">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.834@0.0.1536.834" timestamp="1620315948617" />
+    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.834@0.0.1536.834" timestamp="1619459637993" />
     <state x="578" y="311" key="git4idea.ui.GitResetDialog" timestamp="1619461972432">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -452,5 +737,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="475" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1619532664056" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620553983741">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620553983741" />
   </component>
 </project>
