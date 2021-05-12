@@ -71,7 +71,7 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
         //get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.user_type);
         //create a list of items for the spinner.
-        String[] items = new String[]{"Bus Owner", "Bus Driver", "Trip Manager"};
+        String[] items = new String[]{"Bus Owner", "Bus Driver", "Trip Manager", "Admin"};
         //create an adapter to describe how the items are displayed
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         //set the spinners adapter to the previously created one.
