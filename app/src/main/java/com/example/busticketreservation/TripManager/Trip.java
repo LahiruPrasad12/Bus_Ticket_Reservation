@@ -2,6 +2,7 @@ package com.example.busticketreservation.TripManager;
 
 public class Trip {
     private String trip_id;
+    private String route_id;
     private String date;
     private String dep_time;
     private String ar_time;
@@ -16,6 +17,10 @@ public class Trip {
     public void setTrip_id(String trip_id) {
         this.trip_id = trip_id;
     }
+
+    public String getRoute_id() {return route_id;}
+
+    public void setRoute_id(String route_id){this.route_id=route_id;}
 
     public String getDate() {
         return date;

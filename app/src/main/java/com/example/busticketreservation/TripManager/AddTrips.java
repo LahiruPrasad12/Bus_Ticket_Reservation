@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddTrips extends AppCompatActivity {
 
-    EditText trip_id, date , dep_time, ar_time;
+    EditText trip_id,route_id, date , dep_time, ar_time;
     Button btcancel,btnaddtrip;
     Trip trp;
     DatabaseReference dbref;
@@ -27,6 +27,7 @@ public class AddTrips extends AppCompatActivity {
         setContentView(R.layout.activity_add_trips);
 
         trip_id = findViewById(R.id.addtripid);
+        route_id = findViewById(R.id.addrouteid);
         date = findViewById(R.id.add_date);
         dep_time = findViewById(R.id.txt_dep_time);
         ar_time = findViewById(R.id.txt_ar_time);
@@ -35,12 +36,12 @@ public class AddTrips extends AppCompatActivity {
 
 
 
-        /*navigate to select route */
+        /*navigate to home page */
         btcancel = findViewById(R.id.btncancel);
         btcancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),SelectRoutesTm.class));
+                startActivity(new Intent(getApplicationContext(),TripMainActivity.class));
             }
         });
 
@@ -53,7 +54,9 @@ public class AddTrips extends AppCompatActivity {
 
                 try {
                     if (TextUtils.isEmpty(trip_id.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Empty ID",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Empty Trip ID",Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(route_id.getText().toString()))
+                        Toast.makeText(getApplicationContext(),"Empty Route ID",Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(date.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Empty Date",Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(dep_time.getText().toString()))
@@ -64,9 +67,11 @@ public class AddTrips extends AppCompatActivity {
 
                         trp = new Trip();
                         trp.setTrip_id(trip_id.getText().toString().trim());
+                        trp.setRoute_id(route_id.getText().toString().trim());
                         trp.setDate(date.getText().toString().trim());
                         trp.setDep_time(dep_time.getText().toString().trim());
                         trp.setAr_time(ar_time.getText().toString().trim());
+
 //                        dbref.child("Trip").setValue(trp);
 
                         dbref.push().setValue(trp);
@@ -94,6 +99,7 @@ public class AddTrips extends AppCompatActivity {
 
     private void clearControls(){
         trip_id.setText("");
+        route_id.setText("");
         date.setText("");
         dep_time.setText("");
         ar_time.setText("");

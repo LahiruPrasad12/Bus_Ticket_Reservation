@@ -29,14 +29,14 @@ public class TripMainActivity extends AppCompatActivity {
         viewSelectRoute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),SelectRoutesTm.class));
+                startActivity(new Intent(getApplicationContext(),AddTrips.class));
             }
         });
 
         viewTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ViewTrips.class));
+                startActivity(new Intent(getApplicationContext(),ShowTrips.class));
             }
         });
 

@@ -65,15 +65,12 @@
     <string name="btnUpdate">update</string>
     <string name="btnDelete">delete</string>
     <string name="nextPg">Next Page</string>
-<!--    <string name="addRoute">Add New Route</string>-->
-<!--    <string name="hintRoutNoAdmin"> Route Number</string>-->
-<!--    <string name="hintFromAdmin"> From</string>-->
-<!--    <string name="hintToAdmin"> To</string>-->
-<!--    <string name="hintPriceAdmin"> Price</string>-->
-<!--    <string name="admin_btn_submit">submit</string>-->
-
-
-
+    <!--    <string name="addRoute">Add New Route</string>-->
+    <!--    <string name="hintRoutNoAdmin"> Route Number</string>-->
+    <!--    <string name="hintFromAdmin"> From</string>-->
+    <!--    <string name="hintToAdmin"> To</string>-->
+    <!--    <string name="hintPriceAdmin"> Price</string>-->
+    <!--    <string name="admin_btn_submit">submit</string>-->
 
 
     <!--imports for ActionBarToggle Class-->
@@ -116,7 +113,6 @@
     <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
 
 
-
     <string name="user_type">Type:</string>
     <string name="user_name">Name:</string>
     <string name="user_contact">Contact:</string>
@@ -135,6 +131,7 @@
     <string name="cancel">Cancel</string>
     <string name="root_id">Root ID :</string>
     <string name="select_route_to_add_trip">Select Route To Add Trip</string>
+    <string name="add_route_id">Add Route ID</string>
 
 
 </resources>
