@@ -43,10 +43,10 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtP);
 
 
-        if(frb.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }
+//        if(frb.getCurrentUser() != null){
+//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//            finish();
+//        }
 
     }
 

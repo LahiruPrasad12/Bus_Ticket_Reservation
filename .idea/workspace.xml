@@ -18,16 +18,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Add Test Cases">
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Done All crud operation part">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
@@ -321,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620756081507</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Done All crud operation part">
+      <created>1620757594864</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1620757594864</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,7 +352,8 @@
     <MESSAGE value="Create Validation part in MainActivity" />
     <MESSAGE value="Update login activity" />
     <MESSAGE value="Add Test Cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Test Cases" />
+    <MESSAGE value="Done All crud operation part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done All crud operation part" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="280" key="#Notifications" timestamp="1620315129609">
@@ -388,22 +392,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
-    <state width="1491" height="215" key="GridCell.Tab.0.bottom" timestamp="1620756989765">
+    <state width="1491" height="94" key="GridCell.Tab.0.bottom" timestamp="1620758334789">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="215" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620756989765" />
-    <state width="1491" height="215" key="GridCell.Tab.0.center" timestamp="1620756989765">
+    <state width="1491" height="94" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
+    <state width="1491" height="94" key="GridCell.Tab.0.center" timestamp="1620758334789">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="215" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620756989765" />
-    <state width="1491" height="215" key="GridCell.Tab.0.left" timestamp="1620756989765">
+    <state width="1491" height="94" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
+    <state width="1491" height="94" key="GridCell.Tab.0.left" timestamp="1620758334789">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="215" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620756989765" />
-    <state width="1491" height="215" key="GridCell.Tab.0.right" timestamp="1620756989765">
+    <state width="1491" height="94" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
+    <state width="1491" height="94" key="GridCell.Tab.0.right" timestamp="1620758334789">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="215" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620756989765" />
+    <state width="1491" height="94" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620758334789" />
     <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1620752364219">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -416,10 +420,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1620509434439">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1620757660714">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620509434439" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620757660714" />
     <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1619506173917">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -432,10 +436,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="485" y="205" key="git4idea.merge.GitMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1620509453467" />
-    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620752285132">
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620757614251">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620752285132" />
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620757614251" />
     <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620315948617">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
