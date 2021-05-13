@@ -58,7 +58,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.MyviewHolder> {
                 alertDlg.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Bus").child("-M_WGFI5RKh4ii4siruY");
+                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Bus").child("-M_XAtYd4u7yxCWH_Qej");
                         databaseReference.removeValue();
                         Toast.makeText(context,"DELETED",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(v.getContext(),ViewAllBus.class);
@@ -101,3 +101,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.MyviewHolder> {
         }
     }
 }
+
+
+
+
