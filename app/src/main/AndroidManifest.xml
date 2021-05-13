@@ -19,7 +19,9 @@
         <activity android:name=".TripManager.TripUpdateandDelete"></activity>
         <activity
             android:name=".TripManager.ShowTrips"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity android:name=".AddRoute" />
         <activity
             android:name=".Admin.UpdateRoute"
@@ -58,6 +60,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Admin.AddRoutes"

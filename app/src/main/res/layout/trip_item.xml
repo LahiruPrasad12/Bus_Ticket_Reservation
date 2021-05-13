@@ -9,6 +9,7 @@
     android:layout_margin="10dp">
 
     <LinearLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,40 +23,40 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="Trip ID : "
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:padding="5dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/trip_idtxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:text="100"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginStart="20dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
                 android:text="Route ID : "
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginStart="65dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/route_idtxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="100"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginStart="10dp"/>
-
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,22 +65,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="Date : "
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:padding="5dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/date_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:text="12/05/2020"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginStart="20dp"/>
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,23 +89,24 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:padding="5dp"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="Depature Time : "
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dep_t_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:text="08.30"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginStart="20dp"/>
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -111,25 +114,23 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:padding="5dp"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="Arrival Time      : "
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/ar_t_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:text="10.30"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginStart="20dp"/>
+                android:textStyle="bold" />
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>
