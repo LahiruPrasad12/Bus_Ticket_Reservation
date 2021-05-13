@@ -16,8 +16,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.busticketreservation.LoginActivity;
 import com.example.busticketreservation.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 public class AddRoutes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -35,18 +37,12 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_routes);
 
-        //      using the toolbar as the action bar
+       //nav and tool bar
         Toolbar toolbar = findViewById(R.id.hash_toolbar);
         setSupportActionBar(toolbar);
-
-        //      getting the drawer layout
         drawer = findViewById(R.id.hash_drawer_layout);
-
-        //      listen to click events of the navigation view
         NavigationView navigationView = findViewById(R.id.hash_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        //       get the menu button in the top left corner
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -119,6 +115,7 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
             else if (TextUtils.isEmpty(stopPrice.getText().toString()))
                 Toast.makeText(getApplicationContext(), "Empty stopPrice", Toast.LENGTH_SHORT).show();
 
+
             else {
 
                 //getting inputs into int fields
@@ -145,7 +142,7 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                 clearControls();
             }
         } catch (NumberFormatException nfe) {
-            Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Stops and Prices Should be numbers", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -163,6 +160,11 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                 break;
             case R.id.nav_add_users:
                 startActivity(new Intent(getApplicationContext(), AddUsers.class));
+                break;
+            case R.id.logOut:
+                Toast.makeText(this, "logging out", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
         }
 

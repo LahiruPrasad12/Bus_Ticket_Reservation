@@ -19,6 +19,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.busticketreservation.LoginActivity;
 import com.example.busticketreservation.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -111,6 +112,11 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_add_users:
                 startActivity(new Intent(getApplicationContext(), AddUsers.class));
                 break;
+            case R.id.logOut:
+                Toast.makeText(this, "logging out", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -142,7 +148,7 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
                 mail = email.getText().toString();
                 pass = pwd.getText().toString();
 
-               // connecting to the database and referring users table
+                // connecting to the database and referring users table
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Employees");
 
                 //validating input fields
@@ -159,7 +165,7 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
                     Toast.makeText(getApplicationContext(), "Please Enter User Email Address", Toast.LENGTH_SHORT).show();
 
                 else if (TextUtils.isEmpty(pass))
-                        Toast.makeText(getApplicationContext(), "Please Enter Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please Enter Password", Toast.LENGTH_SHORT).show();
 
                 else {
                     try{
@@ -176,7 +182,7 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
                                     user.put("Name", un);
                                     user.put("Mail", mail);
                                     user.put("Roll", userType);
-                                    user.put("Phone", con);
+                                    user.put("Phone",con);
 
                                     dbRef.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override

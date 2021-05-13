@@ -16,20 +16,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".TripManager.ShowTrips"></activity>
-        <activity android:name=".AddRoute"></activity>
+        <activity android:name=".AddRoute">
+
+        </activity>
         <activity
             android:name=".Admin.UpdateRoute"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Admin.ViewRoute" />
-        <activity android:name=".BusOwner.ViewBus" />
+        <activity android:name=".Admin.ViewRoute" android:theme="@style/AppTheme.NoActionBarHash"/>
+        <activity android:name=".BusOwner.ViewAllBus" />
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
         <activity android:name=".BusOwner.AddBus" />
-        <activity android:name=".TripManager.TripMainActivity" /> <!-- <activity -->
+        <activity android:name=".TripManager.TripMain" /> <!-- <activity -->
         <!-- android:name=".Admin.AdminMain" -->
         <!-- android:theme="@style/AppTheme.NoActionBarHash" /> -->
         <!-- <activity android:name=".hashTest" /> -->
-        <activity android:name=".TripManager.AddTrips" />
         <activity
             android:name=".ViewUserProfile"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -47,19 +47,21 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBarHash">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Admin.AddRoutes"
             android:theme="@style/AppTheme.NoActionBarHash" />
         <activity
             android:name=".Admin.AllRoutes"
-            android:theme="@style/AppTheme.NoActionBarHash" />
+            android:theme="@style/AppTheme.NoActionBarHash"></activity>
         <activity
             android:name=".Admin.AddUsers"
             android:theme="@style/AppTheme.NoActionBarHash" />

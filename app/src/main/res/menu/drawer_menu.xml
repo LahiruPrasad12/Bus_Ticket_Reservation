@@ -24,5 +24,10 @@
             android:id="@+id/nav_add_users"
             android:icon="@drawable/ic_user_add"
             android:title="Add User" />
+
+        <item
+            android:id="@+id/logOut"
+            android:icon="@drawable/ic_hash_logout"
+            android:title="Sign Out" />
     </group>
 </menu>
