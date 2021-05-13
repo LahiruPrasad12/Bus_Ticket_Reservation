@@ -38,22 +38,6 @@
     <string name="del">Delete</string>
 
 
-    <!--    ishara-->
-    <string name="tv1">Add Bus In Here !!</string>
-    <string name="pt">Bus ID</string>
-    <string name="pt2">Route Number</string>
-    <string name="pt3">License Number</string>
-    <string name="pt4">Number Of Seats</string>
-    <string name="bt1">ADD BUS</string>
-    <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
-    <string name="bt2">UPDATE</string>
-    <string name="bt3">DELETE </string>
-    <string name="tvv3">Bus ID</string>
-    <string name="tvv4">Route ID</string>
-    <string name="tvv5">Licence Number</string>
-    <string name="tvv6">Number Of Seats</string>
-
-
     <!--Hashen-->
     <!--    hash sample-->
     <string name="hintID">Enter Student ID</string>
@@ -65,6 +49,8 @@
     <string name="btnUpdate">update</string>
     <string name="btnDelete">delete</string>
     <string name="nextPg">Next Page</string>
+    <string name="tool_bar_title">Book My Bus</string>
+    <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
     <!--    <string name="addRoute">Add New Route</string>-->
     <!--    <string name="hintRoutNoAdmin"> Route Number</string>-->
     <!--    <string name="hintFromAdmin"> From</string>-->
@@ -100,7 +86,7 @@
     <string name="admin_btn_edit">Edit</string>
     <string name="admin_btn_delete">Delete</string>
     <string name="updateRoute">Update Route</string>
-    <string name="btn_update">Update</string>
+    <string name="btn_update">Save And Update</string>
     <string name="addUser">Add New User</string>
 
     <string name="admin_hint_type">Enter User Type</string>
@@ -108,9 +94,10 @@
     <string name="admin_hint_contact">Contact Number</string>
     <string name="admin_hint_email">Email Address</string>
     <string name="admin_hint_pwd">Password</string>
-    <string name="all_users">All Users</string>
-    <string name="tool_bar_title">Book My Bus</string>
-    <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
+    <string name="all_users">Select User Type</string>
+    <string name="tool_bar_titl">Book My Bus</string>
+    <string name="tool_bar_subtitl">Make Your Ride Awesome</string>
+
 
 
     <string name="user_type">Type:</string>
@@ -120,18 +107,21 @@
     <string name="btn3">VIEW BUS</string>
 
 
-    <!--    pamoda-->
-    <string name="welcome_trip_manager">Welcome Trip Manager</string>
-    <string name="view_trips">View Trips</string>
-    <string name="add_trip">Add Trip</string>
-    <string name="add_trip_id">Add Trip ID</string>
-    <string name="add_date">Add Date</string>
-    <string name="depature_time">Depature Time</string>
-    <string name="arrival_time">Arrival Time</string>
-    <string name="cancel">Cancel</string>
-    <string name="root_id">Root ID :</string>
-    <string name="select_route_to_add_trip">Select Route To Add Trip</string>
-    <string name="add_route_id">Add Route ID</string>
+    <!--    ishara-->
+    <string name="tv1">Add Bus In Here !!</string>
+    <string name="pt">Bus ID</string>
+    <string name="pt2">Route Number</string>
+    <string name="pt3">License Number</string>
+    <string name="pt4">Number Of Seats</string>
+    <string name="bt1">ADD BUS</string>
+    <string name="tvv2">You Can Edit Or Delete Bus In Here!!</string>
+    <string name="bt2">UPDATE</string>
+    <string name="bt3">DELETE </string>
+    <string name="tvv3">Bus ID</string>
+    <string name="tvv4">Route ID</string>
+    <string name="tvv5">Licence Number</string>
+    <string name="tvv6">Number Of Seats</string>
+    <string name="pt7">Additional Faire</string>
 
 
 </resources>

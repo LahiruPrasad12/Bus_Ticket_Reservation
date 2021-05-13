@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".BusOwner.AddBus">
-
-
-
 
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
         android:layout_marginTop="28dp"
         android:text="@string/tv1"
         android:textColor="@color/hash_middle_blue"
         android:textSize="24sp"
         android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,6 +32,7 @@
         android:ems="10"
         android:hint="@string/pt"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,11 +41,12 @@
         android:layout_width="210dp"
         android:layout_height="55dp"
         android:layout_marginStart="132dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="188dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt2"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,6 +60,7 @@
         android:ems="10"
         android:hint="@string/pt3"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,25 +68,13 @@
         android:id="@+id/pt4"
         android:layout_width="210dp"
         android:layout_height="55dp"
+        android:padding="10dp"
         android:layout_marginStart="132dp"
         android:layout_marginTop="356dp"
         android:background="@drawable/edit_text_boder"
         android:ems="10"
         android:hint="@string/pt4"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="464dp"
-        android:background="@drawable/admin_rounded_btn"
-        android:backgroundTint="@color/hash_dark_blue"
-        android:text="@string/bt1"
-        android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -132,11 +122,29 @@
         android:id="@+id/btn3"
         android:layout_width="112dp"
         android:layout_height="48dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="79dp"
         android:background="@drawable/admin_rounded_btn"
-        android:onClick="View_Bus"
+
         android:text="@string/btn3"
+        android:textColor="@color/hash_light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="476dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:backgroundTint="@color/hash_dark_blue"
+        android:padding="10dp"
+        android:text="@string/bt1"
         android:textColor="@color/hash_light_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

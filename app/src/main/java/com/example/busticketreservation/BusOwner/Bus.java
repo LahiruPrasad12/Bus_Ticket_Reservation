@@ -6,6 +6,7 @@ public class Bus {
     private String LicenseNo;
     private Integer Seats;
 
+
     public String getID() {
         return ID;
     }
@@ -37,6 +38,8 @@ public class Bus {
     public void setSeats(Integer seats) {
         Seats = seats;
     }
+
+
 
     public Bus() {
 

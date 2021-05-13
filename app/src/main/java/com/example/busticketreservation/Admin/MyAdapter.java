@@ -18,7 +18,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     ArrayList<Routes> list;
 
-    //for onclick card
+   // for onclick card
     //had to make this static
     private static RecyclerViewClickListener listener;
 
