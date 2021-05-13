@@ -119,6 +119,7 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
             else if (TextUtils.isEmpty(stopPrice.getText().toString()))
                 Toast.makeText(getApplicationContext(), "Empty stopPrice", Toast.LENGTH_SHORT).show();
 
+
             else {
 
                 //getting inputs into int fields
@@ -145,7 +146,7 @@ public class AddRoutes extends AppCompatActivity implements NavigationView.OnNav
                 clearControls();
             }
         } catch (NumberFormatException nfe) {
-            Toast.makeText(getApplicationContext(), "Invalid Price", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Stops and Prices Should be numbers", Toast.LENGTH_SHORT).show();
         }
     }
 

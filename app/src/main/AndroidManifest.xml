@@ -47,7 +47,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBarHash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
