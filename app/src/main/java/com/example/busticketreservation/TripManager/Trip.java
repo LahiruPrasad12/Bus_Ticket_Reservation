@@ -1,6 +1,8 @@
 package com.example.busticketreservation.TripManager;
 
-public class Trip {
+import java.io.Serializable;
+
+public class Trip implements Serializable {
     private String trip_id;
     private String route_id;
     private String date;

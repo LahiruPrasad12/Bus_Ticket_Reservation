@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.busticketreservation.Admin.MyAdapter;
 import com.example.busticketreservation.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +25,10 @@ public class ShowTrips extends AppCompatActivity {
     private DatabaseReference root = db.getReference().child("Trip");
     private TripAdapter adapter;
     private ArrayList<TripModel> list;
+
+    //click listener for card items
+    private TripAdapter.RecyclerViewClickListener listener;
+    //new over
 
 
     @Override

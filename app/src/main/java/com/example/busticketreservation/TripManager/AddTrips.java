@@ -26,18 +26,18 @@ public class AddTrips extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_trips);
 
-        trip_id = findViewById(R.id.addtripid);
-        route_id = findViewById(R.id.addrouteid);
-        date = findViewById(R.id.add_date);
-        dep_time = findViewById(R.id.txt_dep_time);
-        ar_time = findViewById(R.id.txt_ar_time);
+        trip_id = findViewById(R.id.addtripid_up);
+        route_id = findViewById(R.id.addrouteid_up);
+        date = findViewById(R.id.add_date_up);
+        dep_time = findViewById(R.id.txt_dep_time_up);
+        ar_time = findViewById(R.id.txt_ar_time_up);
 
-        btnaddtrip = findViewById(R.id.button_add_trip);
+        btnaddtrip = findViewById(R.id.button_updte_trip_up);
 
 
 
         /*navigate to home page */
-        btcancel = findViewById(R.id.btncancel);
+        btcancel = findViewById(R.id.btn_delete_trip_up);
         btcancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
