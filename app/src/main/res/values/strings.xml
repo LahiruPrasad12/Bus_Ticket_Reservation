@@ -95,8 +95,8 @@
     <string name="admin_hint_email">Email Address</string>
     <string name="admin_hint_pwd">Password</string>
     <string name="all_users">Select User Type</string>
-    <string name="tool_bar_title">Book My Bus</string>
-    <string name="tool_bar_subtitle">Make Your Ride Awesome</string>
+    <string name="tool_bar_titl">Book My Bus</string>
+    <string name="tool_bar_subtitl">Make Your Ride Awesome</string>
 
 
 
@@ -121,6 +121,7 @@
     <string name="tvv4">Route ID</string>
     <string name="tvv5">Licence Number</string>
     <string name="tvv6">Number Of Seats</string>
+    <string name="pt7">Additional Faire</string>
 
 
 </resources>

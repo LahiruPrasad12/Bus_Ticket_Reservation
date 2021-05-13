@@ -23,7 +23,7 @@
             android:name=".Admin.UpdateRoute"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Admin.ViewRoute" />
-        <activity android:name=".BusOwner.ViewBus" />
+        <activity android:name=".BusOwner.ViewAllBus" />
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
         <activity android:name=".BusOwner.AddBus" />
         <activity android:name=".TripManager.TripMain" /> <!-- <activity -->

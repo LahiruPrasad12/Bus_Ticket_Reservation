@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
         android:orientation="vertical">
 
@@ -26,7 +26,7 @@
                 android:text="Bus ID :"
                 android:textColor="@color/hash_dark_blue"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvbusId"
@@ -35,9 +35,7 @@
                 android:layout_marginLeft="8dp"
                 android:text="ID0020:"
                 android:textColor="@color/hash_dark_blue"
-                android:textSize="20sp"
-                />
-
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -55,7 +53,7 @@
                 android:text="Route Number :"
                 android:textColor="@color/hash_dark_blue"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/rnumber"
@@ -64,9 +62,7 @@
                 android:layout_marginLeft="8dp"
                 android:text="RB138:"
                 android:textColor="@color/hash_dark_blue"
-                android:textSize="20sp"
-                />
-
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -84,7 +80,7 @@
                 android:text="License Number :"
                 android:textColor="@color/hash_dark_blue"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/lNumber"
@@ -93,12 +89,11 @@
                 android:layout_marginLeft="8dp"
                 android:text="V567346:"
                 android:textColor="@color/hash_dark_blue"
-                android:textSize="20sp"
-                />
-
+                android:textSize="20sp" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,7 +107,7 @@
                 android:text="Number Of Seats :"
                 android:textColor="@color/hash_dark_blue"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sets"
@@ -121,16 +116,32 @@
                 android:layout_marginLeft="8dp"
                 android:text="56:"
                 android:textColor="@color/hash_dark_blue"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/delBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="185dp"
+                android:layout_marginRight="18dp"
+
+                android:text="Delete" />
 
 
         </LinearLayout>
 
 
-
     </LinearLayout>
+
+
 
 
 
