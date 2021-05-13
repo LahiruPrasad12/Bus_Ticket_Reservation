@@ -236,12 +236,12 @@
 
     <!--    creation of the navigation view-->
     <!--    the navigation header and the navigation menu is passed below-->
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        android:id="@+id/hash_nav_view"-->
-<!--        app:headerLayout="@layout/hash_nav_header"-->
-<!--        app:menu="@menu/drawer_menu"/>-->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/hash_nav_view"
+        app:headerLayout="@layout/hash_nav_header"
+        app:menu="@menu/drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
