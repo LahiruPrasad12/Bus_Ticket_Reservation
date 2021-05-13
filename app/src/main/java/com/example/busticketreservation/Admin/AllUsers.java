@@ -19,8 +19,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.busticketreservation.LoginActivity;
 import com.example.busticketreservation.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -102,6 +104,11 @@ public class AllUsers extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.nav_add_users:
                 startActivity(new Intent(getApplicationContext(), AddUsers.class));
+                break;
+            case R.id.logOut:
+                Toast.makeText(this, "logging out", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
         }
 

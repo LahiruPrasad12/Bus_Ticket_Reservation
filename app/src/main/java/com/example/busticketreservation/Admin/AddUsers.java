@@ -19,6 +19,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.busticketreservation.LoginActivity;
 import com.example.busticketreservation.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -110,6 +111,11 @@ public class AddUsers extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.nav_add_users:
                 startActivity(new Intent(getApplicationContext(), AddUsers.class));
+                break;
+            case R.id.logOut:
+                Toast.makeText(this, "logging out", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
         }
 
