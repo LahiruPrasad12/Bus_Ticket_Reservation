@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripManager.TripUpdateandDelete">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/tool_bar_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/txtwelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/architects_daughter"
+            android:text="@string/tool_bar_subtitle"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/baloo_thambi"
+            android:text="@string/tool_bar_title"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/addtripid_up"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/add_trip_id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/addtripid_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addtripid_up"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_add_routes" />
+
+    <EditText
+        android:id="@+id/addrouteid_up"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/add_route_id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/image5"
+        app:layout_constraintTop_toBottomOf="@+id/addtripid_up" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/addrouteid_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addrouteid_up"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_rote_tm" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/whiteTextColor"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_dep_time_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_dep_time_up"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/add_date_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_date_up"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_calendar" />
+
+    <EditText
+        android:id="@+id/txt_dep_time_up"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/depature_time"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/image3"
+        app:layout_constraintTop_toBottomOf="@+id/add_date_up" />
+
+    <EditText
+        android:id="@+id/add_date_up"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/add_date"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/addrouteid_up" />
+
+    <EditText
+        android:id="@+id/txt_ar_time_up"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:ems="10"
+        android:hint="@string/arrival_time"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/image4"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dep_time_up" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_ar_time_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_ar_time_up"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <Button
+        android:id="@+id/button_updte_trip_up"
+        android:layout_width="139dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:text="@string/update_trip"
+        android:textColor="@color/hash_light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ar_time_up" />
+
+    <Button
+        android:id="@+id/btn_delete_trip_up"
+        android:layout_width="139dp"
+        android:layout_height="55dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:text="@string/delete_trip"
+        android:textColor="@color/hash_light_blue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_updte_trip_up"
+        app:layout_constraintEnd_toStartOf="@+id/button_updte_trip_up"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="Update Trip"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
