@@ -132,6 +132,8 @@
     <string name="root_id">Root ID :</string>
     <string name="select_route_to_add_trip">Select Route To Add Trip</string>
     <string name="add_route_id">Add Route ID</string>
+    <string name="update_trip">Update Trip</string>
+    <string name="delete_trip">Delete Trip</string>
 
 
 </resources>
