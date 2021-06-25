@@ -41,7 +41,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             >
         </activity>
-        <activity android:name=".Select_Bus" />
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />

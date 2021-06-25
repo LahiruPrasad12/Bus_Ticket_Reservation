@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.exists()){
-                        Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+
                         progressBar.setVisibility(View.INVISIBLE);
 
                         //Check whether have 1 bus
