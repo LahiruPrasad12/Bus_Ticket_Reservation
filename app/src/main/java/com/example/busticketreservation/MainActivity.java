@@ -49,7 +49,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
-    TextView From,To,tx3;
+    TextView name;
     String from,to,depTime,arTime;
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     private int count = 0;
     private int numRetrieve = 0;
+
 
     private DatabaseReference databaseReference;
     private ArrayList<String> BusNo = new ArrayList<>();
@@ -74,12 +75,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         drawerLayout=findViewById(R.id.tx1111);
         toolbar=findViewById(R.id.toolBar);
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view);
+
+
+
+
 
 
         //Navigation  Bar
@@ -114,91 +120,122 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        frbAuth = FirebaseAuth.getInstance();
+        useId = frbAuth.getCurrentUser().getUid();
+
+        name = findViewById(R.id.name);
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(useId);
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                name.setText(snapshot.child("Name").getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
     }
 
 
+    public void findRouteNumber(View view){
+        startActivity(new Intent(this,FindRouteNumber.class));
+    }
 
-
-//    private void loadFragment(Fragment fragment) {
+    //    private void loadFragment(Fragment fragment) {
 //        FragmentManager fragmentManager=getSupportFragmentManager();
 //        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
 //        fragmentTransaction.replace(R.id.frame,fragment).commit();
 //        drawerLayout.closeDrawer(GravityCompat.START);
 //        fragmentTransaction.addToBackStack(null);
 //    }
-
-
-    public void FindBus(View view) {
-        From = findViewById(R.id.From);
-        To = findViewById(R.id.To);
-        progressBar = findViewById(R.id.progressBar);
-
-
-        progressBar.setVisibility(View.VISIBLE);
-        frbAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-        useId = frbAuth.getCurrentUser().getUid();
-        from = From.getText().toString();
-        to = To.getText().toString();
-
-
-        if(from.length()==0){
-            Toast.makeText(this, "Please Enter Your Location", Toast.LENGTH_SHORT).show();
-            progressBar.setVisibility(View.INVISIBLE);
-        }else if(to.length()==0){
-            Toast.makeText(this, "Please Enter Finding Location", Toast.LENGTH_SHORT).show();
-            progressBar.setVisibility(View.INVISIBLE);
-        }else{
-
-            //Retrieve Data Using From and To place
-            Query query = FirebaseDatabase.getInstance().getReference("Routes").
-                    orderByChild("from").equalTo(from);
-            query.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if(snapshot.exists()){
-
-                        progressBar.setVisibility(View.INVISIBLE);
-
-                        //Check whether have 1 bus
-                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                            if(dataSnapshot.child("to").getValue().toString().equals(to)){
-                                count++;
-                            }
-                        }
-
-                        if(count>=1){
-                            for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                TextView textView = new TextView(MainActivity.this);
-                                Button button = new Button(getApplicationContext());
-                                progressBar.setVisibility(View.INVISIBLE);
-                                busNo = dataSnapshot.child("bus_No").getValue().toString();
-                                depTime = dataSnapshot.child("departure_Time").getValue().toString();
-                                arTime = dataSnapshot.child("arrival_Time").getValue().toString();
-                                BusNo.add(busNo);
-                                Time.add(arTime +" - "+depTime);
-                                Location.add(from + " - "+to);
-                                initRecyclerView();
-                            }
-                        }else {
-                            Toast.makeText(MainActivity.this, "Can't Find Location", Toast.LENGTH_SHORT).show();
-                        }
-                    }else {
-                        Toast.makeText(getApplicationContext(), "Can't Find Location", Toast.LENGTH_SHORT).show();
-                        progressBar.setVisibility(View.INVISIBLE);
-                    }
-                }
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                    Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.INVISIBLE);
-                }
-            });
-
-        }
-
-
-
+//
+//
+//    public void FindBus(View view) {
+//        From = findViewById(R.id.From);
+//        To = findViewById(R.id.To);
+//        progressBar = findViewById(R.id.progressBar);
+//
+//
+//        progressBar.setVisibility(View.VISIBLE);
+//        frbAuth = FirebaseAuth.getInstance();
+//        fStore = FirebaseFirestore.getInstance();
+//        useId = frbAuth.getCurrentUser().getUid();
+//        from = From.getText().toString();
+//        to = To.getText().toString();
+//
+//
+//        if(from.length()==0){
+//            Toast.makeText(this, "Please Enter Your Location", Toast.LENGTH_SHORT).show();
+//            progressBar.setVisibility(View.INVISIBLE);
+//        }else if(to.length()==0){
+//            Toast.makeText(this, "Please Enter Finding Location", Toast.LENGTH_SHORT).show();
+//            progressBar.setVisibility(View.INVISIBLE);
+//        }else{
+//
+//            //Retrieve Data Using From and To place
+//            Query query = FirebaseDatabase.getInstance().getReference("Routes").
+//                    orderByChild("from").equalTo(from);
+//            query.addValueEventListener(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                    if(snapshot.exists()){
+//
+//                        progressBar.setVisibility(View.INVISIBLE);
+//
+//                        //Check whether have 1 bus
+//                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+//                            if(dataSnapshot.child("to").getValue().toString().equals(to)){
+//                                count++;
+//                            }
+//                        }
+//
+//                        if(count>=1){
+//                            for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                                TextView textView = new TextView(MainActivity.this);
+//                                Button button = new Button(getApplicationContext());
+//                                progressBar.setVisibility(View.INVISIBLE);
+//                                busNo = dataSnapshot.child("bus_No").getValue().toString();
+//                                depTime = dataSnapshot.child("departure_Time").getValue().toString();
+//                                arTime = dataSnapshot.child("arrival_Time").getValue().toString();
+//                                BusNo.add(busNo);
+//                                Time.add(arTime +" - "+depTime);
+//                                Location.add(from + " - "+to);
+//                                initRecyclerView();
+//                            }
+//                        }else {
+//                            Toast.makeText(MainActivity.this, "Can't Find Location", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }else {
+//                        Toast.makeText(getApplicationContext(), "Can't Find Location", Toast.LENGTH_SHORT).show();
+//                        progressBar.setVisibility(View.INVISIBLE);
+//                    }
+//                }
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError error) {
+//                    Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
+//                    progressBar.setVisibility(View.INVISIBLE);
+//                }
+//            });
+//
+//        }
+//
+//
+//
 
 
 
@@ -245,11 +282,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Invoke Bus View Adapter
-    private void initRecyclerView(){
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        BusViewAdapter adapter = new BusViewAdapter(BusNo,Location,Time,this);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }
-}
+//    //Invoke Bus View Adapter
+//    private void initRecyclerView(){
+//        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+//        BusViewAdapter adapter = new BusViewAdapter(BusNo,Location,Time,this);
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//    }

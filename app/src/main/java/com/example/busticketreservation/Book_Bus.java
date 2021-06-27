@@ -170,7 +170,7 @@ public class Book_Bus extends AppCompatActivity {
 
             databaseReference.push().setValue(final_bill);
             Toast.makeText(this, "Booking Success..", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
