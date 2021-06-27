@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.example.busticketreservation.Admin.Routes;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,10 +28,13 @@ import java.util.ArrayList;
 
 public class FindRouteNumber extends AppCompatActivity {
 
+    SearchView sLocation;
      FirebaseAuth frbAuth;
      FirebaseFirestore fStore;
      ProgressBar progressBar;
+    RouteViewAdapter routeViewAdapter;
 
+    private ArrayList<Routes> arrayList = new ArrayList<>();
     private ArrayList<String> RouteNo = new ArrayList<>();
     private ArrayList<String> startLocation = new ArrayList<>();
     private ArrayList<String> EndLocation = new ArrayList<>();
@@ -34,13 +42,15 @@ public class FindRouteNumber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_route_number);
+//        sLocation = findViewById(R.id.startLocation);
+
         getAllRoutes();
     }
 
     public void getAllRoutes(){
         frbAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        progressBar = findViewById(R.id.progressBar2);
+        progressBar = findViewById(R.id.progressBar4);
         progressBar.setVisibility(View.VISIBLE);
         Query query = FirebaseDatabase.getInstance().getReference("Routes_Admin");
 
@@ -49,15 +59,20 @@ public class FindRouteNumber extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(FindRouteNumber.this, "Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FindRouteNumber.this, "Data Loaded", Toast.LENGTH_SHORT).show();
 
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        String route = dataSnapshot.child("routeNo").getValue().toString();
-                        String sLocation = dataSnapshot.child("from").getValue().toString();
-                        String eLocation = dataSnapshot.child("to").getValue().toString();
-                        RouteNo.add(route);
-                        startLocation.add(sLocation);
-                        EndLocation.add(eLocation);
+//                        String route = dataSnapshot.child("routeNo").getValue().toString();
+//                        String sLocation = dataSnapshot.child("from").getValue().toString();
+//                        String eLocation = dataSnapshot.child("to").getValue().toString();
+//                        RouteNo.add(route);
+//                        startLocation.add(sLocation);
+//                        EndLocation.add(eLocation);
+
+
+
+                        Routes routes = dataSnapshot.getValue(Routes.class);
+                        arrayList.add(routes);
                         initRecyclerView();
                     }
                 }
@@ -75,8 +90,34 @@ public class FindRouteNumber extends AppCompatActivity {
 
     private void initRecyclerView(){
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        RouteViewAdapter routeViewAdapter = new RouteViewAdapter(RouteNo,startLocation,EndLocation,this);
+        routeViewAdapter = new RouteViewAdapter(arrayList,this);
         recyclerView.setAdapter(routeViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    public void back(View view){
+        startActivity(new Intent(this,MainActivity.class));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.manus,menu);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        androidx.appcompat.widget.SearchView searchView = (androidx.appcompat.widget.SearchView) menuItem.getActionView();
+
+        searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                routeViewAdapter.getFilter().filter(s.toString());
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                routeViewAdapter.getFilter().filter(s);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
     }
 }
