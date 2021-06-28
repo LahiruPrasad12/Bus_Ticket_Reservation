@@ -108,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="199dp"
         android:layout_marginEnd="20dp"
+        android:onClick="next"
         android:text="NEXT --"
         android:textColor="@color/lick_blue"
         android:textSize="24sp"

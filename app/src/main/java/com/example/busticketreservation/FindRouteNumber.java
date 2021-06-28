@@ -94,6 +94,7 @@ public class FindRouteNumber extends AppCompatActivity {
     public void back(View view){
         startActivity(new Intent(this,MainActivity.class));
     }
+    public void next(View view){startActivity(new Intent(this,FindBus.class));}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

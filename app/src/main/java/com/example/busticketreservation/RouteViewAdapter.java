@@ -1,6 +1,7 @@
 package com.example.busticketreservation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,19 +58,12 @@ public class RouteViewAdapter extends RecyclerView.Adapter<RouteViewAdapter.View
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "OK", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext,FindBus.class);
+                intent.putExtra("routeNo",route.getRouteNo());
+                mContext.startActivity(intent);
             }
         });
 
-//        holder.routeNo.setText(RouteNo.get(position));
-//        holder.sLocation.setText(sLocation.get(position));
-//        holder.eLocation.setText(eLocation.get(position));
-//        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(mContext, "OK", Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 
     @Override

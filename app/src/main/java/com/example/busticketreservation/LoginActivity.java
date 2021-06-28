@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 
         frb = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.pBar);
-        txtMail = findViewById(R.id.txNam);
+        txtMail = findViewById(R.id.routeNumber);
         txtPassword = findViewById(R.id.txtP);
 
 

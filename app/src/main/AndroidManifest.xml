@@ -16,7 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".FindBus"></activity>
+        <activity android:name=".FindBus"
+            android:theme="@style/AppTheme.NoActionBarHash">
+
+        </activity>
         <activity
             android:name=".FindRouteNumber"
             android:icon="@drawable/search"
