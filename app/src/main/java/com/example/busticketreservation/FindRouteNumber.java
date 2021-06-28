@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
@@ -25,6 +26,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class FindRouteNumber extends AppCompatActivity {
 
@@ -33,6 +36,7 @@ public class FindRouteNumber extends AppCompatActivity {
      FirebaseFirestore fStore;
      ProgressBar progressBar;
     RouteViewAdapter routeViewAdapter;
+    private String ser = "panni";
 
     private ArrayList<Routes> arrayList = new ArrayList<>();
     private ArrayList<String> RouteNo = new ArrayList<>();
@@ -52,6 +56,7 @@ public class FindRouteNumber extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         progressBar = findViewById(R.id.progressBar4);
         progressBar.setVisibility(View.VISIBLE);
+
         Query query = FirebaseDatabase.getInstance().getReference("Routes_Admin");
 
         query.addValueEventListener(new ValueEventListener() {
@@ -62,15 +67,6 @@ public class FindRouteNumber extends AppCompatActivity {
                     Toast.makeText(FindRouteNumber.this, "Data Loaded", Toast.LENGTH_SHORT).show();
 
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-//                        String route = dataSnapshot.child("routeNo").getValue().toString();
-//                        String sLocation = dataSnapshot.child("from").getValue().toString();
-//                        String eLocation = dataSnapshot.child("to").getValue().toString();
-//                        RouteNo.add(route);
-//                        startLocation.add(sLocation);
-//                        EndLocation.add(eLocation);
-
-
-
                         Routes routes = dataSnapshot.getValue(Routes.class);
                         arrayList.add(routes);
                         initRecyclerView();
@@ -103,13 +99,14 @@ public class FindRouteNumber extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.manus,menu);
         MenuItem menuItem = menu.findItem(R.id.action_search);
+
         androidx.appcompat.widget.SearchView searchView = (androidx.appcompat.widget.SearchView) menuItem.getActionView();
 
         searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
                 routeViewAdapter.getFilter().filter(s.toString());
-                return false;
+                return true;
             }
 
             @Override
@@ -120,4 +117,6 @@ public class FindRouteNumber extends AppCompatActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
+
+
 }

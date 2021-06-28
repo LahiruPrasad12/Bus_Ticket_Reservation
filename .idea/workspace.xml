@@ -18,9 +18,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="Create RouteViewAdapter.java class and implement it and aslo  adapter and FindRouteNumber.java file">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/manus.xml" afterDir="false" />
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="create search bar for FindRouteNumber activity">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/FindBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_west_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_bus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -31,13 +34,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/FindRouteNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/FindRouteNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RouteViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RouteViewAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_route_number.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_route_number.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/manus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/manus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +107,10 @@
     <key name="android.template.1984254529">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1114989114">
+    <key name="android.template.904773871">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-654448286">
+    <key name="android.template.-1704837980">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -109,13 +123,13 @@
     <key name="android.template.1487717672">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.904773871">
+    <key name="android.template.-654448286">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.-975130194">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1704837980">
+    <key name="android.template.-1114989114">
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
@@ -369,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624779553681</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="create search bar for FindRouteNumber activity">
+      <created>1624825215820</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624825215820</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -402,7 +423,8 @@
     <MESSAGE value="Delete some unusable files" />
     <MESSAGE value="Design Mainactivity.java files" />
     <MESSAGE value="Create RouteViewAdapter.java class and implement it and aslo  adapter and FindRouteNumber.java file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create RouteViewAdapter.java class and implement it and aslo  adapter and FindRouteNumber.java file" />
+    <MESSAGE value="create search bar for FindRouteNumber activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="create search bar for FindRouteNumber activity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="280" key="#Notifications" timestamp="1620315129609">
@@ -445,22 +467,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
-    <state width="1491" height="203" key="GridCell.Tab.0.bottom" timestamp="1624824797444">
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom" timestamp="1624864180345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1624824797444" />
-    <state width="1491" height="203" key="GridCell.Tab.0.center" timestamp="1624824797444">
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1624864180345" />
+    <state width="1491" height="2" key="GridCell.Tab.0.center" timestamp="1624864180345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1624824797444" />
-    <state width="1491" height="203" key="GridCell.Tab.0.left" timestamp="1624824797443">
+    <state width="1491" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1624864180345" />
+    <state width="1491" height="2" key="GridCell.Tab.0.left" timestamp="1624864180345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1624824797443" />
-    <state width="1491" height="203" key="GridCell.Tab.0.right" timestamp="1624824797444">
+    <state width="1491" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1624864180345" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right" timestamp="1624864180345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1624824797444" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1624864180345" />
     <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1620752364219">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -477,10 +499,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620780922735" />
-    <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1624685553496">
+    <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1624863288247">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1624685553496" />
+    <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1624863288247" />
     <state x="465" y="130" key="git4idea.branch.GitSmartOperationDialog" timestamp="1620509398592">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -505,6 +527,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="475" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1619532664056" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1624864307754">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1624864307754" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
