@@ -156,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,FindRouteNumber.class));
     }
 
+    public void gotoFindBus(View view){
+        Intent intent = new Intent(this,FindBus.class);
+        intent.putExtra("routeNo","0");
+        startActivity(intent);
+    }
+
     //    private void loadFragment(Fragment fragment) {
 //        FragmentManager fragmentManager=getSupportFragmentManager();
 //        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
