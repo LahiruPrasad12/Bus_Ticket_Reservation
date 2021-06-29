@@ -34,7 +34,9 @@
         <activity
             android:name=".Home"
             android:theme="@style/AppTheme.NoActionBarHash" />
-        <activity android:name=".AddRoute" />
+        <activity android:name=".AddRoute" >
+
+        </activity>
         <activity
             android:name=".Admin.UpdateRoute"
             android:theme="@style/AppTheme.NoActionBar" />
