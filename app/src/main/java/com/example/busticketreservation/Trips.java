@@ -8,17 +8,12 @@ public class Trips implements Serializable {
     private String date;
     private String route_id;
     private String trip_id;
+    private String Status;
+    private Integer noOfSeats;
+    private Integer AvailableSeats;
     private float price;
 
     public Trips() {
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public String getAr_time() {
@@ -59,5 +54,37 @@ public class Trips implements Serializable {
 
     public void setTrip_id(String trip_id) {
         this.trip_id = trip_id;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
+    }
+
+    public Integer getNoOfSeats() {
+        return noOfSeats;
+    }
+
+    public void setNoOfSeats(Integer noOfSeats) {
+        this.noOfSeats = noOfSeats;
+    }
+
+    public Integer getAvailableSeats() {
+        return AvailableSeats;
+    }
+
+    public void setAvailableSeats(Integer availableSeats) {
+        AvailableSeats = availableSeats;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 }

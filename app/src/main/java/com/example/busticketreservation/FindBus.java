@@ -36,6 +36,7 @@ public class FindBus extends AppCompatActivity {
     private String price = "0";
     private String RouteNo;
     private String enterRoute;
+    private int x =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,7 @@ public class FindBus extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar5);
         progressBar.setVisibility(View.VISIBLE);
 
+
         Query query1 = FirebaseDatabase.getInstance().getReference("Trips").orderByChild("route_id").equalTo(RouteNo);
         Query query2 = FirebaseDatabase.getInstance().getReference("Routes_Admin").orderByChild("routeNo").equalTo(RouteNo);
 
@@ -75,7 +77,6 @@ public class FindBus extends AppCompatActivity {
                     progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(FindBus.this, "Invalid route number", Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
@@ -92,8 +93,15 @@ public class FindBus extends AppCompatActivity {
                     Toast.makeText(FindBus.this, "Data Loaded", Toast.LENGTH_SHORT).show();
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                         Trips trip = dataSnapshot.getValue(Trips.class);
-                        trips.add(trip);
-                        initRecyclerView();
+                        if(trip.getStatus().equals("Active")) {
+                            x++;
+                            trips.add(trip);
+                            initRecyclerView();
+                        }
+                    }
+
+                    if(x==0){
+                        Toast.makeText(FindBus.this, "Not Available Buses at this time", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     progressBar.setVisibility(View.INVISIBLE);

@@ -1,6 +1,7 @@
 package com.example.busticketreservation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +41,9 @@ public class TripViewAdapter extends RecyclerView.Adapter<TripViewAdapter.ViewHo
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, routes, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext,BookBus.class);
+                intent.putExtra("tripId",trip.getTrip_id());
+                mContext.startActivity(intent);
             }
         });
     }

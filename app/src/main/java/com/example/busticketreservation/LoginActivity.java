@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         frb = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.pBar);
         txtMail = findViewById(R.id.routeNumber);
-        txtPassword = findViewById(R.id.txtP);
+        txtPassword = findViewById(R.id.numOfSeats);
 
 
 //        if(frb.getCurrentUser() != null){
