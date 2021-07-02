@@ -16,18 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".BookBus"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+        <activity android:name=".AddSavedPlace"
+            android:parentActivityName=".ViewSavedPlace"></activity>
         <activity
-            android:name=".FindBus"
-            android:theme="@style/AppTheme.NoActionBarHash"></activity>
-        <activity
-            android:name=".FindRouteNumber"
-            android:icon="@drawable/search"
-            android:label="Find Route Here"
-            android:supportsPictureInPicture="true">
+            android:name=".ViewSavedPlace"
+            android:parentActivityName=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,9 +28,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".BookBus"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindBus"
+            android:theme="@style/AppTheme.NoActionBarHash" />
+        <activity
+            android:name=".FindRouteNumber"
+            android:icon="@drawable/search"
+            android:label="Find Route Here"
+            android:parentActivityName=".MainActivity"
+            android:supportsPictureInPicture="true"></activity>
+        <activity
             android:name=".Home"
             android:theme="@style/AppTheme.NoActionBarHash" />
-        <activity android:name=".AddRoute"></activity>
+        <activity android:name=".AddRoute" />
         <activity
             android:name=".Admin.UpdateRoute"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -65,7 +70,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity
             android:name=".Admin.AddRoutes"
             android:theme="@style/AppTheme.NoActionBarHash" />

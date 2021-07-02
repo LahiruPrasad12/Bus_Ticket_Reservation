@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         //Navigation  Bar
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -161,6 +162,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("routeNo","0");
         startActivity(intent);
     }
+
+    public void gotoChooseSavedPlace(View view){
+        Intent intent = new Intent(this,ViewSavedPlace.class);
+        startActivity(intent);
+    }
+
 
     //    private void loadFragment(Fragment fragment) {
 //        FragmentManager fragmentManager=getSupportFragmentManager();

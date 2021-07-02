@@ -4,21 +4,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        app:elevation="0dp"
-        android:fitsSystemWindows="true"
         android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay"
-        >
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:background="@color/colorAccent"
-            android:id="@+id/toolBar"
-            app:popupTheme="@style/AppTheme.popUpOverlay"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:layout_height="60dp">
-        </androidx.appcompat.widget.Toolbar>
+        app:elevation="0dp">
+
     </com.google.android.material.appbar.AppBarLayout>
     <FrameLayout
         android:layout_width="match_parent"
@@ -27,4 +21,14 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
     </FrameLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.popUpOverlay"></androidx.appcompat.widget.Toolbar>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

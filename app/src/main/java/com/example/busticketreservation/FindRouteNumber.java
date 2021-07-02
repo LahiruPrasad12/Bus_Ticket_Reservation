@@ -46,6 +46,7 @@ public class FindRouteNumber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_route_number);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        sLocation = findViewById(R.id.startLocation);
 
         getAllRoutes();
