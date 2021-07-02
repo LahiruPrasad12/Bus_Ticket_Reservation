@@ -79,6 +79,7 @@
     <orderEntry type="library" name="Gradle: com.google.protobuf:protobuf-javalite:3.14.0" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-okhttp:1.28.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp:okhttp:2.7.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.6.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.13.0" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-core:1.28.0" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-stub:1.28.0" level="project" />
@@ -168,9 +169,11 @@
     <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:protolite-well-known-types:17.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.paypal.sdk:paypal-android-sdk:2.15.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-android:1.28.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: br.com.simplepass:loading-button-android:1.14.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-base:15.0.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: de.hdodenhof:circleimageview:3.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: io.card:android-sdk:5.5.0@aar" level="project" />
   </component>
 </module>

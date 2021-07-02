@@ -130,14 +130,14 @@
         app:layout_constraintTop_toBottomOf="@+id/available" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/paymentBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:background="@drawable/button_background_blue"
         android:backgroundTint="@color/colorPrimary"
         android:backgroundTintMode="screen"
-        android:onClick="goToPayment"
+        android:onClick="makePayment"
         android:text="Make Payment"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.529"
