@@ -29,7 +29,7 @@ public class FindBus extends AppCompatActivity {
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
     ProgressBar progressBar;
-    TripViewAdapter tripViewAdapter;
+
 
     private ArrayList<Routes> routes = new ArrayList<>();
     private ArrayList<Trips> trips = new ArrayList<>();

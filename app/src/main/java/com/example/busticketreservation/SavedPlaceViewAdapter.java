@@ -1,20 +1,61 @@
 package com.example.busticketreservation;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class SavedPlaceViewAdapter {
+import java.util.ArrayList;
 
+public class SavedPlaceViewAdapter extends RecyclerView.Adapter<SavedPlaceViewAdapter.ViewHolder> {
+
+    ArrayList<SavedPlace> savedPlaces = new ArrayList<>();
+    private Context mContext;
+
+    public SavedPlaceViewAdapter(ArrayList<SavedPlace> savedPlaces, Context mContext) {
+        this.savedPlaces = savedPlaces;
+        this.mContext = mContext;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_saved_place,parent,false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        SavedPlace savedPlace = savedPlaces.get(position);
+        holder.name.setText(savedPlace.getName());
+        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mContext, "ok", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+       return savedPlaces.size();
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView arTime;
+        TextView name;
         RelativeLayout parentLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            name = itemView.findViewById(R.id.Name);
+            parentLayout = itemView.findViewById(R.id.parentL);
         }
     }
 }
