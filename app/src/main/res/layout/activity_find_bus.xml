@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hash_light_blue"
+    tools:context=".FindBus">
+
+    <EditText
+        android:id="@+id/routeNumber"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="Enter Route Number Here..."
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#1f232d"
+        android:textColorHint="#1f232d"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="EnteredRoute"
+        app:layout_constraintBottom_toBottomOf="@+id/routeNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/routeNumber"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="64dp"
+        android:foregroundTint="@color/colorPrimary"
+        android:onClick="goChoosePlace"
+        android:paddingLeft="35dp"
+        android:paddingTop="5dp"
+        android:text="Choose saved place"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/routeNumber" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/textView17"
+        app:srcCompat="@drawable/sa" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="355dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="50dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="5dp"
+        android:text="Don't know route number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:onClick="goBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="412dp"
+        android:layout_height="395dp"
+        android:layout_marginTop="27dp"
+        android:background="@color/listBackgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:srcCompat="@drawable/f" />
+
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/admin_rounded_btn"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

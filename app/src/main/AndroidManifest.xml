@@ -11,13 +11,42 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/bu"
+        android:label="Bus Ticket Reservation"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
+<<<<<<< HEAD
+        <activity android:name=".VerifyUserMail"
+            android:parentActivityName=".RegisterActivity"></activity>
+        <activity
+            android:name=".AddSavedPlace"
+            android:parentActivityName=".ViewSavedPlace" />
+        <activity
+            android:name=".ViewSavedPlace"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".BookBus"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindBus"
+            android:theme="@style/AppTheme.NoActionBarHash" />
+        <activity
+            android:name=".FindRouteNumber"
+            android:icon="@drawable/search"
+            android:label="Find Route Here"
+            android:parentActivityName=".MainActivity"
+            android:supportsPictureInPicture="true" />
+        <activity
+            android:name=".Home"
+            android:theme="@style/AppTheme.NoActionBarHash" />
+        <activity android:name=".AddRoute" >
+
+        </activity>
+=======
         <activity android:name=".TripManager.ShowTrips"></activity>
         <activity android:name=".AddRoute"></activity>
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
         <activity
             android:name=".Admin.UpdateRoute"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -41,7 +70,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             >
         </activity>
-        <activity android:name=".Select_Bus" />
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />

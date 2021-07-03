@@ -21,6 +21,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="completely finish save user booking histry part">
+=======
     <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/TripManager/ShowTrips.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/TripManager/TripAdapter.java" afterDir="false" />
@@ -28,15 +31,19 @@
       <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_rote_tm.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_trips.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/trip_item.xml" afterDir="false" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
@@ -45,6 +52,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BusTicketReservation.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/TripManager/Adapter.java" beforeDir="false" />
@@ -60,6 +69,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pamoda_nav_header.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/trip_design_recycler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +98,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
+<<<<<<< HEAD
+=======
         <option value="layoutResourceFile_vertical" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Class" />
@@ -98,7 +111,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
+        <entry key="$PROJECT_DIR$" value="dev" />
+=======
         <entry key="$PROJECT_DIR$" value="master" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,14 +129,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_4_XL_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-11T18:15:13.291Z" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="COLOR" />
+=======
     <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="81a5fb19" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-12T07:13:03.672Z" />
     <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-74519619">
+      <recent name="com.example.busticketreservation" />
+=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
@@ -133,13 +164,28 @@
   <component name="RecentsManager">
     <key name="android.template.766005891">
       <recent name="com.example.busticketreservation.TripManager" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     </key>
-    <key name="android.template.607012876">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\MY PROJECTS\MAD Project\MAD_FINAL_PROJECT\Bus_Ticket_Reservation\app\src\main\res\drawable" />
+      <recent name="C:\Users\ASUS\Desktop\MY PROJECTS\MAD Project\MAD_FINAL_PROJECT\Bus_Ticket_Reservation\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\drawable" />
+      <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\font" />
+      <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\values" />
+    </key>
+    <key name="android.template.1718834506">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-1086965718">
+      <recent name="com.example.busticketreservation" />
+    </key>
+<<<<<<< HEAD
+    <key name="android.template.-1114989114">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.1984254529">
       <recent name="com.example.busticketreservation" />
-    </key>
+=======
     <key name="android.template.-1045011103">
       <recent name="com.example.busticketreservation.TripManager" />
     </key>
@@ -162,6 +208,7 @@
     </key>
     <key name="android.template.-807086624">
       <recent name="com.example.busticketreservation.TripManager" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     </key>
     <key name="android.template.904773871">
       <recent name="com.example.busticketreservation" />
@@ -169,16 +216,50 @@
     <key name="android.template.-975130194">
       <recent name="com.example.busticketreservation" />
     </key>
+<<<<<<< HEAD
+    <key name="android.template.607012876">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.1487717672">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.2050761721">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-386308636">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-654448286">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-1704837980">
+=======
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.busticketreservation.TripManager" />
     </key>
     <key name="android.template.-1114989114">
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
+<<<<<<< HEAD
+    <configuration name="ExampleUnitTest.testFinalAmount" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BusTicketReservation.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.busticketreservation.MainActivity" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.busticketreservation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.busticketreservation.ExampleUnitTest" />
+      <option name="METHOD_NAME" value="testFinalAmount" />
+      <option name="TEST_OBJECT" value="method" />
+=======
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
@@ -186,6 +267,19 @@
     </configuration>
     <configuration name="AddRoutes" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
       <module name="BusTicketReservation.app" />
+<<<<<<< HEAD
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.busticketreservation.MainActivity" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.busticketreservation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.busticketreservation.FullRoutePriceTest" />
+      <option name="METHOD_NAME" value="priceCalculation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+=======
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -237,6 +331,7 @@
       <option name="ACTIVITY_CLASS" value="com.example.busticketreservation.Admin.AddRoutes" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -528,11 +623,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Android JUnit.FullRoutePriceTest.priceCalculation" />
+        <item itemvalue="Android JUnit.ExampleUnitTest.testFinalAmount" />
+        <item itemvalue="Android JUnit.ExampleUnitTest.testFinalAmount" />
+        <item itemvalue="Android JUnit.FullRoutePriceTest.priceCalculation" />
+=======
         <item itemvalue="Android App.AddRoutes" />
         <item itemvalue="Android App.ViewTrips" />
         <item itemvalue="Android App.TripMain" />
         <item itemvalue="Android App.AdminMain" />
         <item itemvalue="Android App.adminTest" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
       </list>
     </recent_temporary>
   </component>
@@ -652,6 +754,128 @@
       <option name="project" value="LOCAL" />
       <updated>1620477009792</updated>
     </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00016" summary="Design Bus View Function">
+      <created>1620780826135</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620780826135</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Delete some unusable files">
+      <created>1624641157309</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624641157309</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Design Mainactivity.java files">
+      <created>1624761863751</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624761863752</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Create RouteViewAdapter.java class and implement it and aslo  adapter and FindRouteNumber.java file">
+      <created>1624779553681</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624779553681</updated>
+    </task>
+    <task id="LOCAL-00020" summary="create search bar for FindRouteNumber activity">
+      <created>1624825215820</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624825215820</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Complete FindRouteNumber class implementation">
+      <created>1624888213861</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1624888213861</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Design FindBus.xml">
+      <created>1624903957475</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624903957475</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Design and implementation complete on FindBus java class and xml file">
+      <created>1624979037732</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1624979037732</updated>
+    </task>
+    <task id="LOCAL-00024" summary="completely finish up to find route and find bus part">
+      <created>1624979571095</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1624979571095</updated>
+    </task>
+    <task id="LOCAL-00025" summary="completely finish up to book bus implementation part and designing part">
+      <created>1625037748849</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1625037748849</updated>
+    </task>
+    <task id="LOCAL-00026" summary="completely finish up to make payment part">
+      <created>1625220799228</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1625220799228</updated>
+    </task>
+    <task id="LOCAL-00027" summary="completely finish up to Add Saved place part">
+      <created>1625228779547</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1625228779547</updated>
+    </task>
+    <task id="LOCAL-00028" summary="completely finish up to View saved place">
+      <created>1625231261866</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1625231261866</updated>
+    </task>
+    <task id="LOCAL-00029" summary="completely finish forgot password pard">
+      <created>1625282196499</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1625282196499</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Complete user mail verification part">
+      <created>1625288897520</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1625288897520</updated>
+    </task>
+    <task id="LOCAL-00031" summary="All complete">
+      <created>1625289142669</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1625289142669</updated>
+    </task>
+    <task id="LOCAL-00032" summary="completely finish save user booking histry part">
+      <created>1625316869495</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1625316869495</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+=======
     <task id="LOCAL-00016" summary="convert fragments to activities">
       <created>1620477093919</created>
       <option name="number" value="00016" />
@@ -695,6 +919,7 @@
       <updated>1620808491784</updated>
     </task>
     <option name="localTasksCounter" value="22" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -710,6 +935,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
+    <MESSAGE value="Change Bus View Database into real time and update LoginActivity" />
+    <MESSAGE value="Create Bus View Function" />
+    <MESSAGE value="Design Bus View Part" />
+    <MESSAGE value="Create Final Bill Part" />
+    <MESSAGE value="Create Validation part in MainActivity" />
+    <MESSAGE value="Update login activity" />
+    <MESSAGE value="Add Test Cases" />
+    <MESSAGE value="Done All crud operation part" />
+    <MESSAGE value="Design Bus View Function" />
+    <MESSAGE value="Delete some unusable files" />
+    <MESSAGE value="Design Mainactivity.java files" />
+    <MESSAGE value="Create RouteViewAdapter.java class and implement it and aslo  adapter and FindRouteNumber.java file" />
+    <MESSAGE value="create search bar for FindRouteNumber activity" />
+    <MESSAGE value="Complete FindRouteNumber class implementation" />
+    <MESSAGE value="Design FindBus.xml" />
+    <MESSAGE value="Design and implementation complete on FindBus java class and xml file" />
+    <MESSAGE value="completely finish up to find route and find bus part" />
+    <MESSAGE value="completely finish up to book bus implementation part and designing part" />
+    <MESSAGE value="completely finish up to make payment part" />
+    <MESSAGE value="completely finish up to Add Saved place part" />
+    <MESSAGE value="completely finish up to View saved place" />
+    <MESSAGE value="completely finish forgot password pard" />
+    <MESSAGE value="Complete user mail verification part" />
+    <MESSAGE value="All complete" />
+    <MESSAGE value="completely finish save user booking histry part" />
+    <option name="LAST_COMMIT_MESSAGE" value="completely finish save user booking histry part" />
+=======
     <MESSAGE value="Create User Registration And Design Login Interface" />
     <MESSAGE value="Create Login" />
     <MESSAGE value="Create Update And Delete User Profile" />
@@ -726,11 +979,29 @@
     <MESSAGE value="created add trip" />
     <MESSAGE value="Updated string file" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated string file" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
   </component>
   <component name="WindowStateProjectService">
     <state x="436" y="155" key="#PSD" timestamp="1620493409536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+<<<<<<< HEAD
+    <state x="654" y="280" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1620315129609" />
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1625314718288">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1625314718288" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624894542781">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1624894542781" />
+    <state x="499" y="164" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1624818718188">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.834@0.0.1536.834" timestamp="1624818718188" />
+    <state x="93" y="93" width="1350" height="648" key="AVDManager" timestamp="1620756946398">
+      <screen x="0" y="0" width="1536" height="834" />
+=======
     <state x="436" y="155" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1620493409536" />
     <state x="883" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1620490741835">
       <screen x="0" y="0" width="1536" height="824" />
@@ -742,6 +1013,7 @@
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1620477499356" />
     <state x="626" y="183" key="#com.intellij.ide.util.MemberChooser" timestamp="1620824815896">
       <screen x="0" y="0" width="1536" height="824" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     </state>
     <state x="626" y="183" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1620824815896" />
     <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619546793935" />
@@ -755,6 +1027,14 @@
     </state>
     <state x="595" y="178" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1620549715865" />
     <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1619475150401" />
+<<<<<<< HEAD
+    <state x="349" y="172" key="AndroidCreateResourceFileDialog" timestamp="1625228156340">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="349" y="172" key="AndroidCreateResourceFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1625228156340" />
+    <state x="610" y="203" key="AndroidCreateXmlResourceDialog" timestamp="1619637134243">
+      <screen x="0" y="0" width="1536" height="834" />
+=======
     <state x="698" y="142" key="AndroidCreateResourceFileDialog" timestamp="1620821857015">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -762,6 +1042,7 @@
     <state x="349" y="172" key="AndroidCreateResourceFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1619546471966" />
     <state x="610" y="201" key="AndroidCreateXmlResourceDialog" timestamp="1620815940572">
       <screen x="0" y="0" width="1536" height="824" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     </state>
     <state x="610" y="201" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1620815940572" />
     <state x="610" y="203" key="AndroidCreateXmlResourceDialog/0.0.1536.834@0.0.1536.834" timestamp="1619637134243" />
@@ -777,6 +1058,27 @@
     <state width="1491" height="540" key="GridCell.Tab.0.bottom" timestamp="1620829264097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+<<<<<<< HEAD
+    <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
+    <state width="1491" height="323" key="GridCell.Tab.0.bottom" timestamp="1625316061650">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1491" height="323" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1625316061650" />
+    <state width="1491" height="323" key="GridCell.Tab.0.center" timestamp="1625316061650">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1491" height="323" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1625316061650" />
+    <state width="1491" height="323" key="GridCell.Tab.0.left" timestamp="1625316061650">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1491" height="323" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1625316061650" />
+    <state width="1491" height="323" key="GridCell.Tab.0.right" timestamp="1625316061650">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1491" height="323" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1625316061650" />
+    <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1620752364219">
+      <screen x="0" y="0" width="1536" height="834" />
+=======
     <state width="1491" height="540" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620829264097" />
     <state width="1491" height="176" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619639697698" />
     <state width="1491" height="540" key="GridCell.Tab.0.center" timestamp="1620829264096">
@@ -800,6 +1102,7 @@
     <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1620328750809" />
     <state x="259" y="171" width="1030" height="476" key="MultipleFileMergeDialog" timestamp="1620808568032">
       <screen x="0" y="0" width="1536" height="824" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     </state>
     <state x="259" y="171" width="1030" height="476" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1620808568032" />
     <state x="521" y="119" key="RollbackChangesDialog" timestamp="1619461954236">
@@ -811,6 +1114,36 @@
     </state>
     <state x="209" y="114" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620585106805" />
     <state x="209" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619462132765" />
+<<<<<<< HEAD
+    <state width="498" height="449" key="SwitcherDM" timestamp="1625026839544">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="498" height="449" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1625026839544" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1625317084100">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1625317084100" />
+    <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1625238748174">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1625238748174" />
+    <state x="465" y="130" key="git4idea.branch.GitSmartOperationDialog" timestamp="1620509398592">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="465" y="130" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.834@0.0.1536.834" timestamp="1620509398592" />
+    <state x="485" y="205" key="git4idea.merge.GitMergeDialog" timestamp="1620509453467">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="485" y="205" key="git4idea.merge.GitMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1620509453467" />
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog" timestamp="1620780884067">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="446" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1620780884067" />
+    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620315948617">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.834@0.0.1536.834" timestamp="1620315948617" />
+=======
     <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620810078779">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -828,6 +1161,7 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.834@0.0.1536.834" timestamp="1619459637993" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
     <state x="578" y="311" key="git4idea.ui.GitResetDialog" timestamp="1619461972432">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -840,18 +1174,40 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="475" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1619532664056" />
+<<<<<<< HEAD
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1624864307754">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1624864307754" />
+=======
     <state x="815" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620548014605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="815" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620548014605" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewUserProfile.java</url>
+<<<<<<< HEAD
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/AddSavedPlace.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="3" />
+=======
           <line>53</line>
           <option name="timeStamp" value="1" />
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtP"
+        android:id="@+id/numOfSeats"
         android:layout_width="350dp"
         android:layout_height="?actionBarSize"
         android:layout_marginStart="20dp"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtP" />
+        app:layout_constraintTop_toBottomOf="@+id/numOfSeats" />
 
     <Button
         android:id="@+id/button5"
