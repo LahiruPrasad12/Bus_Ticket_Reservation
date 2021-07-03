@@ -62,22 +62,13 @@
         </androidx.appcompat.widget.Toolbar>
 
 
+
         <!--        creating the frame layout-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--            heading-->
-            <!--            <TextView-->
-            <!--                android:id="@+id/heading"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="70dp"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--                tools:ignore="MissingConstraints"-->
-            <!--                android:background="@color/hash_middle_blue"/>-->
 
-            <!--                id is wrong-->
             <TextView
                 android:id="@+id/admin_txt_update_rout"
                 android:layout_width="wrap_content"
@@ -85,100 +76,75 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/baloo_thambi"
-                android:text="@string/addRoute"
+                android:text="Update Trip"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/admin_edit_routeno"
-                android:layout_width="160dp"
-                android:layout_height="31dp"
-                android:background="@drawable/edit_text_rect_light"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_width_40dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/hintRoutNoAdmin"
+                android:hint="Trip ID"
                 android:icon="@drawable/ic_route_no"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/admin_txt_update_rout"
-                app:layout_constraintEnd_toEndOf="@+id/admin_edit_from" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/admin_txt_update_rout" />
 
             <EditText
                 android:id="@+id/admin_edit_from"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginStart="125dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/hintFromAdmin"
+                android:hint="Date"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/admin_edit_routeno"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_routeno" />
 
             <EditText
                 android:id="@+id/admin_edit_to"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/hintToAdmin"
+                android:hint="Arrival Time"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_from"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_from" />
 
             <EditText
-                android:id="@+id/admin_edit_noOfStops"
+                android:id="@+id/admin_edit_price"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:ems="10"
-                android:hint="@string/noOfStops"
+                android:hint="Depature Time"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@+id/admin_edit_to"
                 app:layout_constraintTop_toBottomOf="@+id/admin_edit_to" />
 
-            <EditText
-                android:id="@+id/admin_edit_basePrice"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:ems="10"
-                android:hint="@string/basePrice"
-                android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                app:layout_constraintStart_toStartOf="@+id/admin_edit_noOfStops"
-                app:layout_constraintTop_toBottomOf="@+id/admin_edit_noOfStops" />
-
-            <EditText
-                android:id="@+id/admin_edit_stopPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/edit_text_width_40dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:ems="10"
-                android:hint="@string/priceOfStop"
-                android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                app:layout_constraintStart_toStartOf="@+id/admin_edit_basePrice"
-                app:layout_constraintTop_toBottomOf="@+id/admin_edit_basePrice" />
-
             <Button
-                android:id="@+id/admin_btn_addRoute"
+                android:id="@+id/admin_btn_updateRoute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@drawable/admin_rounded_btn"
-                android:text="@string/admin_btn_submit"
+                android:text="@string/btn_update"
                 android:textColor="@color/hash_light_blue"
-                app:layout_constraintEnd_toEndOf="@+id/admin_edit_stopPrice"
-                app:layout_constraintTop_toBottomOf="@+id/admin_edit_stopPrice"
+                app:layout_constraintEnd_toEndOf="@+id/admin_edit_price"
+                app:layout_constraintTop_toBottomOf="@+id/admin_edit_price"
                 tools:text="@string/admin_btn_submit" />
 
             <ImageView
@@ -189,7 +155,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/admin_edit_from"
                 app:layout_constraintEnd_toStartOf="@+id/admin_edit_from"
                 app:layout_constraintTop_toTopOf="@+id/admin_edit_from"
-                app:srcCompat="@drawable/ic_my_location" />
+                app:srcCompat="@drawable/ic_baseline_calendar" />
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -199,37 +165,27 @@
                 app:layout_constraintBottom_toBottomOf="@+id/admin_edit_to"
                 app:layout_constraintEnd_toStartOf="@+id/admin_edit_to"
                 app:layout_constraintTop_toTopOf="@+id/admin_edit_to"
-                app:srcCompat="@drawable/ic_end_location" />
+                app:srcCompat="@drawable/ic_clock" />
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginEnd="25dp"
-                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_basePrice"
-                app:layout_constraintEnd_toStartOf="@+id/admin_edit_basePrice"
-                app:layout_constraintTop_toTopOf="@+id/admin_edit_basePrice"
-                app:srcCompat="@drawable/ic_price" />
+                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_price"
+                app:layout_constraintEnd_toStartOf="@+id/admin_edit_price"
+                app:layout_constraintTop_toTopOf="@+id/admin_edit_price"
+                app:srcCompat="@drawable/ic_clock" />
 
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginEnd="25dp"
-                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_noOfStops"
-                app:layout_constraintEnd_toStartOf="@+id/admin_edit_noOfStops"
-                app:layout_constraintTop_toTopOf="@+id/admin_edit_noOfStops"
-                app:srcCompat="@drawable/ic_baseline_stop_24" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginEnd="25dp"
-                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_stopPrice"
-                app:layout_constraintEnd_toStartOf="@+id/admin_edit_stopPrice"
-                app:layout_constraintTop_toTopOf="@+id/admin_edit_stopPrice"
-                app:srcCompat="@drawable/ic_price" />
+                app:layout_constraintBottom_toBottomOf="@+id/admin_edit_routeno"
+                app:layout_constraintEnd_toStartOf="@+id/admin_edit_routeno"
+                app:layout_constraintTop_toTopOf="@+id/admin_edit_routeno"
+                app:srcCompat="@drawable/ic_add_routes" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

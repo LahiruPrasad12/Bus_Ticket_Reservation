@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
+<<<<<<< HEAD
         <activity android:name=".VerifyUserMail"
             android:parentActivityName=".RegisterActivity"></activity>
         <activity
@@ -42,6 +43,10 @@
         <activity android:name=".AddRoute" >
 
         </activity>
+=======
+        <activity android:name=".TripManager.ShowTrips"></activity>
+        <activity android:name=".AddRoute"></activity>
+>>>>>>> 44e1665e55c3ea21f7354c3a50ce32b98d11dd0e
         <activity
             android:name=".Admin.UpdateRoute"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -49,10 +54,11 @@
         <activity android:name=".BusOwner.ViewBus" />
         <activity android:name=".BusOwner.UpdateAndDeleteBus" />
         <activity android:name=".BusOwner.AddBus" />
-        <activity android:name=".TripManager.TripMain" /> <!-- <activity -->
+        <activity android:name=".TripManager.TripMainActivity" /> <!-- <activity -->
         <!-- android:name=".Admin.AdminMain" -->
         <!-- android:theme="@style/AppTheme.NoActionBarHash" /> -->
         <!-- <activity android:name=".hashTest" /> -->
+        <activity android:name=".TripManager.AddTrips" />
         <activity
             android:name=".ViewUserProfile"
             android:theme="@style/AppTheme.NoActionBar" />

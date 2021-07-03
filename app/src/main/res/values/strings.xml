@@ -120,4 +120,18 @@
     <string name="btn3">VIEW BUS</string>
 
 
+    <!--    pamoda-->
+    <string name="welcome_trip_manager">Welcome Trip Manager</string>
+    <string name="view_trips">View Trips</string>
+    <string name="add_trip">Add Trip</string>
+    <string name="add_trip_id">Add Trip ID</string>
+    <string name="add_date">Add Date</string>
+    <string name="depature_time">Depature Time</string>
+    <string name="arrival_time">Arrival Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="root_id">Root ID :</string>
+    <string name="select_route_to_add_trip">Select Route To Add Trip</string>
+    <string name="add_route_id">Add Route ID</string>
+
+
 </resources>

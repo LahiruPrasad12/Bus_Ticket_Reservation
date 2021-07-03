@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.busticketreservation.Admin.AllRoutes;
 import com.example.busticketreservation.BusOwner.AddBus;
-import com.example.busticketreservation.TripManager.TripMain;
+import com.example.busticketreservation.TripManager.TripMainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 else if(role.equals("Trip Manager")){
                                     Toast.makeText(LoginActivity.this, "Trip Manager Login Success!", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), TripMain.class));
+                                    startActivity(new Intent(getApplicationContext(), TripMainActivity.class));
                                 }
                             }
 
