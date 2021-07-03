@@ -42,6 +42,7 @@ public class TripViewAdapter extends RecyclerView.Adapter<TripViewAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext,BookBus.class);
+                intent.putExtra("routeId",trip.getRoute_id());
                 intent.putExtra("tripId",trip.getTrip_id());
                 intent.putExtra("price",routes);
                 mContext.startActivity(intent);

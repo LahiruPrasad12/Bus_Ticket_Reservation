@@ -157,8 +157,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 mail1 = resetMail.getText().toString();
-
-                if(mail1.equals(mail2)) {
                     frb.sendPasswordResetEmail(mail1).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
@@ -170,13 +168,6 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
-
-                }else {
-                    Toast.makeText(LoginActivity.this, "Entered mail is doesn't match", Toast.LENGTH_SHORT).show();
-                }
-
-
-
             }
         });
 

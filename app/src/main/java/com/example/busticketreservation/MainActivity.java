@@ -80,10 +80,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
         button = findViewById(R.id.button7);
         errMsg = findViewById(R.id.vmsg);
 
@@ -98,48 +94,51 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            finish();
+        }else {
 
 
+            drawerLayout = findViewById(R.id.tx1111);
+            toolbar = findViewById(R.id.toolBar);
+            toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+            drawerLayout.addDrawerListener(toggle);
+            toggle.syncState();
+            navigationView = findViewById(R.id.nav_view);
 
-        drawerLayout=findViewById(R.id.tx1111);
-        toolbar=findViewById(R.id.toolBar);
-        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView=findViewById(R.id.nav_view);
 
+            //Navigation  Bar
+            navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    int id = menuItem.getItemId();
+                    Fragment fragment = null;
+                    switch (id) {
+                        case R.id.Trips:
 
-        //Navigation  Bar
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                int id=menuItem.getItemId();
-                Fragment fragment=null;
-                switch (id)
-                {
-                    case R.id.Trips:
+                            break;
+                        case R.id.wallet:
 
-                        break;
-                    case R.id.wallet:
+                            break;
+                        case R.id.Helps:
 
-                        break;
-                    case R.id.Helps:
+                            break;
 
-                        break;
-
-                    case R.id.setting:
-                        startActivity(new Intent(getApplicationContext(),ViewUserProfile.class));
-                        break;
-                    case R.id.logOut:
-                        FirebaseAuth.getInstance().signOut();
-                       startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                        break;
-                    default:
-                        return true;
+                        case R.id.setting:
+                            startActivity(new Intent(getApplicationContext(), ViewUserProfile.class));
+                            break;
+                        case R.id.logOut:
+                            FirebaseAuth.getInstance().signOut();
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            break;
+                        default:
+                            return true;
+                    }
+                    return true;
                 }
-                return true;
-            }
-        });
+            });
+        }
     }
 
 
@@ -147,8 +146,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
+        } else{
 
-        name = findViewById(R.id.name);
+            name = findViewById(R.id.name);
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(useId);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -162,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
     }
 
 

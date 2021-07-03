@@ -32,6 +32,9 @@ public class BookBus extends AppCompatActivity {
 
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
+    private String userId;
+    private String routeId;
+    private String tripId;
     private int Available ;
     private int numOfSeats = 0,Price;
     DatabaseReference databaseReference;
@@ -55,6 +58,8 @@ public class BookBus extends AppCompatActivity {
         errMsg = findViewById(R.id.errMsg);
         numSeats = findViewById(R.id.numOfSeats);
 
+         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         Intent intent = new Intent(this, PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,payPalConfiguration);
         startService(intent);
@@ -64,8 +69,10 @@ public class BookBus extends AppCompatActivity {
 
     public void selectBus(){
         Intent intent = getIntent();
-        String tripId = intent.getStringExtra("tripId");
+         tripId = intent.getStringExtra("tripId");
+         routeId = intent.getStringExtra("routeId");
         String amount = intent.getStringExtra("price");
+
 
 
         Query query = FirebaseDatabase.getInstance().getReference("Trips").orderByChild("trip_id").equalTo(tripId);
@@ -145,7 +152,20 @@ public class BookBus extends AppCompatActivity {
 
         if(requestCode == PAPAL_REQ_CODE){
             if(requestCode == Activity.RESULT_OK){
+
+
+                userBookingHistry userBookingHistry = new userBookingHistry();
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Booking_History");
+
+                userBookingHistry.setUserId(userId);
+                userBookingHistry.setRouteId(routeId);
+                userBookingHistry.setTripId(tripId);
+                userBookingHistry.setNumOfseats(numOfSeats);
+                userBookingHistry.setToatlAmount(total);
+                databaseReference.push().setValue(userBookingHistry);
+                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
                 Toast.makeText(this, "Payment Successful", Toast.LENGTH_SHORT).show();
+
             }else {
                 Toast.makeText(this, "Payment Unsuccessful", Toast.LENGTH_SHORT).show();
             }
