@@ -1,5 +1,6 @@
 package com.example.busticketreservation;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,12 +10,15 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.busticketreservation.Admin.AllRoutes;
 import com.example.busticketreservation.BusOwner.AddBus;
 import com.example.busticketreservation.TripManager.TripMain;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText txtMail,txtPassword;
     String mail,password;
     DatabaseReference databaseReference;
+    private String mail1,mail2,useId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +46,15 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.pBar);
         txtMail = findViewById(R.id.routeNumber);
         txtPassword = findViewById(R.id.numOfSeats);
+        progressBar.setVisibility(View.INVISIBLE);
 
+       Intent intent = getIntent();
+       mail2 = intent.getStringExtra("userId");
 
-//        if(frb.getCurrentUser() != null){
-//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-//            finish();
-//        }
+        if(frb.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
 
     }
 
@@ -71,9 +79,11 @@ public class LoginActivity extends AppCompatActivity {
 
         if(TextUtils.isEmpty(mail)) {
             Toast.makeText(this, "Name Is Required", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.INVISIBLE);
         }
         else if(TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Password Is Required", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.INVISIBLE);
         }else {
             //Authenticated User
             frb.signInWithEmailAndPassword(mail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -119,6 +129,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     }else {
                         Toast.makeText(LoginActivity.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.INVISIBLE);
                     }
 
                 }
@@ -131,5 +142,52 @@ public class LoginActivity extends AppCompatActivity {
 //    public void signOut(View view){
 //        FirebaseAuth.getInstance().signOut();
 //    }
+
+    public void forgotPassword(View view){
+
+        progressBar.setVisibility(View.INVISIBLE);
+        EditText resetMail = new EditText(view.getContext());
+        AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(view.getContext());
+        passwordResetDialog.setTitle("Reset Password ?");
+        passwordResetDialog.setMessage("Enter email to received reset link");
+        passwordResetDialog.setView(resetMail);
+
+
+        passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                mail1 = resetMail.getText().toString();
+
+                if(mail1.equals(mail2)) {
+                    frb.sendPasswordResetEmail(mail1).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(LoginActivity.this, "Reset Link Sent To Your Email", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                }else {
+                    Toast.makeText(LoginActivity.this, "Entered mail is doesn't match", Toast.LENGTH_SHORT).show();
+                }
+
+
+
+            }
+        });
+
+        passwordResetDialog.setNegativeButton("not now", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        passwordResetDialog.create().show();
+
+    }
 
 }

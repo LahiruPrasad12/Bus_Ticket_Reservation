@@ -18,7 +18,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="completely finish up to Add Saved place part">
+    <list default="true" id="71471cf8-aec6-4eb3-97d4-d3277fed666e" name="Default Changelist" comment="completely finish up to View saved place">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dele.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/deletee.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,11 +32,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/AddSavedPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/AddSavedPlace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/FindBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/FindBus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/RegisterActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/SavedPlaceViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/SavedPlaceViewAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewSavedPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/ViewSavedPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_saved_place.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_saved_place.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_bus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_bus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_saved_place.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_saved_place.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,24 +88,6 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.2050761721">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.607012876">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.1984254529">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.904773871">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.1718834506">
-      <recent name="com.example.busticketreservation" />
-    </key>
-    <key name="android.template.-1086965718">
-      <recent name="com.example.busticketreservation" />
-    </key>
     <key name="android.template.-74519619">
       <recent name="com.example.busticketreservation" />
     </key>
@@ -110,19 +98,40 @@
       <recent name="C:\Users\ASUS\Desktop\MAD\BUS_ME\app\src\main\res\font" />
       <recent name="C:\Users\ASUS\Desktop\MADBusTicketReservation\app\src\main\res\values" />
     </key>
-    <key name="android.template.1487717672">
+    <key name="android.template.1718834506">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-654448286">
+    <key name="android.template.-1086965718">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-1114989114">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.1984254529">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.904773871">
       <recent name="com.example.busticketreservation" />
     </key>
     <key name="android.template.-975130194">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1704837980">
+    <key name="android.template.607012876">
       <recent name="com.example.busticketreservation" />
     </key>
-    <key name="android.template.-1114989114">
+    <key name="android.template.1487717672">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.2050761721">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-386308636">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-654448286">
+      <recent name="com.example.busticketreservation" />
+    </key>
+    <key name="android.template.-1704837980">
       <recent name="com.example.busticketreservation" />
     </key>
   </component>
@@ -432,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625228779547</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="completely finish up to View saved place">
+      <created>1625231261866</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1625231261866</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,7 +464,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create User Registration And Design Login Interface" />
     <MESSAGE value="Create Login" />
     <MESSAGE value="Create Update And Delete User Profile" />
     <MESSAGE value="Design List View Using Adapter Class" />
@@ -473,7 +488,8 @@
     <MESSAGE value="completely finish up to book bus implementation part and designing part" />
     <MESSAGE value="completely finish up to make payment part" />
     <MESSAGE value="completely finish up to Add Saved place part" />
-    <option name="LAST_COMMIT_MESSAGE" value="completely finish up to Add Saved place part" />
+    <MESSAGE value="completely finish up to View saved place" />
+    <option name="LAST_COMMIT_MESSAGE" value="completely finish up to View saved place" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="280" key="#Notifications" timestamp="1620315129609">
@@ -516,22 +532,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="148" y="66" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1620489500988" />
-    <state width="1491" height="289" key="GridCell.Tab.0.bottom" timestamp="1625230173562">
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom" timestamp="1625282043944">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="289" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1625230173562" />
-    <state width="1491" height="289" key="GridCell.Tab.0.center" timestamp="1625230173562">
+    <state width="1491" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1625282043944" />
+    <state width="1491" height="2" key="GridCell.Tab.0.center" timestamp="1625282043944">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="289" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1625230173562" />
-    <state width="1491" height="289" key="GridCell.Tab.0.left" timestamp="1625230173562">
+    <state width="1491" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1625282043944" />
+    <state width="1491" height="2" key="GridCell.Tab.0.left" timestamp="1625282043944">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="289" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1625230173562" />
-    <state width="1491" height="289" key="GridCell.Tab.0.right" timestamp="1625230173562">
+    <state width="1491" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1625282043944" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right" timestamp="1625282043944">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="289" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1625230173562" />
+    <state width="1491" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1625282043944" />
     <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1620752364219">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -552,10 +568,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620780922735" />
-    <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1625035790717">
+    <state x="512" y="204" key="chooseDestDirectoryDialog" timestamp="1625238748174">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1625035790717" />
+    <state x="512" y="204" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1625238748174" />
     <state x="465" y="130" key="git4idea.branch.GitSmartOperationDialog" timestamp="1620509398592">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -595,7 +611,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/busticketreservation/AddSavedPlace.java</url>
-          <line>14</line>
+          <line>15</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

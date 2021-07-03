@@ -53,7 +53,7 @@ public class ViewSavedPlace extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(ViewSavedPlace.this, "Data Loaded", Toast.LENGTH_SHORT).show();
+
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                         SavedPlace savedPlace = dataSnapshot.getValue(SavedPlace.class);
                         savedPlaces.add(savedPlace);
@@ -61,12 +61,14 @@ public class ViewSavedPlace extends AppCompatActivity {
                     }
                 }else {
                     Toast.makeText(ViewSavedPlace.this, "You haven't any saved places", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(ViewSavedPlace.this, "Error!", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
 

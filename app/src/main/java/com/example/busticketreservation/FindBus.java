@@ -185,4 +185,7 @@ public class FindBus extends AppCompatActivity {
     public void goBack(View view){
         startActivity(new Intent(this,FindRouteNumber.class));
     }
+    public void goChoosePlace(View view){
+        startActivity(new Intent(this,ViewSavedPlace.class));
+    }
 }

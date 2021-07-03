@@ -2,6 +2,7 @@ package com.example.busticketreservation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -45,6 +46,7 @@ public class AddSavedPlace extends AppCompatActivity {
             savedPlace.setRouteNumber(RouteNum);
             savedPlace.setUserId(userId);
             databaseReference.push().setValue(savedPlace);
+            startActivity(new Intent(this,ViewSavedPlace.class));
             Toast.makeText(this, "Saved your favourite place successful", Toast.LENGTH_SHORT).show();
         }
     }

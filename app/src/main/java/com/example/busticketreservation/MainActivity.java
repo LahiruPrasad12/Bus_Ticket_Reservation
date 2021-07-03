@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     private int count = 0;
     private int numRetrieve = 0;
+    private String mail;
 
 
     private DatabaseReference databaseReference;
@@ -82,12 +83,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view);
-
-
-
-
-
-
 
         //Navigation  Bar
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -113,7 +108,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.logOut:
                         FirebaseAuth.getInstance().signOut();
-                        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                        intent.putExtra("userId",mail);
+                        startActivity(intent);
                         break;
                     default:
                         return true;
@@ -140,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 name.setText(snapshot.child("Name").getValue().toString());
+                mail = snapshot.child("Mail").getValue().toString();
             }
 
             @Override
