@@ -32,9 +32,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -49,7 +52,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
-    TextView name;
+    TextView name,errMsg;
     String from,to,depTime,arTime;
     FirebaseAuth frbAuth;
     FirebaseFirestore fStore;
@@ -60,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private int count = 0;
     private int numRetrieve = 0;
     private String mail;
-
+    Button button;
 
     private DatabaseReference databaseReference;
     private ArrayList<String> BusNo = new ArrayList<>();
@@ -77,12 +80,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
+        button = findViewById(R.id.button7);
+        errMsg = findViewById(R.id.vmsg);
+
+
+        frbAuth = FirebaseAuth.getInstance();
+        useId = frbAuth.getCurrentUser().getUid();
+        FirebaseUser firebaseUser = frbAuth.getCurrentUser();
+
+        if(firebaseUser.isEmailVerified()){
+            button.setVisibility(View.INVISIBLE);
+            errMsg.setVisibility(View.INVISIBLE);
+        }
+
+
+
+
+
         drawerLayout=findViewById(R.id.tx1111);
         toolbar=findViewById(R.id.toolBar);
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view);
+
 
         //Navigation  Bar
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -104,13 +129,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.setting:
                         startActivity(new Intent(getApplicationContext(),ViewUserProfile.class));
-
                         break;
                     case R.id.logOut:
                         FirebaseAuth.getInstance().signOut();
-                        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
-                        intent.putExtra("userId",mail);
-                        startActivity(intent);
+                       startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                         break;
                     default:
                         return true;
@@ -118,18 +140,13 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
-
     }
+
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        frbAuth = FirebaseAuth.getInstance();
-        useId = frbAuth.getCurrentUser().getUid();
 
         name = findViewById(R.id.name);
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(useId);
@@ -145,9 +162,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 
 
@@ -155,15 +169,36 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,FindRouteNumber.class));
     }
 
+
     public void gotoFindBus(View view){
         Intent intent = new Intent(this,FindBus.class);
         intent.putExtra("routeNo","0");
         startActivity(intent);
     }
 
+
     public void gotoChooseSavedPlace(View view){
         Intent intent = new Intent(this,ViewSavedPlace.class);
         startActivity(intent);
+    }
+
+
+    public void sendVerificationMail(View view){
+        FirebaseUser firebaseUser = frbAuth.getCurrentUser();
+        firebaseUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(getApplicationContext(), "Verification mail has been sent", Toast.LENGTH_SHORT).show();
+               
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
@@ -290,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 
-    }
+}
 
 
 //    //Invoke Bus View Adapter

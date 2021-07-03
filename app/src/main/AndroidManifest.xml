@@ -16,13 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusTicketReservation">
-        <activity android:name=".AddSavedPlace"
-            android:parentActivityName=".ViewSavedPlace"></activity>
+        <activity android:name=".VerifyUserMail"
+            android:parentActivityName=".RegisterActivity"></activity>
+        <activity
+            android:name=".AddSavedPlace"
+            android:parentActivityName=".ViewSavedPlace" />
         <activity
             android:name=".ViewSavedPlace"
-            android:parentActivityName=".MainActivity" >
-
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".BookBus"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -34,7 +35,7 @@
             android:icon="@drawable/search"
             android:label="Find Route Here"
             android:parentActivityName=".MainActivity"
-            android:supportsPictureInPicture="true"></activity>
+            android:supportsPictureInPicture="true" />
         <activity
             android:name=".Home"
             android:theme="@style/AppTheme.NoActionBarHash" />

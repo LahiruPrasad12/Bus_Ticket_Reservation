@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
        mail2 = intent.getStringExtra("userId");
 
         if(frb.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(),VerifyUserMail.class));
             finish();
         }
 
@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                                 //Customer Login
                                 if(role.equals("Customer")){
                                     Toast.makeText(LoginActivity.this, "Passenger Login Success!", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(),VerifyUserMail.class));
                                 }
 
                                 else if(role.equals("Admin")){

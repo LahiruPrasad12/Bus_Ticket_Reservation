@@ -5,6 +5,8 @@
     android:id="@+id/tx1111"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#ffff"
+    android:background="#fff"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     tools:openDrawer="start">
@@ -60,6 +62,16 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/vmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="60dp"
+                android:text="Verify your mail address"
+                android:textColor="@color/hash_dark_red"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,7 +89,7 @@
                 android:id="@+id/imageView15"
                 android:layout_width="76dp"
                 android:layout_height="87dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="70dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -88,12 +100,12 @@
                 android:layout_width="76dp"
                 android:layout_height="87dp"
                 android:layout_marginStart="70dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="122dp"
                 android:onClick="gotoFindBus"
                 app:layout_constraintEnd_toStartOf="@+id/imageView15"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button7"
                 app:srcCompat="@drawable/ride" />
 
             <TextView
@@ -204,6 +216,22 @@
                 android:onClick="findRouteNumber"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="123dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="132dp"
+                android:layout_marginEnd="132dp"
+                android:background="@drawable/button_background_blue"
+                android:backgroundTint="@color/hash_dark_red"
+                android:onClick="sendVerificationMail"
+                android:paddingRight="10dp"
+                android:text="Verify Now"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
